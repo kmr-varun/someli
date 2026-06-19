@@ -1,11 +1,11 @@
 # Someli.ai — Build Progress
 
 ## Current Work
-**Section:** 13 — Certifications
-**Figma Node:** `233:10683`
+**Section:** 14 — Footer
+**Figma Node:** `337:11016`
 **Status:** not started
-**Stopped at:** Section 12 completed and verified - Blog section with left column (heading, description, CTA button) and right column with 3 blog cards (2 vertical cards on top, 1 horizontal card below), Open Sans font for author/dates, hover effect changes border to orange
-**Next step:** Run `get_design_context` and `get_screenshot` on node 233:10683, identify certification logos and layout, then implement CertificationsSection.tsx
+**Stopped at:** Section 13 completed - Certifications section with Space Grotesk pill label, centered heading, 5 certification logos in equal-width bordered boxes with items-stretch to ensure consistent heights
+**Next step:** Run `get_design_context` and `get_screenshot` on node 337:11016, identify footer structure (CTA, logo, nav columns, social icons), download assets, then implement Footer.tsx
 
 ---
 
@@ -24,7 +24,7 @@
 - [x] 10 — Reach Calculator   → `components/sections/ReachCalculatorSection.tsx`
 - [x] 11 — Pricing            → `components/sections/PricingSection.tsx`
 - [x] 12 — Blog               → `components/sections/BlogSection.tsx`
-- [ ] 13 — Certifications     → `components/sections/CertificationsSection.tsx`
+- [x] 13 — Certifications     → `components/sections/CertificationsSection.tsx`
 - [ ] 14 — Footer             → `components/Footer.tsx`
 
 ---
@@ -112,6 +112,12 @@ After each section is coded, before marking `[x] done`:
 - **Props:** none (static Server Component)
 - **Assets used:** `public/assets/blog/union-pattern.svg`, `public/assets/blog/blog-image-1.jpg`, `public/assets/blog/blog-image-2.jpg`, `public/assets/blog/blog-image-3.jpg`, `public/assets/blog/author-avatar.png`
 - **Decisions:** White section with two-column layout. Left column (470px): Space Grotesk pill label "BLOGS", 60px bold heading "Latest from Blogs", 18px description, and CTA button with bullet prefix. Right column: 3 blog cards in 2-1 layout (2 vertical cards on top row with gap-3, 1 horizontal card below). Each card has image, title (16px semibold), "Read more >" link in orange (#FF5722), and footer with author avatar + name and date + read time. Footer uses Open Sans font (loaded via next/font with CSS variable --font-open-sans). All cards have hover effect: border changes from rgba(0,0,0,0.08) to #DF8251 with 300ms transition. Background has union-pattern.svg positioned absolutely with specific inset percentages. Blog images are all JPEGs despite some Figma asset URLs suggesting SVG.
+
+### CertificationsSection
+- **File:** `components/sections/CertificationsSection.tsx`
+- **Props:** none (static Server Component)
+- **Assets used:** `public/assets/certifications/cert-logo-1-mark.svg`, `public/assets/certifications/cert-logo-1-type.svg`, `public/assets/certifications/cert-logo-2.svg`, `public/assets/certifications/cert-logo-3.svg`, `public/assets/certifications/cert-logo-4.svg`, `public/assets/certifications/cert-logo-5.svg`
+- **Decisions:** White section with centered heading and Space Grotesk pill label "OUR CERTIFICATIONS". 5 certification logos displayed in equal-width bordered boxes (rgba(0,0,0,0.08) borders). Parent container uses `items-stretch` to ensure all boxes have consistent height despite logos having different aspect ratios. Logo 1 has two parts (mark + type). All logos are SVGs (Figma asset URLs had .png extension but files were actually SVG). Logo dimensions preserved exactly from Figma design context.
 
 ---
 
