@@ -2,32 +2,32 @@ import Image from 'next/image';
 
 export default function PricingSection() {
   return (
-    <section className="w-full bg-white px-24 py-[100px]">
-      <div className="max-w-[1440px] mx-auto flex flex-col gap-14 items-center">
+    <section className="w-full bg-white px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px]">
+      <div className="max-w-[1440px] mx-auto flex flex-col gap-10 sm:gap-12 md:gap-14 items-center">
         {/* Header */}
-        <div className="flex flex-col gap-4 items-center w-full">
-          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] px-[15px] py-[7px] rounded-full">
-            <p className="font-montserrat font-normal text-[12px] text-[#ED6B52] tracking-[0.96px] uppercase leading-[15px]">
+        <div className="flex flex-col gap-3 sm:gap-4 items-center w-full">
+          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px] rounded-full">
+            <p className="font-montserrat font-normal text-[10px] sm:text-[11px] md:text-[12px] text-[#ED6B52] tracking-[0.8px] sm:tracking-[0.96px] uppercase leading-[15px]">
               Transparent pricing
             </p>
           </div>
-          <div className="flex flex-col gap-6 items-center text-center w-full">
-            <h2 className="font-montserrat font-bold text-[60px] text-[#222222] tracking-[-2px] leading-[71.4px]">
+          <div className="flex flex-col gap-4 sm:gap-5 md:gap-6 items-center text-center w-full">
+            <h2 className="font-montserrat font-bold text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] text-[#222222] tracking-[-1.5px] md:tracking-[-2px] leading-[1.2]">
               One plan. Everything you need to scale employee advocacy.
             </h2>
-            <p className="font-montserrat font-normal text-[18px] text-[#222222] leading-[24.5px]">
+            <p className="font-montserrat font-normal text-[14px] sm:text-[16px] md:text-[18px] text-[#222222] leading-[1.4]">
               Powerful features.Meaningful impact.
             </p>
           </div>
         </div>
 
         {/* Three Cards */}
-        <div className="flex gap-6 items-center justify-center w-full">
+        <div className="flex flex-col lg:flex-row gap-5 sm:gap-6 items-stretch justify-center w-full">
           {/* Left Card - Feature List */}
-          <div className="flex-1 border-2 border-[rgba(0,0,0,0.08)] rounded-[20px] px-8 py-10 flex flex-col gap-4">
+          <div className="flex-1 border-2 border-[rgba(0,0,0,0.08)] rounded-[16px] sm:rounded-[18px] md:rounded-[20px] px-5 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10 flex flex-col gap-3 sm:gap-4">
             {/* AI Content Strategy */}
-            <div className="flex gap-[18px] items-center pb-4 border-b border-[rgba(0,0,0,0.1)]">
-              <div className="w-[52px] h-[52px] flex-shrink-0 relative">
+            <div className="flex gap-3 sm:gap-4 md:gap-[18px] items-center pb-3 sm:pb-4 border-b border-[rgba(0,0,0,0.1)]">
+              <div className="w-[44px] h-[44px] sm:w-[48px] sm:h-[48px] md:w-[52px] md:h-[52px] flex-shrink-0 relative">
                 <Image
                   src="/assets/pricing/ai-content-icon.svg"
                   alt=""
@@ -37,10 +37,10 @@ export default function PricingSection() {
                 />
               </div>
               <div className="flex-1 flex flex-col gap-[3px]">
-                <p className="font-montserrat font-bold text-[14px] text-[#222222] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-bold text-[13px] sm:text-[14px] text-[#222222] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Al Content Strategy
                 </p>
-                <p className="font-montserrat font-normal text-[14px] text-[#5F5F5F] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] text-[#5F5F5F] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Build data-driven content that resonates.
                 </p>
               </div>
@@ -58,10 +58,10 @@ export default function PricingSection() {
                 />
               </div>
               <div className="flex-1 flex flex-col gap-[3px]">
-                <p className="font-montserrat font-bold text-[14px] text-[#222222] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-bold text-[13px] sm:text-[14px] text-[#222222] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Advanced Analytics
                 </p>
-                <p className="font-montserrat font-normal text-[14px] text-[#5F5F5F] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] text-[#5F5F5F] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Track performance & optimize for growth.
                 </p>
               </div>
@@ -79,10 +79,10 @@ export default function PricingSection() {
                 />
               </div>
               <div className="flex-1 flex flex-col gap-[3px]">
-                <p className="font-montserrat font-bold text-[14px] text-[#222222] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-bold text-[13px] sm:text-[14px] text-[#222222] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Team Collaboration
                 </p>
-                <p className="font-montserrat font-normal text-[14px] text-[#5F5F5F] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] text-[#5F5F5F] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Empower your team to share & engage.
                 </p>
               </div>
@@ -100,10 +100,10 @@ export default function PricingSection() {
                 />
               </div>
               <div className="flex-1 flex flex-col gap-[3px]">
-                <p className="font-montserrat font-bold text-[14px] text-[#222222] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-bold text-[13px] sm:text-[14px] text-[#222222] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Integrations
                 </p>
-                <p className="font-montserrat font-normal text-[14px] text-[#5F5F5F] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] text-[#5F5F5F] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Connect with your favorite tools seamlessly.
                 </p>
               </div>
@@ -121,10 +121,10 @@ export default function PricingSection() {
                 />
               </div>
               <div className="flex-1 flex flex-col gap-[3px]">
-                <p className="font-montserrat font-bold text-[14px] text-[#222222] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-bold text-[13px] sm:text-[14px] text-[#222222] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Priority Support
                 </p>
-                <p className="font-montserrat font-normal text-[14px] text-[#5F5F5F] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] text-[#5F5F5F] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Get fast, human support whenever you need it.
                 </p>
               </div>
@@ -142,10 +142,10 @@ export default function PricingSection() {
                 />
               </div>
               <div className="flex-1 flex flex-col gap-[3px]">
-                <p className="font-montserrat font-bold text-[14px] text-[#222222] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-bold text-[13px] sm:text-[14px] text-[#222222] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Smart Scheduling
                 </p>
-                <p className="font-montserrat font-normal text-[14px] text-[#5F5F5F] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] text-[#5F5F5F] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Post at the perfect time, every time.
                 </p>
               </div>
@@ -163,10 +163,10 @@ export default function PricingSection() {
                 />
               </div>
               <div className="flex-1 flex flex-col gap-[3px]">
-                <p className="font-montserrat font-bold text-[14px] text-[#222222] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-bold text-[13px] sm:text-[14px] text-[#222222] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Unlimited Content
                 </p>
-                <p className="font-montserrat font-normal text-[14px] text-[#5F5F5F] tracking-[-0.28px] leading-[1.5]">
+                <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] text-[#5F5F5F] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                   Generate posts, carousels, videos & more.
                 </p>
               </div>
@@ -174,7 +174,7 @@ export default function PricingSection() {
           </div>
 
           {/* Center Card - Main Pricing */}
-          <div className="w-[417.333px] flex-shrink-0 bg-gradient-to-b from-[#DF8251] to-[#D54050] rounded-[21.149px] px-[33.838px] py-[42.297px] flex flex-col gap-14 drop-shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+          <div className="w-full lg:w-[417.333px] flex-shrink-0 bg-gradient-to-b from-[#DF8251] to-[#D54050] rounded-[16px] sm:rounded-[18px] md:rounded-[21.149px] px-5 sm:px-6 md:px-[33.838px] py-8 sm:py-10 md:py-[42.297px] flex flex-col gap-10 sm:gap-12 md:gap-14 drop-shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
             <div className="flex flex-col gap-[34px]">
               <div className="flex flex-col gap-6">
                 {/* Badge */}
@@ -264,7 +264,7 @@ export default function PricingSection() {
           </div>
 
           {/* Right Card - Benefits */}
-          <div className="flex-1 border-2 border-[rgba(0,0,0,0.08)] rounded-[20px] px-8 py-10 h-[692px] flex flex-col gap-8">
+          <div className="flex-1 border-2 border-[rgba(0,0,0,0.08)] rounded-[16px] sm:rounded-[18px] md:rounded-[20px] px-5 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10 lg:h-[692px] flex flex-col gap-6 sm:gap-7 md:gap-8">
             <div className="flex flex-col gap-4">
               {/* Scale Your Reach */}
               <div className="flex gap-[18px] items-center pb-4 border-b border-[rgba(0,0,0,0.1)]">
@@ -278,10 +278,10 @@ export default function PricingSection() {
                   />
                 </div>
                 <div className="flex-1 flex flex-col gap-[3px]">
-                  <p className="font-montserrat font-bold text-[14px] text-[#222222] tracking-[-0.28px] leading-[1.5]">
+                  <p className="font-montserrat font-bold text-[13px] sm:text-[14px] text-[#222222] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                     Scale Your Reach
                   </p>
-                  <p className="font-montserrat font-normal text-[14px] text-[#5F5F5F] tracking-[-0.28px] leading-[1.5]">
+                  <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] text-[#5F5F5F] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                     Increase visibility across Linkedln and beyond.
                   </p>
                 </div>
@@ -299,10 +299,10 @@ export default function PricingSection() {
                   />
                 </div>
                 <div className="flex-1 flex flex-col gap-[3px]">
-                  <p className="font-montserrat font-bold text-[14px] text-[#222222] tracking-[-0.28px] leading-[1.5]">
+                  <p className="font-montserrat font-bold text-[13px] sm:text-[14px] text-[#222222] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                     Stronger Brand
                   </p>
-                  <p className="font-montserrat font-normal text-[14px] text-[#5F5F5F] tracking-[-0.28px] leading-[1.5]">
+                  <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] text-[#5F5F5F] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                     Build trust and authority with consistent content
                   </p>
                 </div>
@@ -320,10 +320,10 @@ export default function PricingSection() {
                   />
                 </div>
                 <div className="flex-1 flex flex-col gap-[3px]">
-                  <p className="font-montserrat font-bold text-[14px] text-[#222222] tracking-[-0.28px] leading-[1.5]">
+                  <p className="font-montserrat font-bold text-[13px] sm:text-[14px] text-[#222222] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                     Engaged Employees
                   </p>
-                  <p className="font-montserrat font-normal text-[14px] text-[#5F5F5F] tracking-[-0.28px] leading-[1.5]">
+                  <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] text-[#5F5F5F] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                     Turn your team into brand advocates.
                   </p>
                 </div>
@@ -341,10 +341,10 @@ export default function PricingSection() {
                   />
                 </div>
                 <div className="flex-1 flex flex-col gap-[3px]">
-                  <p className="font-montserrat font-bold text-[14px] text-[#222222] tracking-[-0.28px] leading-[1.5]">
+                  <p className="font-montserrat font-bold text-[13px] sm:text-[14px] text-[#222222] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                     Better Results
                   </p>
-                  <p className="font-montserrat font-normal text-[14px] text-[#5F5F5F] tracking-[-0.28px] leading-[1.5]">
+                  <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] text-[#5F5F5F] tracking-[-0.24px] sm:tracking-[-0.28px] leading-[1.5]">
                     Drive more engagement, leads, and opportunities.
                   </p>
                 </div>
@@ -375,7 +375,7 @@ export default function PricingSection() {
         </div>
 
         {/* Bottom Pills */}
-        <div className="flex gap-2">
+        <div className="flex flex-wrap justify-center gap-2">
           {[
             'Secure & Compliant',
             'CANCEL ANYTIME',
@@ -383,9 +383,9 @@ export default function PricingSection() {
           ].map((label, index) => (
             <div
               key={index}
-              className="bg-[rgba(245,245,245,0.5)] rounded-full px-8 py-4 flex gap-[10px] items-center"
+              className="bg-[rgba(245,245,245,0.5)] rounded-full px-4 sm:px-6 md:px-8 py-3 sm:py-3.5 md:py-4 flex gap-[8px] sm:gap-[10px] items-center"
             >
-              <div className="w-[16.909px] h-[16.909px] relative">
+              <div className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] md:w-[16.909px] md:h-[16.909px] relative">
                 <Image
                   src="/assets/pricing/orange-dot.svg"
                   alt=""
@@ -394,7 +394,7 @@ export default function PricingSection() {
                   className="object-contain"
                 />
               </div>
-              <p className="font-montserrat font-normal text-[16px] text-[#111111] tracking-[0.64px] uppercase leading-none">
+              <p className="font-montserrat font-normal text-[12px] sm:text-[14px] md:text-[16px] text-[#111111] tracking-[0.5px] sm:tracking-[0.64px] uppercase leading-none">
                 {label}
               </p>
             </div>

@@ -181,31 +181,31 @@ export default function HowItWorksSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-white px-24 py-[100px]">
+    <section ref={sectionRef} className="relative bg-white px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px]">
       {/* Header */}
-      <div className="mx-auto mb-16 flex max-w-[892px] flex-col items-center gap-4 text-center">
+      <div className="mx-auto mb-10 sm:mb-12 md:mb-14 lg:mb-16 flex max-w-[892px] flex-col items-center gap-3 sm:gap-4 text-center">
         {/* Pill Label */}
-        <div className="inline-flex items-center rounded-full border border-[rgba(247,103,57,0.15)] bg-[rgba(247,103,57,0.16)] px-[15px] py-[7px]">
-          <span className="font-montserrat text-[10px] font-normal uppercase leading-[15px] tracking-[1px] text-[#f76739]">
+        <div className="inline-flex items-center rounded-full border border-[rgba(247,103,57,0.15)] bg-[rgba(247,103,57,0.16)] px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px]">
+          <span className="font-montserrat text-[9px] sm:text-[10px] font-normal uppercase leading-[15px] tracking-[0.8px] sm:tracking-[1px] text-[#f76739]">
             Smart Workflow
           </span>
         </div>
 
         {/* Heading */}
-        <h2 className="w-full font-montserrat text-[60px] font-bold leading-[71.4px] tracking-[-2px] text-[#222]">
+        <h2 className="w-full font-montserrat text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] font-bold leading-[1.2] tracking-[-1.5px] md:tracking-[-2px] text-[#222]">
           How Someli AI works
         </h2>
 
         {/* Subheading */}
-        <p className="font-montserrat text-[18px] font-normal leading-[1.5] text-[#444]">
+        <p className="font-montserrat text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[1.5] text-[#444]">
           AI + Strategy + Consistency + Influence that grows your businesss
         </p>
       </div>
 
       {/* Items Container */}
-      <div className="relative mx-auto flex max-w-[1200px] flex-col gap-4">
-        {/* Left Sidebar Dots & Lines - Absolute positioned */}
-        <div className="absolute left-[-67px] top-0 flex h-full w-[26px] flex-col items-center gap-[9.825px] py-[150px]">
+      <div className="relative mx-auto flex max-w-[1200px] flex-col gap-3 sm:gap-4">
+        {/* Left Sidebar Dots & Lines - Hidden on mobile/tablet */}
+        <div className="hidden lg:flex absolute left-[-67px] top-0 h-full w-[26px] flex-col items-center gap-[9.825px] py-[150px]">
           {/* Dot 1 */}
           <div
             ref={(el) => {
@@ -272,19 +272,19 @@ export default function HowItWorksSection() {
             ref={(el) => {
               cardsRef.current[index] = el;
             }}
-            className="flex w-full overflow-hidden rounded-[24px] border-2 border-[rgba(0,0,0,0.06)]"
+            className="flex flex-col lg:flex-row w-full overflow-hidden rounded-[16px] sm:rounded-[20px] md:rounded-[24px] border-2 border-[rgba(0,0,0,0.06)]"
           >
             {/* Left Side - Number & Title */}
             <div
               data-left-panel
-              className="flex w-[243px] flex-col items-start justify-center border-r border-[rgba(0,0,0,0.08)] bg-[rgba(247,103,57,0.06)] px-8 py-10"
+              className="flex w-full lg:w-[243px] flex-col items-start justify-center border-b lg:border-b-0 lg:border-r border-[rgba(0,0,0,0.08)] bg-[rgba(247,103,57,0.06)] px-5 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10"
             >
-              <div className="flex w-full flex-col gap-10">
+              <div className="flex w-full flex-col gap-6 sm:gap-8 md:gap-10">
                 {/* Number */}
                 <div className="flex items-center">
                   <span
                     data-number
-                    className="font-montserrat text-[28px] font-bold leading-none text-[#f76739]"
+                    className="font-montserrat text-[22px] sm:text-[24px] md:text-[28px] font-bold leading-none text-[#f76739]"
                   >
                     {item.number}
                   </span>
@@ -293,14 +293,14 @@ export default function HowItWorksSection() {
                 {/* Icon + Title */}
                 <div className="flex w-full flex-col gap-1">
                   {/* Icon */}
-                  <div className="h-6 w-6">
+                  <div className="h-5 w-5 sm:h-6 sm:w-6">
                     <Image src={item.icon} alt="" width={24} height={24} />
                   </div>
 
                   {/* Title */}
                   <h3
                     data-title
-                    className="font-montserrat text-[32px] font-bold leading-[1.4] tracking-[-2px] text-[#222]"
+                    className="font-montserrat text-[22px] sm:text-[26px] md:text-[28px] lg:text-[30px] xl:text-[32px] font-bold leading-[1.4] tracking-[-1.5px] md:tracking-[-2px] text-[#222]"
                   >
                     {item.title}
                   </h3>
@@ -309,20 +309,20 @@ export default function HowItWorksSection() {
             </div>
 
             {/* Right Content */}
-            <div className="flex flex-1 items-center justify-between px-8 py-10">
+            <div className="flex flex-col xl:flex-row flex-1 items-start xl:items-center justify-between gap-6 md:gap-8 px-5 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10">
               {/* Left Content - Description & Bullets */}
-              <div className="flex w-[313px] flex-col gap-6">
+              <div className="flex w-full xl:w-[313px] flex-col gap-4 sm:gap-5 md:gap-6">
                 {/* Description */}
-                <p className="font-montserrat text-[20px] font-bold leading-[1.5] tracking-[-0.4px] text-[#222]">
+                <p className="font-montserrat text-[16px] sm:text-[18px] md:text-[20px] font-bold leading-[1.5] tracking-[-0.3px] md:tracking-[-0.4px] text-[#222]">
                   {item.description}
                 </p>
 
                 {/* Bullets */}
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-1.5 sm:gap-2">
                   {item.bullets.map((bullet, idx) => (
-                    <div key={idx} className="flex gap-3">
+                    <div key={idx} className="flex gap-2 sm:gap-3">
                       {/* Checkmark */}
-                      <div className="mt-0.5 h-[23.861px] w-[15.861px] flex-shrink-0">
+                      <div className="mt-0.5 h-[20px] w-[13px] sm:h-[23.861px] sm:w-[15.861px] flex-shrink-0">
                         <Image
                           src="/assets/how-it-works/checkmark.svg"
                           alt=""
@@ -332,7 +332,7 @@ export default function HowItWorksSection() {
                       </div>
 
                       {/* Bullet Text */}
-                      <p className="flex-1 font-montserrat text-[16px] font-normal leading-[1.5] text-[#222]">
+                      <p className="flex-1 font-montserrat text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-normal leading-[1.5] text-[#222]">
                         {bullet}
                       </p>
                     </div>
@@ -341,14 +341,14 @@ export default function HowItWorksSection() {
               </div>
 
               {/* Right Mockup */}
-              <div className="flex-shrink-0 rounded-[13.974px] p-[6px]">
-                <div className="overflow-hidden rounded-[16px] border-[0.582px] border-[rgba(247,103,57,0.6)] bg-white p-[6.987px]">
-                  <div className="relative h-[321.593px] w-[512.102px] overflow-hidden rounded-[4.658px]">
+              <div className="flex-shrink-0 rounded-[12px] sm:rounded-[13.974px] p-[4px] sm:p-[6px] w-full xl:w-auto">
+                <div className="overflow-hidden rounded-[14px] sm:rounded-[16px] border-[0.5px] sm:border-[0.582px] border-[rgba(247,103,57,0.6)] bg-white p-[5px] sm:p-[6.987px]">
+                  <div className="relative h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[321.593px] w-full xl:w-[512.102px] overflow-hidden rounded-[4px] sm:rounded-[4.658px]">
                     <Image
                       src={item.mockup}
                       alt={`${item.title} dashboard`}
                       fill
-                      sizes="512px"
+                      sizes="(max-width: 1280px) 90vw, 512px"
                       className={`object-cover ${item.mockupPosition}`}
                     />
                   </div>

@@ -28,10 +28,10 @@ interface LogosSectionProps {
 
 export default function LogosSection({ label = "Businesses That Grow With Someli" }: LogosSectionProps) {
   return (
-    <section className="w-full bg-white py-[80px] overflow-hidden">
-      <div className="flex flex-col gap-[46px] items-center">
+    <section className="w-full bg-white py-12 sm:py-16 md:py-20 lg:py-[80px] overflow-hidden">
+      <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 lg:gap-[46px] items-center">
         {/* Label */}
-        <p className="text-[17px] font-normal text-[#222] tracking-[1.36px] uppercase">
+        <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[17px] font-normal text-[#222] tracking-[1px] sm:tracking-[1.2px] md:tracking-[1.36px] uppercase px-4 text-center">
           {label}
         </p>
 
@@ -50,16 +50,23 @@ export default function LogosSection({ label = "Businesses That Grow With Someli
           >
             {/* Two identical strips for seamless loop */}
             {[0, 1].map((pass) => (
-              <div key={pass} className="flex items-center gap-[100px] pr-[100px]">
+              <div key={pass} className="flex items-center gap-12 sm:gap-16 md:gap-20 lg:gap-[100px] pr-12 sm:pr-16 md:pr-20 lg:pr-[100px]">
                 {LOGOS.map((logo, i) => (
-                  <div key={i} className="shrink-0 flex items-center justify-center" style={{ width: logo.width, height: 35 }}>
+                  <div
+                    key={i}
+                    className="shrink-0 flex items-center justify-center"
+                    style={{
+                      width: logo.width * 0.7,
+                      height: 25
+                    }}
+                  >
                     <Image
                       src={logo.src}
                       alt={logo.alt}
                       width={logo.width}
                       height={logo.height}
-                      className="object-contain"
-                      style={{ maxHeight: 35 }}
+                      className="object-contain w-full h-full"
+                      style={{ maxHeight: 25 }}
                     />
                   </div>
                 ))}

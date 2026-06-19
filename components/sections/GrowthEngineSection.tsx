@@ -39,7 +39,7 @@ const TESTIMONIAL_CARDS = [
 
 export default function GrowthEngineSection() {
   return (
-    <section className="relative w-full bg-[#111]" style={{ minHeight: 709 }}>
+    <section className="relative w-full bg-[#111]" style={{ minHeight: 'auto' }}>
       {/* Orange swoosh background */}
       <div className="absolute inset-0 opacity-50 pointer-events-none overflow-hidden">
         <Image
@@ -53,39 +53,38 @@ export default function GrowthEngineSection() {
       </div>
 
       {/* Content */}
-      <div className="relative px-24 py-[120px] flex items-center justify-between gap-8">
+      <div className="relative px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px] flex flex-col lg:flex-row items-center lg:items-center justify-between gap-8 md:gap-10 lg:gap-8">
 
         {/* LEFT: text block */}
-        <div className="flex flex-col gap-[40px] shrink-0 w-[595px]">
+        <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-[40px] shrink-0 w-full lg:w-[595px]">
           {/* Pill label */}
-          <div className="flex flex-col gap-[16px]">
+          <div className="flex flex-col gap-3 sm:gap-4 md:gap-[16px]">
             <div
-              className="self-start flex items-center px-[15px] py-[7px] rounded-full border"
+              className="self-start flex items-center px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px] rounded-full border"
               style={{ backgroundColor: "rgba(237,107,82,0.16)", borderColor: "rgba(237,107,82,0.16)" }}
             >
-              <span className="text-[10px] font-normal text-[#ED6B52] tracking-[1px] uppercase whitespace-nowrap">
+              <span className="text-[9px] sm:text-[10px] font-normal text-[#ED6B52] tracking-[0.8px] sm:tracking-[1px] uppercase whitespace-nowrap">
                 People-Powered Reach
               </span>
             </div>
 
             {/* H2 */}
             <h2
-              className="font-bold text-white"
-              style={{ fontSize: 60, lineHeight: "71.4px", letterSpacing: "-2px" }}
+              className="font-bold text-white text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] leading-[1.2] tracking-[-1.5px] md:tracking-[-2px]"
             >
               Your team is your<br />greatest growth engine
             </h2>
           </div>
 
           {/* Body */}
-          <p className="text-[18px] text-white leading-[1.5] font-normal">
+          <p className="text-[14px] sm:text-[16px] md:text-[18px] text-white leading-[1.5] font-normal">
             When your team builds their personal brand your company becomes the obvious choice. Teams with 70%+ participation typically see exponential growth in visibility.
           </p>
 
           {/* CTA */}
           <a
             href="#"
-            className="self-start flex items-center gap-2 pl-7 pr-10 py-4 rounded-full border border-[#ED6B52] text-[16px] font-bold text-[#ED6B52] whitespace-nowrap"
+            className="self-start flex items-center gap-2 pl-5 pr-8 sm:pl-6 sm:pr-9 md:pl-7 md:pr-10 py-3 sm:py-3.5 md:py-4 rounded-full border border-[#ED6B52] text-[14px] sm:text-[15px] md:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap"
           >
             <span>•</span>
             <span>Build your team&apos;s influence →</span>
@@ -93,9 +92,9 @@ export default function GrowthEngineSection() {
         </div>
 
         {/* RIGHT: testimonial card stack */}
-        <div className="relative shrink-0 overflow-hidden" style={{ width: 558, height: 358 }}>
+        <div className="relative shrink-0 overflow-hidden w-full lg:w-[558px] h-[280px] sm:h-[320px] md:h-[358px]">
           <motion.div
-            className="absolute top-0 left-0 flex gap-[16px] items-center"
+            className="absolute top-0 left-0 flex gap-3 sm:gap-4 md:gap-[16px] items-center"
             animate={{ x: [0, -380] }}
             transition={{ duration: 20, ease: "linear", repeat: Infinity }}
           >
@@ -103,60 +102,61 @@ export default function GrowthEngineSection() {
             {TESTIMONIAL_CARDS.map((card, i) => (
               <div
                 key={i}
-                className="glass-border-card shrink-0 flex flex-col p-[33px] rounded-[8px]"
+                className="glass-border-card shrink-0 flex flex-col p-5 sm:p-6 md:p-[33px] rounded-[8px]"
                 style={{
-                  width: 364,
+                  width: 'min(90vw, 364px)',
                   backgroundColor: "rgba(255,255,255,0.04)",
                   // @ts-ignore
                   "--fx-filter": "blur(4px) liquid-glass(2, 10, 1) saturate(1.25) color-overlay(black,.3) contrast(1.25)",
                 }}
               >
-                <div className="flex flex-col gap-[25px]">
-                  <div style={{ transform: "rotate(180deg)", width: 28, height: 20 }}>
-                    <Image src="/assets/growth/quote-mark.svg" alt="" width={28} height={20} />
+                <div className="flex flex-col gap-4 sm:gap-5 md:gap-[25px]">
+                  <div className="w-[24px] h-[18px] sm:w-[26px] sm:h-[19px] md:w-[28px] md:h-[20px]" style={{ transform: "rotate(180deg)" }}>
+                    <Image src="/assets/growth/quote-mark.svg" alt="" width={28} height={20} className="w-full h-full" />
                   </div>
                   <p
-                    className="text-white font-normal"
-                    style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 17.8, lineHeight: 1.5 }}
+                    className="text-white font-normal text-[15px] sm:text-[16px] md:text-[17.8px] leading-[1.5]"
+                    style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
                   >
                     {card.quote}
                   </p>
                   <div
-                    className="flex items-center justify-between pt-[8px]"
+                    className="flex items-center justify-between pt-2 md:pt-[8px]"
                     style={{ borderTop: "1.048px solid rgba(255,255,255,0.1)" }}
                   >
-                    <div className="flex items-center gap-[8px]">
+                    <div className="flex items-center gap-2 md:gap-[8px]">
                       <Image
                         src="/assets/growth/avatar.png"
                         alt={card.name}
                         width={44}
                         height={44}
-                        className="rounded-full object-cover shrink-0"
+                        className="rounded-full object-cover shrink-0 w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[44px] md:h-[44px]"
                         unoptimized
                       />
                       <div className="flex flex-col">
-                        <div className="flex items-center gap-[8px]">
+                        <div className="flex items-center gap-[6px] sm:gap-[8px]">
                           <span
-                            className="text-white font-normal"
-                            style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 12.5 }}
+                            className="text-white font-normal text-[11px] sm:text-[12px] md:text-[12.5px]"
+                            style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
                           >
                             {card.name}
                           </span>
                           <span
-                            className="font-light"
-                            style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 10, color: "#aaaaaa" }}
+                            className="font-light text-[9px] sm:text-[10px]"
+                            style={{ fontFamily: "var(--font-space-grotesk), sans-serif", color: "#aaaaaa" }}
                           >
                             {card.time}
                           </span>
                         </div>
                         <span
-                          style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 8.4, color: "#d5d5d5" }}
+                          className="text-[7.5px] sm:text-[8px] md:text-[8.4px]"
+                          style={{ fontFamily: "var(--font-space-grotesk), sans-serif", color: "#d5d5d5" }}
                         >
                           {card.title}
                         </span>
                       </div>
                     </div>
-                    <div className="relative rounded-[5px] overflow-hidden shrink-0" style={{ width: 24, height: 24 }}>
+                    <div className="relative rounded-[5px] overflow-hidden shrink-0 w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]">
                       <Image
                         src="/assets/growth/linkedin-icon.png"
                         alt="LinkedIn"
@@ -173,28 +173,30 @@ export default function GrowthEngineSection() {
         </div>
       </div>
 
-      {/* Floating benefit pills */}
-      {BENEFIT_PILLS.map((pill) => (
-        <div
-          key={pill.text}
-          className="glass-border absolute flex items-center gap-[12px] px-[32px] py-[20px] rounded-full overflow-hidden"
-          style={{
-            top: pill.top,
-            left: pill.left,
-            position: "absolute",
-            // @ts-ignore
-            "--fx-filter": "blur(4px) liquid-glass(2, 10, 1) saturate(1.25) color-overlay(black,.3) contrast(1.25)",
-          }}
-        >
-          <Image src="/assets/growth/pill-icon.svg" alt="" width={15} height={15} />
-          <span
-            className="font-medium text-[#ED6B52] whitespace-nowrap"
-            style={{ fontSize: 16, letterSpacing: "0.64px" }}
+      {/* Floating benefit pills - hidden on mobile/tablet */}
+      <div className="hidden lg:block">
+        {BENEFIT_PILLS.map((pill) => (
+          <div
+            key={pill.text}
+            className="glass-border absolute flex items-center gap-[12px] px-[32px] py-[20px] rounded-full overflow-hidden"
+            style={{
+              top: pill.top,
+              left: pill.left,
+              position: "absolute",
+              // @ts-ignore
+              "--fx-filter": "blur(4px) liquid-glass(2, 10, 1) saturate(1.25) color-overlay(black,.3) contrast(1.25)",
+            }}
           >
-            {pill.text}
-          </span>
-        </div>
-      ))}
+            <Image src="/assets/growth/pill-icon.svg" alt="" width={15} height={15} />
+            <span
+              className="font-medium text-[#ED6B52] whitespace-nowrap"
+              style={{ fontSize: 16, letterSpacing: "0.64px" }}
+            >
+              {pill.text}
+            </span>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
