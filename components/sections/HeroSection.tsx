@@ -1,9 +1,53 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import RotatingCircle from "@/components/RotatingCircle";
 import ProfileCard from "@/components/ProfileCard";
+
+function CounterStat({ value }: { value: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [display, setDisplay] = useState("0");
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    const match = value.match(/^([\d.]+)(.*)$/);
+    if (!match) {
+      setDisplay(value);
+      return;
+    }
+
+    const target = parseFloat(match[1]);
+    const suffix = match[2];
+    const duration = 1500;
+    const startTime = Date.now();
+    const isDecimal = target % 1 !== 0;
+
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = target * eased;
+
+      if (isDecimal) {
+        setDisplay(current.toFixed(1) + suffix);
+      } else {
+        setDisplay(Math.round(current) + suffix);
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [isInView, value]);
+
+  return <span ref={ref}>{display}</span>;
+}
 
 const STAT_ITEMS = [
   {
@@ -273,7 +317,7 @@ export default function HeroSection() {
                   </div>
                   <div className="flex flex-col items-center">
                     <span className="font-bold text-[#ff5722] leading-none text-center text-[14px] sm:text-[16px] md:text-[18.5px]">
-                      {stat.value}
+                      <CounterStat value={stat.value} />
                     </span>
                     <div className="mt-[6px] sm:mt-[8px] md:mt-[9px] flex flex-col items-center">
                       <span className="text-[#4b5563] font-semibold text-center whitespace-nowrap text-[7px] sm:text-[7.5px] md:text-[8.2px] leading-[10px] sm:leading-[10.5px] md:leading-[11.3px]">
