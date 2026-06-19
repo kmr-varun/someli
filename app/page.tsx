@@ -6,6 +6,7 @@ import FeaturesSection from "@/components/sections/FeaturesSection";
 import ProvenImpactSection from "@/components/sections/ProvenImpactSection";
 import ContentManagementSection from "@/components/sections/ContentManagementSection";
 import BeforeAfterSection from "@/components/sections/BeforeAfterSection";
+import HowItWorksSection from "@/components/sections/HowItWorksSection";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <LogosSection label="Our Partnerships" />
       <ContentManagementSection />
       <BeforeAfterSection />
+      <HowItWorksSection />
     </main>
   );
 }

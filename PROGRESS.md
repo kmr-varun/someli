@@ -1,11 +1,11 @@
 # Someli.ai — Build Progress
 
 ## Current Work
-**Section:** 9 — How It Works
-**Figma Node:** `233:10577`
+**Section:** 10 — Reach Calculator
+**Figma Node:** `225:6598`
 **Status:** not started
-**Stopped at:** Section 8 completed and verified - Before/After section rendering correctly with overlapping cards and grid background
-**Next step:** Run `get_design_context` and `get_screenshot` on node 233:10577, identify the 3-tab accordion structure (Brand Intelligence, AI Content Engine, Distribution & Insights), then implement HowItWorksSection.tsx
+**Stopped at:** Section 9 completed and verified - How It Works section showing all 3 items (Brand Intelligence, AI Content Engine, Distribution & Insights) with gradient/light backgrounds, icons, bullets, and dashboard mockups
+**Next step:** Run `get_design_context` and `get_screenshot` on node 225:6598, identify the interactive reach calculator widget with input field and calculation logic, then implement ReachCalculatorSection.tsx
 
 ---
 
@@ -20,7 +20,7 @@
 - [x] 6 — Logos Marquee 2     → reuses `components/sections/LogosSection.tsx` with label="Our Partnerships"
 - [x] 7 — Content Management  → `components/sections/ContentManagementSection.tsx`
 - [x] 8 — Before / After      → `components/sections/BeforeAfterSection.tsx`
-- [ ] 9 — How It Works        → `components/sections/HowItWorksSection.tsx`
+- [x] 9 — How It Works        → `components/sections/HowItWorksSection.tsx`
 - [ ] 10 — Reach Calculator   → `components/sections/ReachCalculatorSection.tsx`
 - [ ] 11 — Pricing            → `components/sections/PricingSection.tsx`
 - [ ] 12 — Blog               → `components/sections/BlogSection.tsx`
@@ -88,6 +88,12 @@ After each section is coded, before marking `[x] done`:
 - **Props:** none (static)
 - **Assets used:** `public/assets/before-after/grid-pattern.png`, `public/assets/before-after/x-icon.svg`, `public/assets/before-after/check-icon.svg`
 - **Decisions:** Two overlapping cards — "Before Someli" (white bg, orange border, positioned left with `top-[50px]`) and "After Someli" (gradient bg from `#DF8251` to `#D54050`, positioned right with `top-0`, higher z-index). Cards use exact pixel values from Figma (278.72px and 348.96px widths, 22.3px border radius). Grid background pattern applied via inline CSS `backgroundImage` (same as Hero and Proven Impact sections). Pill label uses Space Grotesk font per Figma design context.
+
+### HowItWorksSection
+- **File:** `components/sections/HowItWorksSection.tsx`
+- **Props:** none (static)
+- **Assets used:** `public/assets/how-it-works/dashboard-tab1.png`, `public/assets/how-it-works/dashboard-tab3.png`, `public/assets/how-it-works/checkmark.svg`, `public/assets/how-it-works/icon-content.svg`, `public/assets/how-it-works/g3473.svg` (brand intelligence icon parts)
+- **Decisions:** NOT a tab accordion - all three items (01/ Brand Intelligence Layer, 02/ AI Content Engine, 03/ Distribution & Insights Layer) are always visible simultaneously in a vertical stack. First item has gradient background (`from-[#df8251] to-[#d54050]`) with white text, items 2 & 3 have light orange background (`bg-[rgba(247,103,57,0.06)]`) with dark text. Each item shows left panel (243px width) with number/icon/title, and right panel with description, 3 bullet points, and dashboard mockup (512×321px). Tab 3 mockup uses different object positioning (`left -3.39% top -5.3%`) vs tabs 1 & 2 (`left -0.04% top 0%`). Added `sizes="512px"` to Image components to eliminate Next.js warning.
 
 ---
 
