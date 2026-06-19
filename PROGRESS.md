@@ -73,9 +73,9 @@ After each section is coded, before marking `[x] done`:
 
 ### ProvenImpactSection
 - **File:** `components/sections/ProvenImpactSection.tsx`
-- **Props:** none (static)
+- **Props:** none (client component - uses Framer Motion)
 - **Assets used:** `public/assets/proven-impact/icon-increase.svg`, `public/assets/proven-impact/icon-group.svg`, `public/assets/proven-impact/grid-pattern.svg`
-- **Decisions:** Grid background pattern applied via inline CSS `backgroundImage` (same as Hero). Large outlined numbers use `-webkit-text-stroke` with brand orange (`#ED6B52`), font-weight 600 to minimize internal artifacts, `padding-left: 4px` to prevent clipping. CSS class moved outside `@layer base` for proper specificity. Fully dynamic via `stats` array - change number text directly. Fade gradients on left column (top/bottom) positioned absolutely. Pill label uses Inter font per Figma (only element that doesn't use Montserrat).
+- **Decisions:** Grid background pattern applied via inline CSS `backgroundImage` (same as Hero). Large outlined numbers use 8-directional text-shadow approach with brand orange (`#ED6B52`) - avoids webkit-text-stroke internal artifacts. Fully dynamic via `stats` array - change number text directly. Infinite vertical scroll animation using Framer Motion (20s linear duration, seamless loop with duplicated stats). Fade gradients with `z-10` to overlay animated content. Pill label uses Inter font per Figma (only element that doesn't use Montserrat).
 
 ---
 
