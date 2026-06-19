@@ -1,11 +1,11 @@
 # Someli.ai — Build Progress
 
 ## Current Work
-**Section:** 10 — Reach Calculator
-**Figma Node:** `225:6598`
+**Section:** 11 — Pricing
+**Figma Node:** `225:6658`
 **Status:** not started
-**Stopped at:** Section 9 completed and verified - How It Works section showing all 3 items (Brand Intelligence, AI Content Engine, Distribution & Insights) with gradient/light backgrounds, icons, bullets, and dashboard mockups
-**Next step:** Run `get_design_context` and `get_screenshot` on node 225:6598, identify the interactive reach calculator widget with input field and calculation logic, then implement ReachCalculatorSection.tsx
+**Stopped at:** Section 10 completed and verified - Reach Calculator with interactive input field, real-time calculations (Brand Reach × Employee Networks = 10X), report request card, and floating "Trusted by 500+" card
+**Next step:** Run `get_design_context` and `get_screenshot` on node 225:6658, identify the pricing plan card with feature checklist and 30-day guarantee badge, then implement PricingSection.tsx
 
 ---
 
@@ -21,7 +21,7 @@
 - [x] 7 — Content Management  → `components/sections/ContentManagementSection.tsx`
 - [x] 8 — Before / After      → `components/sections/BeforeAfterSection.tsx`
 - [x] 9 — How It Works        → `components/sections/HowItWorksSection.tsx`
-- [ ] 10 — Reach Calculator   → `components/sections/ReachCalculatorSection.tsx`
+- [x] 10 — Reach Calculator   → `components/sections/ReachCalculatorSection.tsx`
 - [ ] 11 — Pricing            → `components/sections/PricingSection.tsx`
 - [ ] 12 — Blog               → `components/sections/BlogSection.tsx`
 - [ ] 13 — Certifications     → `components/sections/CertificationsSection.tsx`
@@ -94,6 +94,12 @@ After each section is coded, before marking `[x] done`:
 - **Props:** none (client component - uses GSAP ScrollTrigger)
 - **Assets used:** `public/assets/how-it-works/dashboard-tab1.png`, `public/assets/how-it-works/dashboard-tab3.png`, `public/assets/how-it-works/checkmark.svg`, `public/assets/how-it-works/icon-content.svg`, `public/assets/how-it-works/g3473.svg` (brand intelligence icon parts), `public/assets/how-it-works/ellipse-1.svg`, `public/assets/how-it-works/ellipse-2.svg`, `public/assets/how-it-works/ellipse-3.svg`, `public/assets/how-it-works/line-1.svg`, `public/assets/how-it-works/line-2.svg`
 - **Decisions:** NOT a tab accordion - all three items (01/ Brand Intelligence Layer, 02/ AI Content Engine, 03/ Distribution & Insights Layer) are always visible simultaneously in a vertical stack. Uses GSAP ScrollTrigger to animate cards as they enter viewport center: card shadow fades in, left panel transitions from light orange `bg-[rgba(247,103,57,0.06)]` to gradient `from-[#df8251] to-[#d54050]`, text changes from dark/orange to white. Left sidebar shows 3 dots (outlined circles that fill solid orange `#ED6B52` when active) connected by vertical lines (light background line always visible, dark line fills from top with `scaleY` animation). Each item shows left panel (243px width) with number/icon/title, and right panel with description, 3 bullet points, and dashboard mockup (512×321px). Tab 3 mockup uses different object positioning (`left -3.39% top -5.3%`) vs tabs 1 & 2 (`left -0.04% top 0%`). All animations reverse on scroll back using `onLeaveBack`.
+
+### ReachCalculatorSection
+- **File:** `components/sections/ReachCalculatorSection.tsx`
+- **Props:** none (static Server Component)
+- **Assets used:** `public/assets/reach-calculator/background-pattern.png`, `public/assets/reach-calculator/icon-brand.svg`, `public/assets/reach-calculator/icon-network.svg`, `public/assets/reach-calculator/icon-report.svg`, `public/assets/reach-calculator/checkmark.svg`, `public/assets/reach-calculator/avatar-1.png`, `public/assets/reach-calculator/avatar-2.png`, `public/assets/reach-calculator/avatar-3.png`
+- **Decisions:** Dark section with background pattern. Left side has heading + static calculator widget with gradient background `from-[#DF8251] to-[#D54050]`. Calculator shows: Your Brand Reach 120k × Employee Networks 250k+ = 10X More Reach 1.2M+ (all static values, no input field). Right side has report request card with icon, heading, 3 checkmarked bullets (Space Grotesk font), and CTA button. Both the report card and floating "Trusted by 500+" card use glass effect (`--fx-filter: blur(4px) liquid-glass(2, 10, 1) saturate(1.25) color-overlay(black,.3) contrast(1.25)`). Floating card positioned absolutely at `left-[765px] top-[79.81px]` with avatar stack. Pill label uses Space Grotesk font per Figma.
 
 ---
 

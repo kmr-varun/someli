@@ -7,6 +7,7 @@ import ProvenImpactSection from "@/components/sections/ProvenImpactSection";
 import ContentManagementSection from "@/components/sections/ContentManagementSection";
 import BeforeAfterSection from "@/components/sections/BeforeAfterSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
+import ReachCalculatorSection from "@/components/sections/ReachCalculatorSection";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <ContentManagementSection />
       <BeforeAfterSection />
       <HowItWorksSection />
+      <ReachCalculatorSection />
     </main>
   );
 }
