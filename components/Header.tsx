@@ -39,7 +39,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white w-full">
-      <div className="flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-3 md:py-4 h-16 md:h-20 xl:h-24">
+      <div className="max-w-[1440px] mx-auto flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-3 md:py-4 h-16 md:h-20 xl:h-24">
         {/* Left: logo + nav */}
         <div className="flex items-center gap-4 md:gap-6 lg:gap-10">
           {/* Logo */}

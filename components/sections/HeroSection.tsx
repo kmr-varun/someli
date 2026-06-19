@@ -54,7 +54,7 @@ export default function HeroSection() {
         className="absolute inset-0 object-cover pointer-events-none"
       />
 
-      <div className="relative px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 pt-8 sm:pt-12 md:pt-16 lg:pt-24 xl:pt-[120px] pb-6 sm:pb-8 md:pb-10 flex flex-col">
+      <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 pt-8 sm:pt-12 md:pt-16 lg:pt-24 xl:pt-[120px] pb-6 sm:pb-8 md:pb-10 flex flex-col">
         {/* Main two-column row */}
         <div className="flex flex-col lg:flex-row items-start gap-6 sm:gap-8 lg:gap-8">
           {/* LEFT: ~49% — matches Figma 606px out of 1248px content area */}

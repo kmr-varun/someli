@@ -29,7 +29,7 @@ interface LogosSectionProps {
 export default function LogosSection({ label = "Businesses That Grow With Someli" }: LogosSectionProps) {
   return (
     <section className="w-full bg-white py-12 sm:py-16 md:py-20 lg:py-[80px] overflow-hidden">
-      <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 lg:gap-[46px] items-center">
+      <div className="max-w-[1440px] mx-auto flex flex-col gap-8 sm:gap-10 md:gap-12 lg:gap-[46px] items-center">
         {/* Label */}
         <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[17px] font-normal text-[#222] tracking-[1px] sm:tracking-[1.2px] md:tracking-[1.36px] uppercase px-4 text-center">
           {label}

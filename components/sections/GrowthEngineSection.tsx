@@ -4,10 +4,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const BENEFIT_PILLS = [
-  { text: "More reach across more people",  top: "36px",    left: "967px" },
-  { text: "Higher trust and credibility",   top: "96px",   left: "687px" },
-  { text: "Stronger employee brand",        top: "554px",   left: "711px" },
-  { text: "More inbound opportunities",     top: "634px",   left: "1041px" },
+  { text: "More reach across more people",  top: "36px",    right: "120px" },
+  { text: "Higher trust and credibility",   top: "96px",   right: "400px" },
+  { text: "Stronger employee brand",        top: "554px",   right: "376px" },
+  { text: "More inbound opportunities",     top: "634px",   right: "96px" },
 ];
 
 const TESTIMONIAL_CARDS = [
@@ -53,7 +53,7 @@ export default function GrowthEngineSection() {
       </div>
 
       {/* Content */}
-      <div className="relative px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px] flex flex-col lg:flex-row items-center lg:items-center justify-between gap-8 md:gap-10 lg:gap-8">
+      <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px] flex flex-col lg:flex-row items-center lg:items-center justify-between gap-8 md:gap-10 lg:gap-8">
 
         {/* LEFT: text block */}
         <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-[40px] shrink-0 w-full lg:w-[595px]">
@@ -173,16 +173,15 @@ export default function GrowthEngineSection() {
         </div>
       </div>
 
-      {/* Floating benefit pills - hidden on mobile/tablet */}
-      <div className="hidden lg:block">
+      {/* Floating benefit pills - hidden on mobile/tablet, inside capped container */}
+      <div className="hidden lg:block absolute inset-0 max-w-[1440px] mx-auto pointer-events-none">
         {BENEFIT_PILLS.map((pill) => (
           <div
             key={pill.text}
-            className="glass-border absolute flex items-center gap-[12px] px-[32px] py-[20px] rounded-full overflow-hidden"
+            className="glass-border absolute flex items-center gap-[12px] px-[32px] py-[20px] rounded-full overflow-hidden pointer-events-auto"
             style={{
               top: pill.top,
-              left: pill.left,
-              position: "absolute",
+              right: pill.right,
               // @ts-ignore
               "--fx-filter": "blur(4px) liquid-glass(2, 10, 1) saturate(1.25) color-overlay(black,.3) contrast(1.25)",
             }}

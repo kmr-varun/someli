@@ -181,7 +181,7 @@ export default function HowItWorksSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-white px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px]">
+    <section ref={sectionRef} className="relative bg-white px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px] max-w-[1440px] mx-auto">
       {/* Header */}
       <div className="mx-auto mb-10 sm:mb-12 md:mb-14 lg:mb-16 flex max-w-[892px] flex-col items-center gap-3 sm:gap-4 text-center">
         {/* Pill Label */}
