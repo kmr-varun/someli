@@ -1,11 +1,11 @@
 # Someli.ai — Build Progress
 
 ## Current Work
-**Section:** 5 — Proven Impact Stats
-**Figma Node:** `225:6301`
+**Section:** 6 — Logos Marquee 2
+**Figma Node:** `225:6391`
 **Status:** not started
-**Stopped at:** —
-**Next step:** Run `get_design_context` on node `225:6301`, take screenshot, identify all design values including outlined counter numbers with text stroke, build `components/sections/ProvenImpactSection.tsx`
+**Stopped at:** Section 5 completed and verified in browser
+**Next step:** This section reuses `LogosSection.tsx` with the same logo set — simply add another instance to `app/page.tsx` after ProvenImpactSection
 
 ---
 
@@ -16,7 +16,7 @@
 - [x] 2 — Logos Marquee 1     → `components/sections/LogosSection.tsx`
 - [x] 3 — Growth Engine       → `components/sections/GrowthEngineSection.tsx`
 - [x] 4 — Features Overview   → `components/sections/FeaturesSection.tsx`
-- [ ] 5 — Proven Impact Stats → `components/sections/ProvenImpactSection.tsx`
+- [x] 5 — Proven Impact Stats → `components/sections/ProvenImpactSection.tsx`
 - [ ] 6 — Logos Marquee 2     → reuses `components/sections/LogosSection.tsx`
 - [ ] 7 — Content Management  → `components/sections/ContentManagementSection.tsx`
 - [ ] 8 — Before / After      → `components/sections/BeforeAfterSection.tsx`
@@ -70,6 +70,12 @@ After each section is coded, before marking `[x] done`:
 - **Props:** none (static)
 - **Assets used:** `public/assets/features/dashboard-mockup.png`
 - **Decisions:** Five feature cards positioned absolutely over centered dashboard mockup. Card positions match exact Figma coordinates (top/left values). Dashboard image uses Next.js Image with exact percentage-based overflow positioning to match Figma's scaled/cropped view.
+
+### ProvenImpactSection
+- **File:** `components/sections/ProvenImpactSection.tsx`
+- **Props:** none (static)
+- **Assets used:** `public/assets/proven-impact/icon-increase.svg`, `public/assets/proven-impact/icon-group.svg`, `public/assets/proven-impact/grid-pattern.svg`
+- **Decisions:** Grid background pattern applied via inline CSS `backgroundImage` (same as Hero). Large outlined numbers use `-webkit-text-stroke` with brand orange (`#ED6B52`), font-weight 600 to minimize internal artifacts, `padding-left: 4px` to prevent clipping. CSS class moved outside `@layer base` for proper specificity. Fully dynamic via `stats` array - change number text directly. Fade gradients on left column (top/bottom) positioned absolutely. Pill label uses Inter font per Figma (only element that doesn't use Montserrat).
 
 ---
 

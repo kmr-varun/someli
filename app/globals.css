@@ -48,7 +48,6 @@ body {
     opacity: 0.6;
   }
 
-  /* Card variant — same technique, subtler for larger rounded rectangles */
   .glass-border-card {
     position: relative;
   }
@@ -74,4 +73,23 @@ body {
     z-index: 2;
     opacity: 0.5;
   }
+}
+
+/* Outlined text for Proven Impact stats - CLEAN text-shadow approach ONLY */
+.outlined-stat-number {
+  font-weight: 700;
+  color: white;
+  -webkit-text-stroke: none;
+  -webkit-text-stroke-width: 0;
+  -webkit-text-fill-color: white;
+  text-shadow:
+    -2px -2px 0 #ED6B52,
+     2px -2px 0 #ED6B52,
+    -2px  2px 0 #ED6B52,
+     2px  2px 0 #ED6B52,
+    -2px  0   0 #ED6B52,
+     2px  0   0 #ED6B52,
+     0   -2px 0 #ED6B52,
+     0    2px 0 #ED6B52;
+  padding-left: 4px;
 }
