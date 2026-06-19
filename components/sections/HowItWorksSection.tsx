@@ -95,28 +95,20 @@ export default function HowItWorksSection() {
 
             // Activate dot
             if (dotsRef.current[index]) {
-              if (index === 0) {
-                // First dot: add background
-                gsap.to(dotsRef.current[index], {
-                  backgroundColor: 'rgba(237,107,82,0.2)',
-                  scale: 1.1,
+              // Add background to container
+              gsap.to(dotsRef.current[index], {
+                backgroundColor: 'rgba(237,107,82,0.2)',
+                scale: 1.1,
+                duration: 0.3,
+              });
+
+              // Make image fully visible
+              const img = dotsRef.current[index]?.querySelector('img');
+              if (img) {
+                gsap.to(img, {
+                  opacity: 1,
                   duration: 0.3,
                 });
-              } else {
-                // Other dots: change border to filled ring with background
-                gsap.to(dotsRef.current[index], {
-                  backgroundColor: 'rgba(237,107,82,0.2)',
-                  scale: 1.1,
-                  duration: 0.3,
-                });
-                const innerCircle = dotsRef.current[index]?.querySelector('div');
-                if (innerCircle) {
-                  gsap.to(innerCircle, {
-                    borderColor: 'rgba(237,107,82,0.8)',
-                    borderWidth: '2px',
-                    duration: 0.3,
-                  });
-                }
               }
             }
 
@@ -154,28 +146,20 @@ export default function HowItWorksSection() {
 
             // Deactivate dot
             if (dotsRef.current[index]) {
-              if (index === 0) {
-                // First dot: remove background
-                gsap.to(dotsRef.current[index], {
-                  backgroundColor: 'transparent',
-                  scale: 1,
+              // Remove background
+              gsap.to(dotsRef.current[index], {
+                backgroundColor: 'transparent',
+                scale: 1,
+                duration: 0.3,
+              });
+
+              // Fade image back to 30% opacity (except first dot)
+              const img = dotsRef.current[index]?.querySelector('img');
+              if (img && index > 0) {
+                gsap.to(img, {
+                  opacity: 0.3,
                   duration: 0.3,
                 });
-              } else {
-                // Other dots: reset to light border
-                gsap.to(dotsRef.current[index], {
-                  backgroundColor: 'transparent',
-                  scale: 1,
-                  duration: 0.3,
-                });
-                const innerCircle = dotsRef.current[index]?.querySelector('div');
-                if (innerCircle) {
-                  gsap.to(innerCircle, {
-                    borderColor: 'rgba(237,107,82,0.3)',
-                    borderWidth: '2px',
-                    duration: 0.3,
-                  });
-                }
               }
             }
 
@@ -256,7 +240,13 @@ export default function HowItWorksSection() {
             }}
             className="flex w-full items-center justify-center rounded-full p-[7.369px] transition-all"
           >
-            <div className="h-[10.941px] w-[10.941px] rounded-full border-2 border-[rgba(237,107,82,0.3)] transition-all" />
+            <Image
+              src="/assets/how-it-works/ellipse-2.svg"
+              alt=""
+              width={11}
+              height={11}
+              className="opacity-30"
+            />
           </div>
 
           {/* Line 2 */}
@@ -280,7 +270,13 @@ export default function HowItWorksSection() {
             }}
             className="flex w-full items-center justify-center rounded-full p-[7.369px] transition-all"
           >
-            <div className="h-[10.941px] w-[10.941px] rounded-full border-2 border-[rgba(237,107,82,0.3)] transition-all" />
+            <Image
+              src="/assets/how-it-works/ellipse-3.svg"
+              alt=""
+              width={11}
+              height={11}
+              className="opacity-30"
+            />
           </div>
         </div>
 
