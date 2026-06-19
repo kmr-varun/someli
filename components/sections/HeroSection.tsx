@@ -42,14 +42,12 @@ const STAT_ITEMS = [
 export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden min-h-[790px]">
-      {/* Grid background */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px)",
-          backgroundSize: "46px 46px",
-        }}
+      {/* Union3 background pattern */}
+      <Image
+        src="/assets/hero/union3-background.png"
+        alt=""
+        fill
+        className="absolute inset-0 object-cover pointer-events-none"
       />
 
       <div className="relative px-24 pt-[120px] pb-10 flex flex-col">
