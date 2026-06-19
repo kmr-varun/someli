@@ -1,11 +1,11 @@
 # Someli.ai — Build Progress
 
 ## Current Work
-**Section:** 8 — Before / After
-**Figma Node:** `225:6477`
+**Section:** 9 — How It Works
+**Figma Node:** `233:10577`
 **Status:** not started
-**Stopped at:** Section 7 completed and verified - Content Management section rendering correctly with 3 device cards and social platforms pill
-**Next step:** Run `get_design_context` and `get_screenshot` on node 225:6477, identify all assets (Before/After comparison cards), then implement BeforeAfterSection.tsx
+**Stopped at:** Section 8 completed and verified - Before/After section rendering correctly with overlapping cards and grid background
+**Next step:** Run `get_design_context` and `get_screenshot` on node 233:10577, identify the 3-tab accordion structure (Brand Intelligence, AI Content Engine, Distribution & Insights), then implement HowItWorksSection.tsx
 
 ---
 
@@ -19,7 +19,7 @@
 - [x] 5 — Proven Impact Stats → `components/sections/ProvenImpactSection.tsx`
 - [x] 6 — Logos Marquee 2     → reuses `components/sections/LogosSection.tsx` with label="Our Partnerships"
 - [x] 7 — Content Management  → `components/sections/ContentManagementSection.tsx`
-- [ ] 8 — Before / After      → `components/sections/BeforeAfterSection.tsx`
+- [x] 8 — Before / After      → `components/sections/BeforeAfterSection.tsx`
 - [ ] 9 — How It Works        → `components/sections/HowItWorksSection.tsx`
 - [ ] 10 — Reach Calculator   → `components/sections/ReachCalculatorSection.tsx`
 - [ ] 11 — Pricing            → `components/sections/PricingSection.tsx`
@@ -82,6 +82,12 @@ After each section is coded, before marking `[x] done`:
 - **Props:** none (client component - uses hover effects)
 - **Assets used:** `public/assets/content-management/dashboard-screenshot.png`, `public/assets/content-management/social-icon.svg`
 - **Decisions:** Three device cards rendered with `-rotate-[10deg]` transform. All three use the same dashboard screenshot image. All cards start at `opacity-30` with gray numbers - on hover, card transitions to full opacity and number color changes to orange (`#ED6B52`). Hover effect uses Tailwind `group` utilities with 300ms transitions. Cards have simple border `rgba(255,255,255,0.1)` without fx effects. Social platforms pill positioned below with white border on dark background. Pill label uses Inter font per Figma design context.
+
+### BeforeAfterSection
+- **File:** `components/sections/BeforeAfterSection.tsx`
+- **Props:** none (static)
+- **Assets used:** `public/assets/before-after/grid-pattern.png`, `public/assets/before-after/x-icon.svg`, `public/assets/before-after/check-icon.svg`
+- **Decisions:** Two overlapping cards — "Before Someli" (white bg, orange border, positioned left with `top-[50px]`) and "After Someli" (gradient bg from `#DF8251` to `#D54050`, positioned right with `top-0`, higher z-index). Cards use exact pixel values from Figma (278.72px and 348.96px widths, 22.3px border radius). Grid background pattern applied via inline CSS `backgroundImage` (same as Hero and Proven Impact sections). Pill label uses Space Grotesk font per Figma design context.
 
 ---
 

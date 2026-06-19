@@ -5,6 +5,7 @@ import GrowthEngineSection from "@/components/sections/GrowthEngineSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import ProvenImpactSection from "@/components/sections/ProvenImpactSection";
 import ContentManagementSection from "@/components/sections/ContentManagementSection";
+import BeforeAfterSection from "@/components/sections/BeforeAfterSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <ProvenImpactSection />
       <LogosSection label="Our Partnerships" />
       <ContentManagementSection />
+      <BeforeAfterSection />
     </main>
   );
 }
