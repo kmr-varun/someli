@@ -3,13 +3,12 @@ import Image from 'next/image';
 export default function BeforeAfterSection() {
   return (
     <section className="relative w-full bg-white px-24 py-[120px] overflow-hidden">
-      {/* Grid pattern background */}
-      <div
-        className="absolute inset-0 opacity-100"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px)`,
-          backgroundSize: '46px 46px'
-        }}
+      {/* Union pattern background */}
+      <Image
+        src="/assets/before-after/union-background.png"
+        alt=""
+        fill
+        className="absolute inset-0 object-cover pointer-events-none"
       />
 
       <div className="relative max-w-[1440px] mx-auto flex items-center justify-between gap-16">
