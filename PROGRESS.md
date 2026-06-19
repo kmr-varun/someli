@@ -1,11 +1,11 @@
 # Someli.ai — Build Progress
 
 ## Current Work
-**Section:** 7 — Content Management
-**Figma Node:** `225:6448`
+**Section:** 8 — Before / After
+**Figma Node:** `225:6477`
 **Status:** not started
-**Stopped at:** Section 6 completed and verified - "Our Partnerships" marquee rendering correctly
-**Next step:** Run `get_design_context` and `get_screenshot` on node 225:6448, identify all assets (3 device mockups + social platform pills), then implement ContentManagementSection.tsx
+**Stopped at:** Section 7 completed and verified - Content Management section rendering correctly with 3 device cards and social platforms pill
+**Next step:** Run `get_design_context` and `get_screenshot` on node 225:6477, identify all assets (Before/After comparison cards), then implement BeforeAfterSection.tsx
 
 ---
 
@@ -18,7 +18,7 @@
 - [x] 4 — Features Overview   → `components/sections/FeaturesSection.tsx`
 - [x] 5 — Proven Impact Stats → `components/sections/ProvenImpactSection.tsx`
 - [x] 6 — Logos Marquee 2     → reuses `components/sections/LogosSection.tsx` with label="Our Partnerships"
-- [ ] 7 — Content Management  → `components/sections/ContentManagementSection.tsx`
+- [x] 7 — Content Management  → `components/sections/ContentManagementSection.tsx`
 - [ ] 8 — Before / After      → `components/sections/BeforeAfterSection.tsx`
 - [ ] 9 — How It Works        → `components/sections/HowItWorksSection.tsx`
 - [ ] 10 — Reach Calculator   → `components/sections/ReachCalculatorSection.tsx`
@@ -76,6 +76,12 @@ After each section is coded, before marking `[x] done`:
 - **Props:** none (client component - uses Framer Motion)
 - **Assets used:** `public/assets/proven-impact/icon-increase.svg`, `public/assets/proven-impact/icon-group.svg`, `public/assets/proven-impact/grid-pattern.svg`
 - **Decisions:** Grid background pattern applied via inline CSS `backgroundImage` (same as Hero). Large outlined numbers use 8-directional text-shadow approach with brand orange (`#ED6B52`) - avoids webkit-text-stroke internal artifacts. Fully dynamic via `stats` array - change number text directly. Infinite vertical scroll animation using Framer Motion (20s linear duration, seamless loop with duplicated stats). Fade gradients with `z-10` to overlay animated content. Pill label uses Inter font per Figma (only element that doesn't use Montserrat).
+
+### ContentManagementSection
+- **File:** `components/sections/ContentManagementSection.tsx`
+- **Props:** none (client component - uses hover effects)
+- **Assets used:** `public/assets/content-management/dashboard-screenshot.png`, `public/assets/content-management/social-icon.svg`
+- **Decisions:** Three device cards rendered with `-rotate-[10deg]` transform. All three use the same dashboard screenshot image. All cards start at `opacity-30` with gray numbers - on hover, card transitions to full opacity and number color changes to orange (`#ED6B52`). Hover effect uses Tailwind `group` utilities with 300ms transitions. Cards have simple border `rgba(255,255,255,0.1)` without fx effects. Social platforms pill positioned below with white border on dark background. Pill label uses Inter font per Figma design context.
 
 ---
 
