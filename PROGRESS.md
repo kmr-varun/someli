@@ -1,11 +1,11 @@
 # Someli.ai — Build Progress
 
 ## Current Work
-**Section:** 2 — Logos Marquee 1
-**Figma Node:** `225:6190`
+**Section:** 4 — Features / CMS Overview
+**Figma Node:** `225:6275`
 **Status:** not started
 **Stopped at:** —
-**Next step:** Run `get_design_context` on node `225:6190`, take screenshot, identify all logos and marquee timing, download logo assets, build `components/sections/LogosSection.tsx` (reused for both marquee sections)
+**Next step:** Run `get_design_context` on node `225:6275`, take screenshot, identify all design values, download assets, build `components/sections/FeaturesSection.tsx`
 
 ---
 
@@ -13,8 +13,8 @@
 
 - [x] 0 — Header              → `components/Header.tsx`
 - [x] 1 — Hero                → `components/sections/HeroSection.tsx`
-- [ ] 2 — Logos Marquee 1     → `components/sections/LogosSection.tsx`
-- [ ] 3 — Growth Engine       → `components/sections/GrowthEngineSection.tsx`
+- [x] 2 — Logos Marquee 1     → `components/sections/LogosSection.tsx`
+- [x] 3 — Growth Engine       → `components/sections/GrowthEngineSection.tsx`
 - [ ] 4 — Features Overview   → `components/sections/FeaturesSection.tsx`
 - [ ] 5 — Proven Impact Stats → `components/sections/ProvenImpactSection.tsx`
 - [ ] 6 — Logos Marquee 2     → reuses `components/sections/LogosSection.tsx`
