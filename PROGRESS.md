@@ -1,11 +1,11 @@
 # Someli.ai — Build Progress
 
 ## Current Work
-**Section:** 6 — Logos Marquee 2
-**Figma Node:** `225:6391`
+**Section:** 7 — Content Management
+**Figma Node:** `225:6448`
 **Status:** not started
-**Stopped at:** Section 5 completed and verified in browser
-**Next step:** This section reuses `LogosSection.tsx` with the same logo set — simply add another instance to `app/page.tsx` after ProvenImpactSection
+**Stopped at:** Section 6 completed and verified - "Our Partnerships" marquee rendering correctly
+**Next step:** Run `get_design_context` and `get_screenshot` on node 225:6448, identify all assets (3 device mockups + social platform pills), then implement ContentManagementSection.tsx
 
 ---
 
@@ -17,7 +17,7 @@
 - [x] 3 — Growth Engine       → `components/sections/GrowthEngineSection.tsx`
 - [x] 4 — Features Overview   → `components/sections/FeaturesSection.tsx`
 - [x] 5 — Proven Impact Stats → `components/sections/ProvenImpactSection.tsx`
-- [ ] 6 — Logos Marquee 2     → reuses `components/sections/LogosSection.tsx`
+- [x] 6 — Logos Marquee 2     → reuses `components/sections/LogosSection.tsx` with label="Our Partnerships"
 - [ ] 7 — Content Management  → `components/sections/ContentManagementSection.tsx`
 - [ ] 8 — Before / After      → `components/sections/BeforeAfterSection.tsx`
 - [ ] 9 — How It Works        → `components/sections/HowItWorksSection.tsx`

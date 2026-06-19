@@ -14,6 +14,7 @@ export default function Home() {
       <GrowthEngineSection />
       <FeaturesSection />
       <ProvenImpactSection />
+      <LogosSection label="Our Partnerships" />
     </main>
   );
 }

@@ -7,7 +7,19 @@ const LOGOS = [
   { src: "/assets/logos/logomark.svg",  width: 35,  height: 35,  alt: "Logo mark" },
   { src: "/assets/logos/logotype.svg",  width: 219, height: 17,  alt: "Logotype" },
   { src: "/assets/logos/logotype1.svg", width: 108, height: 35,  alt: "Logo" },
+  { src: "/assets/logos/logotype.svg",  width: 219, height: 17,  alt: "Logotype" },
   { src: "/assets/logos/logotype2.svg", width: 112, height: 35,  alt: "Logotype 2" },
+  { src: "/assets/logos/logomark.svg",  width: 35,  height: 35,  alt: "Logo mark" },
+  { src: "/assets/logos/logotype1.svg", width: 108, height: 35,  alt: "Logo" },
+  { src: "/assets/logos/logotype.svg",  width: 219, height: 17,  alt: "Logotype" },
+  { src: "/assets/logos/logomark.svg",  width: 35,  height: 35,  alt: "Logo mark" },
+  { src: "/assets/logos/logotype.svg",  width: 219, height: 17,  alt: "Logotype" },
+  { src: "/assets/logos/logotype1.svg", width: 108, height: 35,  alt: "Logo" },
+  { src: "/assets/logos/logotype.svg",  width: 219, height: 17,  alt: "Logotype" },
+  { src: "/assets/logos/logotype2.svg", width: 112, height: 35,  alt: "Logotype 2" },
+  { src: "/assets/logos/logomark.svg",  width: 35,  height: 35,  alt: "Logo mark" },
+  { src: "/assets/logos/logotype1.svg", width: 108, height: 35,  alt: "Logo" },
+  { src: "/assets/logos/logotype.svg",  width: 219, height: 17,  alt: "Logotype" },
 ];
 
 interface LogosSectionProps {
