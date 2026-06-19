@@ -62,7 +62,17 @@ export default function HowItWorksSection() {
     if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
-      // Animate each card as it enters view
+      // Pin the section while scrolling through cards
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: 'top top',
+        end: '+=3000', // Scroll distance (adjust as needed)
+        pin: true,
+        pinSpacing: true,
+        scrub: 1,
+      });
+
+      // Animate each card based on scroll progress
       cardsRef.current.forEach((card, index) => {
         if (!card) return;
 
@@ -70,85 +80,90 @@ export default function HowItWorksSection() {
         const number = card.querySelector('[data-number]') as HTMLElement;
         const title = card.querySelector('[data-title]') as HTMLElement;
 
+        // Calculate scroll progress ranges for each card
+        // Card 1: 0-33%, Card 2: 33-66%, Card 3: 66-100%
+        const startProgress = index / items.length;
+        const endProgress = (index + 1) / items.length;
+
         ScrollTrigger.create({
-          trigger: card,
-          start: 'top center',
-          end: 'bottom center',
-          onEnter: () => {
-            // Activate card
-            gsap.to(card, {
-              boxShadow: '0px 4px 25px 0px rgba(0,0,0,0.08)',
-              duration: 0.3,
-            });
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: '+=3000',
+          scrub: 1,
+          onUpdate: (self) => {
+            const progress = self.progress;
 
-            // Activate left panel
-            gsap.to(leftPanel, {
-              background: 'linear-gradient(to bottom, #df8251, #d54050)',
-              duration: 0.3,
-            });
-
-            // Activate text
-            gsap.to([number, title], {
-              color: '#ffffff',
-              duration: 0.3,
-            });
-
-            // Activate dot
-            if (dotsRef.current[index]) {
-              gsap.to(dotsRef.current[index], {
-                backgroundColor: 'rgba(237,107,82,0.2)',
-                scale: 1.1,
+            // Activate when in range
+            if (progress >= startProgress && progress < endProgress) {
+              // Activate card
+              gsap.to(card, {
+                boxShadow: '0px 4px 25px 0px rgba(0,0,0,0.08)',
                 duration: 0.3,
               });
-            }
 
-            // Animate line fill (if not last item)
-            if (index < linesRef.current.length && linesRef.current[index]) {
-              gsap.fromTo(
-                linesRef.current[index],
-                { scaleY: 0 },
-                { scaleY: 1, duration: 0.6, ease: 'power2.out' }
-              );
-            }
-          },
-          onLeaveBack: () => {
-            // Deactivate card
-            gsap.to(card, {
-              boxShadow: '0px 0px 0px 0px rgba(0,0,0,0)',
-              duration: 0.3,
-            });
-
-            // Deactivate left panel
-            gsap.to(leftPanel, {
-              background: 'rgba(247,103,57,0.06)',
-              duration: 0.3,
-            });
-
-            // Deactivate text
-            gsap.to(number, {
-              color: '#f76739',
-              duration: 0.3,
-            });
-            gsap.to(title, {
-              color: '#222222',
-              duration: 0.3,
-            });
-
-            // Deactivate dot
-            if (dotsRef.current[index]) {
-              gsap.to(dotsRef.current[index], {
-                backgroundColor: 'transparent',
-                scale: 1,
+              // Activate left panel
+              gsap.to(leftPanel, {
+                background: 'linear-gradient(to bottom, #df8251, #d54050)',
                 duration: 0.3,
               });
-            }
 
-            // Reset line (if not last item)
-            if (index < linesRef.current.length && linesRef.current[index]) {
-              gsap.to(linesRef.current[index], {
-                scaleY: 0,
+              // Activate text
+              gsap.to([number, title], {
+                color: '#ffffff',
                 duration: 0.3,
               });
+
+              // Activate dot
+              if (dotsRef.current[index]) {
+                gsap.to(dotsRef.current[index], {
+                  backgroundColor: 'rgba(237,107,82,0.2)',
+                  scale: 1.1,
+                  duration: 0.3,
+                });
+              }
+
+              // Animate line fill (if not last item)
+              if (index < linesRef.current.length && linesRef.current[index]) {
+                gsap.to(linesRef.current[index], {
+                  scaleY: 1,
+                  duration: 0.3,
+                });
+              }
+            } else if (progress < startProgress) {
+              // Deactivate if before range
+              gsap.to(card, {
+                boxShadow: '0px 0px 0px 0px rgba(0,0,0,0)',
+                duration: 0.3,
+              });
+
+              gsap.to(leftPanel, {
+                background: 'rgba(247,103,57,0.06)',
+                duration: 0.3,
+              });
+
+              gsap.to(number, {
+                color: '#f76739',
+                duration: 0.3,
+              });
+              gsap.to(title, {
+                color: '#222222',
+                duration: 0.3,
+              });
+
+              if (dotsRef.current[index]) {
+                gsap.to(dotsRef.current[index], {
+                  backgroundColor: 'transparent',
+                  scale: 1,
+                  duration: 0.3,
+                });
+              }
+
+              if (index < linesRef.current.length && linesRef.current[index]) {
+                gsap.to(linesRef.current[index], {
+                  scaleY: 0,
+                  duration: 0.3,
+                });
+              }
             }
           },
         });
