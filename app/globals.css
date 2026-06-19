@@ -93,3 +93,18 @@ body {
      0    2px 0 #ED6B52;
   padding-left: 4px;
 }
+
+.outlined-text-orange {
+  font-weight: 700;
+  color: white;
+  -webkit-text-fill-color: white;
+  text-shadow:
+    -1px -1px 0 #ED6B52,
+     1px -1px 0 #ED6B52,
+    -1px  1px 0 #ED6B52,
+     1px  1px 0 #ED6B52,
+    -1px  0   0 #ED6B52,
+     1px  0   0 #ED6B52,
+     0   -1px 0 #ED6B52,
+     0    1px 0 #ED6B52;
+}

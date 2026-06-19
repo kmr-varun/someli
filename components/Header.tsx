@@ -55,7 +55,7 @@ export default function Header() {
           </div>
 
           {/* Nav links - hidden on mobile, visible from md */}
-          <nav className="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-6">
+          <nav className="hidden lg:flex items-center gap-3 lg:gap-4 xl:gap-6">
             {NAV_ITEMS.map((item) => (
               <div key={item.label} className="relative group">
                 <a
@@ -106,7 +106,7 @@ export default function Header() {
           {/* Log in — ghost, no border */}
           <a
             href="#"
-            className="hidden sm:flex items-center gap-1 sm:gap-2 px-3 sm:pl-4 sm:pr-6 md:pl-5 md:pr-8 lg:pl-7 lg:pr-10 py-2 sm:py-3 md:py-4 rounded-full text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap"
+            className="hidden lg:flex items-center gap-1 sm:gap-2 px-3 sm:pl-4 sm:pr-6 md:pl-5 md:pr-8 lg:pl-7 lg:pr-10 py-2 sm:py-3 md:py-4 rounded-full text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap"
           >
             <span>•</span>
             <span>Log in</span>
@@ -115,7 +115,7 @@ export default function Header() {
           {/* Book a Demo — outlined */}
           <a
             href="#"
-            className="hidden sm:flex items-center gap-1 sm:gap-2 px-3 sm:pl-4 sm:pr-6 md:pl-5 md:pr-8 lg:pl-7 lg:pr-10 py-2 sm:py-3 md:py-4 rounded-full border border-[#ED6B52] text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap"
+            className="hidden lg:flex items-center gap-1 sm:gap-2 px-3 sm:pl-4 sm:pr-6 md:pl-5 md:pr-8 lg:pl-7 lg:pr-10 py-2 sm:py-3 md:py-4 rounded-full border border-[#ED6B52] text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap"
           >
             <span>•</span>
             <span>Book a Demo</span>
@@ -123,7 +123,7 @@ export default function Header() {
 
           {/* Hamburger button - visible on mobile only */}
           <button
-            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px]"
+            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className={`block w-5 h-[2px] bg-[#222] transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
@@ -135,10 +135,10 @@ export default function Header() {
 
       {/* Mobile menu overlay */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white border-t border-[rgba(0,0,0,0.08)] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-white border-t border-[rgba(0,0,0,0.08)] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] max-h-[80vh] overflow-y-auto">
           <nav className="flex flex-col px-4 py-4">
-            {NAV_ITEMS.map((item) => (
-              <div key={item.label} className="border-b border-[rgba(0,0,0,0.06)] last:border-b-0">
+            {NAV_ITEMS.map((item, idx) => (
+              <div key={item.label} className={`${idx < NAV_ITEMS.length - 1 ? "border-b border-[rgba(0,0,0,0.06)]" : ""}`}>
                 <button
                   className={`flex items-center justify-between w-full py-4 text-[15px] leading-none text-[#222] ${
                     item.active ? "font-bold" : "font-normal"
