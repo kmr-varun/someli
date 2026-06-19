@@ -1,11 +1,11 @@
 # Someli.ai — Build Progress
 
 ## Current Work
-**Section:** 4 — Features / CMS Overview
-**Figma Node:** `225:6275`
+**Section:** 5 — Proven Impact Stats
+**Figma Node:** `225:6301`
 **Status:** not started
 **Stopped at:** —
-**Next step:** Run `get_design_context` on node `225:6275`, take screenshot, identify all design values, download assets, build `components/sections/FeaturesSection.tsx`
+**Next step:** Run `get_design_context` on node `225:6301`, take screenshot, identify all design values including outlined counter numbers with text stroke, build `components/sections/ProvenImpactSection.tsx`
 
 ---
 
@@ -15,7 +15,7 @@
 - [x] 1 — Hero                → `components/sections/HeroSection.tsx`
 - [x] 2 — Logos Marquee 1     → `components/sections/LogosSection.tsx`
 - [x] 3 — Growth Engine       → `components/sections/GrowthEngineSection.tsx`
-- [ ] 4 — Features Overview   → `components/sections/FeaturesSection.tsx`
+- [x] 4 — Features Overview   → `components/sections/FeaturesSection.tsx`
 - [ ] 5 — Proven Impact Stats → `components/sections/ProvenImpactSection.tsx`
 - [ ] 6 — Logos Marquee 2     → reuses `components/sections/LogosSection.tsx`
 - [ ] 7 — Content Management  → `components/sections/ContentManagementSection.tsx`
@@ -64,6 +64,12 @@ After each section is coded, before marking `[x] done`:
 - **Props:** none (static)
 - **Assets used:** `public/assets/hero/network-mockup.png`, `public/assets/hero/stars.svg`, `public/assets/hero/arrow-play.svg`, `public/assets/hero/avatars/avatar-1..4.png`, `public/assets/hero/icons/users.svg`, `public/assets/hero/icons/handshake.png`, `public/assets/hero/icons/chart.svg`, `public/assets/hero/icons/dollar.svg`, `public/assets/hero/icons/user-star.svg`
 - **Decisions:** Component 12 (network viz + LinkedIn card) rendered as single static PNG. Stat row positioned via `paddingLeft: 746px` / `paddingRight: 75px` to match Figma `x=746` coordinate. Several Figma asset URLs returned SVG data despite `.png` extension — renamed on disk. `font-['Inter:*']` used inside stat cards per Figma (stat card font is Inter, not Montserrat).
+
+### FeaturesSection
+- **File:** `components/sections/FeaturesSection.tsx`
+- **Props:** none (static)
+- **Assets used:** `public/assets/features/dashboard-mockup.png`
+- **Decisions:** Five feature cards positioned absolutely over centered dashboard mockup. Card positions match exact Figma coordinates (top/left values). Dashboard image uses Next.js Image with exact percentage-based overflow positioning to match Figma's scaled/cropped view.
 
 ---
 
