@@ -60,7 +60,7 @@ export default function Footer() {
                 src="/assets/footer/logo.png"
                 alt="Someli AI"
                 fill
-                className="pointer-events-none object-bottom"
+                className="pointer-events-none object-contain"
               />
             </div>
 
