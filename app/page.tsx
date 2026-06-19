@@ -8,6 +8,8 @@ import ContentManagementSection from "@/components/sections/ContentManagementSec
 import BeforeAfterSection from "@/components/sections/BeforeAfterSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import ReachCalculatorSection from "@/components/sections/ReachCalculatorSection";
+import PricingSection from "@/components/sections/PricingSection";
+import BlogSection from "@/components/sections/BlogSection";
 
 export default function Home() {
   return (
@@ -23,6 +25,8 @@ export default function Home() {
       <BeforeAfterSection />
       <HowItWorksSection />
       <ReachCalculatorSection />
+      <PricingSection />
+      <BlogSection />
     </main>
   );
 }

@@ -1,11 +1,11 @@
 # Someli.ai — Build Progress
 
 ## Current Work
-**Section:** 11 — Pricing
-**Figma Node:** `225:6658`
+**Section:** 13 — Certifications
+**Figma Node:** `233:10683`
 **Status:** not started
-**Stopped at:** Section 10 completed and verified - Reach Calculator with interactive input field, real-time calculations (Brand Reach × Employee Networks = 10X), report request card, and floating "Trusted by 500+" card
-**Next step:** Run `get_design_context` and `get_screenshot` on node 225:6658, identify the pricing plan card with feature checklist and 30-day guarantee badge, then implement PricingSection.tsx
+**Stopped at:** Section 12 completed and verified - Blog section with left column (heading, description, CTA button) and right column with 3 blog cards (2 vertical cards on top, 1 horizontal card below), Open Sans font for author/dates, hover effect changes border to orange
+**Next step:** Run `get_design_context` and `get_screenshot` on node 233:10683, identify certification logos and layout, then implement CertificationsSection.tsx
 
 ---
 
@@ -22,8 +22,8 @@
 - [x] 8 — Before / After      → `components/sections/BeforeAfterSection.tsx`
 - [x] 9 — How It Works        → `components/sections/HowItWorksSection.tsx`
 - [x] 10 — Reach Calculator   → `components/sections/ReachCalculatorSection.tsx`
-- [ ] 11 — Pricing            → `components/sections/PricingSection.tsx`
-- [ ] 12 — Blog               → `components/sections/BlogSection.tsx`
+- [x] 11 — Pricing            → `components/sections/PricingSection.tsx`
+- [x] 12 — Blog               → `components/sections/BlogSection.tsx`
 - [ ] 13 — Certifications     → `components/sections/CertificationsSection.tsx`
 - [ ] 14 — Footer             → `components/Footer.tsx`
 
@@ -31,9 +31,9 @@
 
 ## Shared Setup
 
-- [x] `app/layout.tsx` — Montserrat (weights 400/500/600/700/800), updated metadata
+- [x] `app/layout.tsx` — Montserrat (weights 400/500/600/700/800), Space Grotesk, Open Sans (weight 400), updated metadata
 - [x] `app/globals.css` — design tokens (colors, font CSS variables) via `@theme inline {}`
-- [x] `app/page.tsx` — assembly file, imports Header + HeroSection
+- [x] `app/page.tsx` — assembly file, imports all sections
 
 ---
 
@@ -100,6 +100,18 @@ After each section is coded, before marking `[x] done`:
 - **Props:** none (static Server Component)
 - **Assets used:** `public/assets/reach-calculator/background-pattern.png`, `public/assets/reach-calculator/icon-brand.svg`, `public/assets/reach-calculator/icon-network.svg`, `public/assets/reach-calculator/icon-report.svg`, `public/assets/reach-calculator/checkmark.svg`, `public/assets/reach-calculator/avatar-1.png`, `public/assets/reach-calculator/avatar-2.png`, `public/assets/reach-calculator/avatar-3.png`
 - **Decisions:** Dark section with background pattern. Left side has heading + static calculator widget with gradient background `from-[#DF8251] to-[#D54050]`. Calculator shows: Your Brand Reach 120k × Employee Networks 250k+ = 10X More Reach 1.2M+ (all static values, no input field). Right side has report request card with icon, heading, 3 checkmarked bullets (Space Grotesk font), and CTA button. Both the report card and floating "Trusted by 500+" card use glass effect (`--fx-filter: blur(4px) liquid-glass(2, 10, 1) saturate(1.25) color-overlay(black,.3) contrast(1.25)`). Floating card positioned absolutely at `left-[765px] top-[79.81px]` with avatar stack. Pill label uses Space Grotesk font per Figma.
+
+### PricingSection
+- **File:** `components/sections/PricingSection.tsx`
+- **Props:** none (static Server Component)
+- **Assets used:** `public/assets/pricing/ai-content-icon.png`, `public/assets/pricing/analytics-icon.svg`, `public/assets/pricing/team-icon.svg`, `public/assets/pricing/integrations-icon.png`, `public/assets/pricing/support-icon.png`, `public/assets/pricing/scheduling-icon.png`, `public/assets/pricing/content-icon.png`, `public/assets/pricing/check-icon.svg`, `public/assets/pricing/orange-dot.png`, `public/assets/pricing/rocket-badge.svg`, `public/assets/pricing/reach-icon.png`, `public/assets/pricing/brand-icon.svg`, `public/assets/pricing/team-engaged-icon.svg`, `public/assets/pricing/target-icon.svg`, `public/assets/pricing/guarantee-badge.svg`
+- **Decisions:** White section with three-column layout. Left card: white bg, 2px gray border, 7 feature items with icons and descriptions (some icons in orange bg circles). Center card: gradient `from-[#DF8251] to-[#D54050]`, $1,500/month pricing, rocket badge icon, 10-item checklist with checkmarks, CTA button with border, "30day money back guarantee" text below. Right card: white bg, 4 benefit items at top, gradient guarantee badge card at bottom (same gradient as center card) with shield icon and text. Bottom: 3 pills with orange dots - "Secure & Compliant", "CANCEL ANYTIME", "USED BY 1000+ TEAMS". Space Grotesk font used for pricing numbers per Figma. Height of right card set to 692px to match Figma.
+
+### BlogSection
+- **File:** `components/sections/BlogSection.tsx`
+- **Props:** none (static Server Component)
+- **Assets used:** `public/assets/blog/union-pattern.svg`, `public/assets/blog/blog-image-1.jpg`, `public/assets/blog/blog-image-2.jpg`, `public/assets/blog/blog-image-3.jpg`, `public/assets/blog/author-avatar.png`
+- **Decisions:** White section with two-column layout. Left column (470px): Space Grotesk pill label "BLOGS", 60px bold heading "Latest from Blogs", 18px description, and CTA button with bullet prefix. Right column: 3 blog cards in 2-1 layout (2 vertical cards on top row with gap-3, 1 horizontal card below). Each card has image, title (16px semibold), "Read more >" link in orange (#FF5722), and footer with author avatar + name and date + read time. Footer uses Open Sans font (loaded via next/font with CSS variable --font-open-sans). All cards have hover effect: border changes from rgba(0,0,0,0.08) to #DF8251 with 300ms transition. Background has union-pattern.svg positioned absolutely with specific inset percentages. Blog images are all JPEGs despite some Figma asset URLs suggesting SVG.
 
 ---
 
