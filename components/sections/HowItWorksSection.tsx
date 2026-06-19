@@ -102,11 +102,12 @@ export default function HowItWorksSection() {
                 duration: 0.3,
               });
 
-              // Make image fully visible
-              const img = dotsRef.current[index]?.querySelector('img');
-              if (img) {
-                gsap.to(img, {
-                  opacity: 1,
+              // Fill the inner circle
+              const innerCircle = dotsRef.current[index]?.querySelector('div');
+              if (innerCircle) {
+                gsap.to(innerCircle, {
+                  backgroundColor: '#ED6B52',
+                  borderColor: '#ED6B52',
                   duration: 0.3,
                 });
               }
@@ -153,11 +154,12 @@ export default function HowItWorksSection() {
                 duration: 0.3,
               });
 
-              // Fade image back to 30% opacity (except first dot)
-              const img = dotsRef.current[index]?.querySelector('img');
-              if (img && index > 0) {
-                gsap.to(img, {
-                  opacity: 0.3,
+              // Reset inner circle to outline only
+              const innerCircle = dotsRef.current[index]?.querySelector('div');
+              if (innerCircle) {
+                gsap.to(innerCircle, {
+                  backgroundColor: 'transparent',
+                  borderColor: 'rgba(237,107,82,0.3)',
                   duration: 0.3,
                 });
               }
@@ -211,12 +213,7 @@ export default function HowItWorksSection() {
             }}
             className="flex w-full items-center justify-center rounded-full p-[7.369px] transition-all"
           >
-            <Image
-              src="/assets/how-it-works/ellipse-1.svg"
-              alt=""
-              width={11}
-              height={11}
-            />
+            <div className="h-[10.941px] w-[10.941px] rounded-full border-2 border-[rgba(237,107,82,0.3)] transition-all" />
           </div>
 
           {/* Line 1 */}
@@ -240,13 +237,7 @@ export default function HowItWorksSection() {
             }}
             className="flex w-full items-center justify-center rounded-full p-[7.369px] transition-all"
           >
-            <Image
-              src="/assets/how-it-works/ellipse-2.svg"
-              alt=""
-              width={11}
-              height={11}
-              className="opacity-30"
-            />
+            <div className="h-[10.941px] w-[10.941px] rounded-full border-2 border-[rgba(237,107,82,0.3)] transition-all" />
           </div>
 
           {/* Line 2 */}
@@ -270,13 +261,7 @@ export default function HowItWorksSection() {
             }}
             className="flex w-full items-center justify-center rounded-full p-[7.369px] transition-all"
           >
-            <Image
-              src="/assets/how-it-works/ellipse-3.svg"
-              alt=""
-              width={11}
-              height={11}
-              className="opacity-30"
-            />
+            <div className="h-[10.941px] w-[10.941px] rounded-full border-2 border-[rgba(237,107,82,0.3)] transition-all" />
           </div>
         </div>
 
