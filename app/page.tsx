@@ -10,6 +10,7 @@ import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import ReachCalculatorSection from "@/components/sections/ReachCalculatorSection";
 import PricingSection from "@/components/sections/PricingSection";
 import BlogSection from "@/components/sections/BlogSection";
+import CertificationsSection from "@/components/sections/CertificationsSection";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <ReachCalculatorSection />
       <PricingSection />
       <BlogSection />
+      <CertificationsSection />
     </main>
   );
 }
