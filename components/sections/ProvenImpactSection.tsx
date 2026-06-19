@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const stats = [
   {
@@ -21,6 +24,9 @@ const stats = [
   },
 ];
 
+// Duplicate stats for seamless infinite scroll
+const duplicatedStats = [...stats, ...stats];
+
 export default function ProvenImpactSection() {
   return (
     <section className="relative w-full bg-white overflow-hidden">
@@ -38,10 +44,10 @@ export default function ProvenImpactSection() {
 
       {/* Content container */}
       <div className="relative max-w-[1440px] mx-auto px-24 py-[100px] flex items-center justify-end gap-[164px]">
-        {/* Left: Stats column with outlined numbers */}
-        <div className="flex-1 h-[516px] relative flex flex-col gap-[80px] justify-center overflow-hidden">
+        {/* Left: Stats column with outlined numbers - infinite scroll animation */}
+        <div className="flex-1 h-[516px] relative overflow-hidden">
           {/* Top fade gradient */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[436px] h-[154px] pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[436px] h-[154px] pointer-events-none z-10">
             <div
               className="w-full h-full scale-y-[-1]"
               style={{
@@ -50,35 +56,48 @@ export default function ProvenImpactSection() {
             />
           </div>
 
-          {/* Stats - dynamically rendered */}
-          {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col gap-1 w-full">
-              <div className="flex items-center gap-2">
-                <div className="w-[15px] h-3 relative shrink-0">
-                  <Image
-                    src={stat.icon}
-                    alt=""
-                    width={15}
-                    height={12}
-                    className="object-contain"
-                  />
+          {/* Animated stats container */}
+          <motion.div
+            className="flex flex-col gap-[80px]"
+            animate={{
+              y: [0, -(stats.length * (150 + 48 + 80))], // Move up by height of original stats
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: 'linear',
+            }}
+          >
+            {/* Stats - duplicated for seamless loop */}
+            {duplicatedStats.map((stat, index) => (
+              <div key={index} className="flex flex-col gap-1 w-full">
+                <div className="flex items-center gap-2">
+                  <div className="w-[15px] h-3 relative shrink-0">
+                    <Image
+                      src={stat.icon}
+                      alt=""
+                      width={15}
+                      height={12}
+                      className="object-contain"
+                    />
+                  </div>
+                  <p className="text-[12px] font-normal text-[#222222] tracking-[0.96px] uppercase leading-[15px]">
+                    {stat.label}
+                  </p>
                 </div>
-                <p className="text-[12px] font-normal text-[#222222] tracking-[0.96px] uppercase leading-[15px]">
-                  {stat.label}
+                <p className="text-[150px] font-bold leading-none tracking-[2px] outlined-stat-number">
+                  {stat.number}
+                </p>
+                <p className="text-[12px] font-normal text-[#444444] tracking-[0.48px] leading-[15px]">
+                  {stat.description}
                 </p>
               </div>
-              <p className="text-[150px] font-bold leading-none tracking-[2px] outlined-stat-number">
-                {stat.number}
-              </p>
-              <p className="text-[12px] font-normal text-[#444444] tracking-[0.48px] leading-[15px]">
-                {stat.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </motion.div>
 
           {/* Bottom fade gradient */}
           <div
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[436px] h-[164px] pointer-events-none"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[436px] h-[164px] pointer-events-none z-10"
             style={{
               background: 'linear-gradient(to bottom, rgba(255,255,255,0), white)',
             }}
