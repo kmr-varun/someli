@@ -95,11 +95,29 @@ export default function HowItWorksSection() {
 
             // Activate dot
             if (dotsRef.current[index]) {
-              gsap.to(dotsRef.current[index], {
-                backgroundColor: 'rgba(237,107,82,0.2)',
-                scale: 1.1,
-                duration: 0.3,
-              });
+              if (index === 0) {
+                // First dot: add background
+                gsap.to(dotsRef.current[index], {
+                  backgroundColor: 'rgba(237,107,82,0.2)',
+                  scale: 1.1,
+                  duration: 0.3,
+                });
+              } else {
+                // Other dots: change border to filled ring with background
+                gsap.to(dotsRef.current[index], {
+                  backgroundColor: 'rgba(237,107,82,0.2)',
+                  scale: 1.1,
+                  duration: 0.3,
+                });
+                const innerCircle = dotsRef.current[index]?.querySelector('div');
+                if (innerCircle) {
+                  gsap.to(innerCircle, {
+                    borderColor: 'rgba(237,107,82,0.8)',
+                    borderWidth: '2px',
+                    duration: 0.3,
+                  });
+                }
+              }
             }
 
             // Animate line fill (if not last item)
@@ -136,11 +154,29 @@ export default function HowItWorksSection() {
 
             // Deactivate dot
             if (dotsRef.current[index]) {
-              gsap.to(dotsRef.current[index], {
-                backgroundColor: 'transparent',
-                scale: 1,
-                duration: 0.3,
-              });
+              if (index === 0) {
+                // First dot: remove background
+                gsap.to(dotsRef.current[index], {
+                  backgroundColor: 'transparent',
+                  scale: 1,
+                  duration: 0.3,
+                });
+              } else {
+                // Other dots: reset to light border
+                gsap.to(dotsRef.current[index], {
+                  backgroundColor: 'transparent',
+                  scale: 1,
+                  duration: 0.3,
+                });
+                const innerCircle = dotsRef.current[index]?.querySelector('div');
+                if (innerCircle) {
+                  gsap.to(innerCircle, {
+                    borderColor: 'rgba(237,107,82,0.3)',
+                    borderWidth: '2px',
+                    duration: 0.3,
+                  });
+                }
+              }
             }
 
             // Reset line (if not last item)
@@ -201,11 +237,14 @@ export default function HowItWorksSection() {
 
           {/* Line 1 */}
           <div className="relative flex min-h-0 flex-1 w-full items-center justify-center overflow-hidden">
+            {/* Background line (light) - always visible */}
+            <div className="absolute h-full w-[2px] bg-[rgba(237,107,82,0.15)]" />
+            {/* Active line (dark) - animates on scroll */}
             <div
               ref={(el) => {
                 linesRef.current[0] = el;
               }}
-              className="h-full w-[2px] origin-top bg-[rgba(237,107,82,0.3)]"
+              className="h-full w-[2px] origin-top bg-[rgba(237,107,82,0.6)]"
               style={{ transform: 'scaleY(0)' }}
             />
           </div>
@@ -215,23 +254,21 @@ export default function HowItWorksSection() {
             ref={(el) => {
               dotsRef.current[1] = el;
             }}
-            className="flex w-full items-center justify-center p-[7.369px] transition-all"
+            className="flex w-full items-center justify-center rounded-full p-[7.369px] transition-all"
           >
-            <Image
-              src="/assets/how-it-works/ellipse-2.svg"
-              alt=""
-              width={11}
-              height={11}
-            />
+            <div className="h-[10.941px] w-[10.941px] rounded-full border-2 border-[rgba(237,107,82,0.3)] transition-all" />
           </div>
 
           {/* Line 2 */}
           <div className="relative flex min-h-0 flex-1 w-full items-center justify-center overflow-hidden">
+            {/* Background line (light) - always visible */}
+            <div className="absolute h-full w-[2px] bg-[rgba(237,107,82,0.15)]" />
+            {/* Active line (dark) - animates on scroll */}
             <div
               ref={(el) => {
                 linesRef.current[1] = el;
               }}
-              className="h-full w-[2px] origin-top bg-[rgba(237,107,82,0.3)]"
+              className="h-full w-[2px] origin-top bg-[rgba(237,107,82,0.6)]"
               style={{ transform: 'scaleY(0)' }}
             />
           </div>
@@ -241,14 +278,9 @@ export default function HowItWorksSection() {
             ref={(el) => {
               dotsRef.current[2] = el;
             }}
-            className="flex w-full items-center justify-center p-[7.369px] transition-all"
+            className="flex w-full items-center justify-center rounded-full p-[7.369px] transition-all"
           >
-            <Image
-              src="/assets/how-it-works/ellipse-3.svg"
-              alt=""
-              width={11}
-              height={11}
-            />
+            <div className="h-[10.941px] w-[10.941px] rounded-full border-2 border-[rgba(237,107,82,0.3)] transition-all" />
           </div>
         </div>
 
