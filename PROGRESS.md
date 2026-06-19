@@ -1,18 +1,18 @@
 # Someli.ai — Build Progress
 
 ## Current Work
-**Section:** 0 — Header
-**Figma Node:** `337:10773`
+**Section:** 2 — Logos Marquee 1
+**Figma Node:** `225:6190`
 **Status:** not started
 **Stopped at:** —
-**Next step:** Run `get_design_context` on node `337:10773`, download logo and chevron assets, then build `components/Header.tsx`
+**Next step:** Run `get_design_context` on node `225:6190`, take screenshot, identify all logos and marquee timing, download logo assets, build `components/sections/LogosSection.tsx` (reused for both marquee sections)
 
 ---
 
 ## Sections
 
-- [ ] 0 — Header              → `components/Header.tsx`
-- [ ] 1 — Hero                → `components/sections/HeroSection.tsx`
+- [x] 0 — Header              → `components/Header.tsx`
+- [x] 1 — Hero                → `components/sections/HeroSection.tsx`
 - [ ] 2 — Logos Marquee 1     → `components/sections/LogosSection.tsx`
 - [ ] 3 — Growth Engine       → `components/sections/GrowthEngineSection.tsx`
 - [ ] 4 — Features Overview   → `components/sections/FeaturesSection.tsx`
@@ -31,11 +31,9 @@
 
 ## Shared Setup
 
-- [ ] `app/layout.tsx` — replace Geist with Montserrat (weights 400/500/600/700/800), update metadata
-- [ ] `app/globals.css` — add CSS custom properties for all design tokens (colors, font)
-- [ ] `app/page.tsx` — assembly file, import sections as they are built
-
-> **Do shared setup as part of Section 0 (Header), since the font and CSS variables are needed from the start.**
+- [x] `app/layout.tsx` — Montserrat (weights 400/500/600/700/800), updated metadata
+- [x] `app/globals.css` — design tokens (colors, font CSS variables) via `@theme inline {}`
+- [x] `app/page.tsx` — assembly file, imports Header + HeroSection
 
 ---
 
@@ -55,22 +53,41 @@ After each section is coded, before marking `[x] done`:
 
 ## Component Registry
 
-> Components are added here as they are built. Check this before creating anything new.
+### Header
+- **File:** `components/Header.tsx`
+- **Props:** none (static)
+- **Assets used:** `public/assets/logo.png`, `public/assets/icons/chevron-down.svg`
+- **Decisions:** Logo PNG not SVG. Nav dots are literal `•` chars. Asymmetric `pl-7 pr-10` on buttons.
 
-_(empty — no components built yet)_
+### HeroSection
+- **File:** `components/sections/HeroSection.tsx`
+- **Props:** none (static)
+- **Assets used:** `public/assets/hero/network-mockup.png`, `public/assets/hero/stars.svg`, `public/assets/hero/arrow-play.svg`, `public/assets/hero/avatars/avatar-1..4.png`, `public/assets/hero/icons/users.svg`, `public/assets/hero/icons/handshake.png`, `public/assets/hero/icons/chart.svg`, `public/assets/hero/icons/dollar.svg`, `public/assets/hero/icons/user-star.svg`
+- **Decisions:** Component 12 (network viz + LinkedIn card) rendered as single static PNG. Stat row positioned via `paddingLeft: 746px` / `paddingRight: 75px` to match Figma `x=746` coordinate. Several Figma asset URLs returned SVG data despite `.png` extension — renamed on disk. `font-['Inter:*']` used inside stat cards per Figma (stat card font is Inter, not Montserrat).
 
 ---
 
 ## Assets
 
-> Assets are logged here as they are downloaded. Check `public/assets/` and this list before downloading again.
-
-_(empty — no assets downloaded yet)_
+- `public/assets/logo.png` — Someli logo
+- `public/assets/icons/chevron-down.svg` — nav chevron
+- `public/assets/hero/network-circle.png` — circular network visualization (background layer, transparent bg, 953×953)
+- `public/assets/hero/linkedin-card.png` — social post card (foreground layer, 486×591)
+- `public/assets/hero/stars.svg` — 5-star rating strip
+- `public/assets/hero/arrow-play.svg` — arrow for "See how it works"
+- `public/assets/hero/avatars/avatar-1..4.png` — social proof avatar stack
+- `public/assets/hero/icons/users.svg` — stat icon: engagement
+- `public/assets/hero/icons/handshake.png` — stat icon: trust
+- `public/assets/hero/icons/chart.svg` — stat icon: reach
+- `public/assets/hero/icons/dollar.svg` — stat icon: conversion
+- `public/assets/hero/icons/user-star.svg` — stat icon: brand
 
 ---
 
 ## Decisions Log
 
-> Non-obvious implementation decisions that must be preserved across sessions.
-
-_(empty — no decisions recorded yet)_
+- Logo from Figma was PNG despite `.svg` extension in node name — saved as `logo.png`.
+- Nav bullet dots: literal `•` characters, not CSS `list-disc`.
+- Hero Component 12 rendered as static screenshot PNG — too complex (rotating circles, abs-positioned cards, connector lines) to recreate in code.
+- Several hero icon assets returned SVG data with `.png` extension — all renamed to `.svg` on disk.
+- Stat row `paddingLeft: 746px` matches Figma `x=746` canvas coordinate for the stats container.
