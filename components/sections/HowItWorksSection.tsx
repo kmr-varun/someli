@@ -1,4 +1,11 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const items = [
   {
@@ -46,9 +53,113 @@ const items = [
 ];
 
 export default function HowItWorksSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const dotsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const linesRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+
+    const ctx = gsap.context(() => {
+      // Animate each card as it enters view
+      cardsRef.current.forEach((card, index) => {
+        if (!card) return;
+
+        const leftPanel = card.querySelector('[data-left-panel]') as HTMLElement;
+        const number = card.querySelector('[data-number]') as HTMLElement;
+        const title = card.querySelector('[data-title]') as HTMLElement;
+
+        ScrollTrigger.create({
+          trigger: card,
+          start: 'top center',
+          end: 'bottom center',
+          onEnter: () => {
+            // Activate card
+            gsap.to(card, {
+              boxShadow: '0px 4px 25px 0px rgba(0,0,0,0.08)',
+              duration: 0.3,
+            });
+
+            // Activate left panel
+            gsap.to(leftPanel, {
+              background: 'linear-gradient(to bottom, #df8251, #d54050)',
+              duration: 0.3,
+            });
+
+            // Activate text
+            gsap.to([number, title], {
+              color: '#ffffff',
+              duration: 0.3,
+            });
+
+            // Activate dot
+            if (dotsRef.current[index]) {
+              gsap.to(dotsRef.current[index], {
+                backgroundColor: 'rgba(237,107,82,0.2)',
+                scale: 1.1,
+                duration: 0.3,
+              });
+            }
+
+            // Animate line fill (if not last item)
+            if (index < linesRef.current.length && linesRef.current[index]) {
+              gsap.fromTo(
+                linesRef.current[index],
+                { scaleY: 0 },
+                { scaleY: 1, duration: 0.6, ease: 'power2.out' }
+              );
+            }
+          },
+          onLeaveBack: () => {
+            // Deactivate card
+            gsap.to(card, {
+              boxShadow: '0px 0px 0px 0px rgba(0,0,0,0)',
+              duration: 0.3,
+            });
+
+            // Deactivate left panel
+            gsap.to(leftPanel, {
+              background: 'rgba(247,103,57,0.06)',
+              duration: 0.3,
+            });
+
+            // Deactivate text
+            gsap.to(number, {
+              color: '#f76739',
+              duration: 0.3,
+            });
+            gsap.to(title, {
+              color: '#222222',
+              duration: 0.3,
+            });
+
+            // Deactivate dot
+            if (dotsRef.current[index]) {
+              gsap.to(dotsRef.current[index], {
+                backgroundColor: 'transparent',
+                scale: 1,
+                duration: 0.3,
+              });
+            }
+
+            // Reset line (if not last item)
+            if (index < linesRef.current.length && linesRef.current[index]) {
+              gsap.to(linesRef.current[index], {
+                scaleY: 0,
+                duration: 0.3,
+              });
+            }
+          },
+        });
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section className="relative bg-white px-24 py-[100px]">
+    <section ref={sectionRef} className="relative bg-white px-24 py-[100px]">
       {/* Header */}
       <div className="mx-auto mb-16 flex max-w-[892px] flex-col items-center gap-4 text-center">
         {/* Pill Label */}
@@ -73,8 +184,13 @@ export default function HowItWorksSection() {
       <div className="relative mx-auto flex max-w-[1200px] flex-col gap-4">
         {/* Left Sidebar Dots & Lines - Absolute positioned */}
         <div className="absolute left-[-67px] top-0 flex h-full w-[26px] flex-col items-center gap-[9.825px] py-[150px]">
-          {/* Dot 1 - with orange background */}
-          <div className="flex w-full items-center justify-center rounded-full bg-[rgba(237,107,82,0.2)] p-[7.369px]">
+          {/* Dot 1 */}
+          <div
+            ref={(el) => {
+              dotsRef.current[0] = el;
+            }}
+            className="flex w-full items-center justify-center rounded-full p-[7.369px] transition-all"
+          >
             <Image
               src="/assets/how-it-works/ellipse-1.svg"
               alt=""
@@ -84,18 +200,23 @@ export default function HowItWorksSection() {
           </div>
 
           {/* Line 1 */}
-          <div className="flex min-h-0 flex-1 w-full items-center justify-center">
-            <Image
-              src="/assets/how-it-works/line-1.svg"
-              alt=""
-              width={2}
-              height={250}
-              className="h-full w-auto"
+          <div className="relative flex min-h-0 flex-1 w-full items-center justify-center overflow-hidden">
+            <div
+              ref={(el) => {
+                linesRef.current[0] = el;
+              }}
+              className="h-full w-[2px] origin-top bg-[rgba(237,107,82,0.3)]"
+              style={{ transform: 'scaleY(0)' }}
             />
           </div>
 
           {/* Dot 2 */}
-          <div className="flex w-full items-center justify-center p-[7.369px]">
+          <div
+            ref={(el) => {
+              dotsRef.current[1] = el;
+            }}
+            className="flex w-full items-center justify-center p-[7.369px] transition-all"
+          >
             <Image
               src="/assets/how-it-works/ellipse-2.svg"
               alt=""
@@ -105,18 +226,23 @@ export default function HowItWorksSection() {
           </div>
 
           {/* Line 2 */}
-          <div className="flex min-h-0 flex-1 w-full items-center justify-center">
-            <Image
-              src="/assets/how-it-works/line-2.svg"
-              alt=""
-              width={2}
-              height={250}
-              className="h-full w-auto"
+          <div className="relative flex min-h-0 flex-1 w-full items-center justify-center overflow-hidden">
+            <div
+              ref={(el) => {
+                linesRef.current[1] = el;
+              }}
+              className="h-full w-[2px] origin-top bg-[rgba(237,107,82,0.3)]"
+              style={{ transform: 'scaleY(0)' }}
             />
           </div>
 
           {/* Dot 3 */}
-          <div className="flex w-full items-center justify-center p-[7.369px]">
+          <div
+            ref={(el) => {
+              dotsRef.current[2] = el;
+            }}
+            className="flex w-full items-center justify-center p-[7.369px] transition-all"
+          >
             <Image
               src="/assets/how-it-works/ellipse-3.svg"
               alt=""
@@ -127,17 +253,26 @@ export default function HowItWorksSection() {
         </div>
 
         {/* All Items - Always visible */}
-        {items.map((item) => (
+        {items.map((item, index) => (
           <div
             key={item.id}
-            className="group flex w-full overflow-hidden rounded-[24px] border-2 border-[rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0px_4px_25px_0px_rgba(0,0,0,0.08)]"
+            ref={(el) => {
+              cardsRef.current[index] = el;
+            }}
+            className="flex w-full overflow-hidden rounded-[24px] border-2 border-[rgba(0,0,0,0.06)]"
           >
             {/* Left Side - Number & Title */}
-            <div className="flex w-[243px] flex-col items-start justify-center border-r border-[rgba(0,0,0,0.08)] bg-[rgba(247,103,57,0.06)] px-8 py-10 transition-all duration-300 group-hover:border-r group-hover:bg-gradient-to-b group-hover:from-[#df8251] group-hover:to-[#d54050]">
+            <div
+              data-left-panel
+              className="flex w-[243px] flex-col items-start justify-center border-r border-[rgba(0,0,0,0.08)] bg-[rgba(247,103,57,0.06)] px-8 py-10"
+            >
               <div className="flex w-full flex-col gap-10">
                 {/* Number */}
                 <div className="flex items-center">
-                  <span className="font-montserrat text-[28px] font-bold leading-none text-[#f76739] transition-colors duration-300 group-hover:text-white">
+                  <span
+                    data-number
+                    className="font-montserrat text-[28px] font-bold leading-none text-[#f76739]"
+                  >
                     {item.number}
                   </span>
                 </div>
@@ -150,7 +285,10 @@ export default function HowItWorksSection() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-montserrat text-[32px] font-bold leading-[1.4] tracking-[-2px] text-[#222] transition-colors duration-300 group-hover:text-white">
+                  <h3
+                    data-title
+                    className="font-montserrat text-[32px] font-bold leading-[1.4] tracking-[-2px] text-[#222]"
+                  >
                     {item.title}
                   </h3>
                 </div>
