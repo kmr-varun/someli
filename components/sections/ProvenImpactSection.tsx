@@ -30,16 +30,12 @@ const duplicatedStats = [...stats, ...stats];
 export default function ProvenImpactSection() {
   return (
     <section className="relative w-full bg-white overflow-hidden">
-      {/* Grid background pattern */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px)
-          `,
-          backgroundSize: '46px 46px',
-        }}
+      {/* Union2 background pattern */}
+      <Image
+        src="/assets/proven-impact/union2-background.png"
+        alt=""
+        fill
+        className="absolute inset-0 object-cover pointer-events-none"
       />
 
       {/* Content container */}
