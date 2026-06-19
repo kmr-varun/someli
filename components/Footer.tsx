@@ -4,19 +4,15 @@ export default function Footer() {
   return (
     <footer className="relative w-full overflow-hidden bg-[#111] px-24 py-[120px]">
       {/* Background Pattern */}
-      <div className="pointer-events-none absolute inset-0 opacity-50">
-        <Image
-          src="/assets/footer/background.png"
-          alt=""
-          fill
-          className="object-cover"
-          style={{
-            left: '-6.16%',
-            top: '-20.32%',
-            width: '157.96%',
-            height: '140.64%'
-          }}
-        />
+      <div className="pointer-events-none absolute inset-0 opacity-50 overflow-hidden">
+        <div className="absolute h-[140.64%] w-[157.96%]" style={{ left: '-6.16%', top: '-20.32%' }}>
+          <Image
+            src="/assets/footer/background.png"
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
 
       {/* Content */}
