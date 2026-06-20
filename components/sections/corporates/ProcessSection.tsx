@@ -191,27 +191,27 @@ export default function ProcessSection() {
         </div>
 
         {/* Mobile/Tablet Timeline - Simplified vertical */}
-        <div className="lg:hidden flex flex-col gap-8">
+        <div className="lg:hidden flex flex-col gap-8 relative">
+          {/* Vertical line for mobile */}
+          <div className="absolute left-1/2 top-[22px] bottom-[22px] w-[2px] -translate-x-1/2 bg-[#F76739] opacity-30" />
+
           {steps.map((step, idx) => (
-            <div key={idx} className="flex flex-col items-center gap-4">
+            <div key={idx} className="flex flex-col items-center gap-4 relative z-10">
               <div
-                className="w-[44px] h-[44px] rounded-full flex items-center justify-center"
-                style={{
-                  backgroundImage: "linear-gradient(to bottom, #DF8251, #D54050)",
-                }}
+                className="w-[44px] h-[44px] rounded-full flex items-center justify-center bg-gradient-to-b from-[#DF8251] to-[#D54050]"
               >
                 <span className="font-montserrat font-bold text-[14px] text-white">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
               </div>
-              <div className="flex flex-col gap-2 text-center">
-                <p className="font-montserrat font-bold text-[24px] text-[#F76739]">
+              <div className="flex flex-col gap-2 text-center px-4">
+                <p className="font-montserrat font-bold text-[20px] sm:text-[24px] text-[#F76739]">
                   {step.number}
                 </p>
-                <h3 className="font-montserrat font-bold text-[32px] sm:text-[40px] text-[#222] leading-[1.1]">
+                <h3 className="font-montserrat font-bold text-[28px] sm:text-[32px] md:text-[40px] text-[#222] leading-[1.1] tracking-[-1px]">
                   {step.title}
                 </h3>
-                <p className="font-montserrat font-normal text-[15px] sm:text-[16px] text-[#666] leading-[1.5]">
+                <p className="font-montserrat font-normal text-[15px] sm:text-[16px] text-[#666] leading-[1.5] max-w-[500px] mx-auto">
                   {step.description}
                 </p>
               </div>
@@ -220,9 +220,9 @@ export default function ProcessSection() {
         </div>
 
         {/* Bottom badge */}
-        <div className="flex justify-center mt-16">
-          <div className="bg-[#111] border border-white rounded-full px-8 py-6 flex items-center gap-2.5">
-            <div className="relative w-[17px] h-[17px]">
+        <div className="flex justify-center mt-12 sm:mt-16">
+          <div className="bg-[#111] border border-white rounded-full px-6 sm:px-8 py-4 sm:py-6 flex items-center gap-2 sm:gap-2.5">
+            <div className="relative w-[15px] h-[15px] sm:w-[17px] sm:h-[17px]">
               <Image
                 src="/assets/corporates/process-icon.svg"
                 alt=""
@@ -231,10 +231,10 @@ export default function ProcessSection() {
               />
             </div>
             <div className="flex flex-col gap-1">
-              <span className="font-montserrat font-normal text-[10px] text-[rgba(255,255,255,0.4)] tracking-[0.4px] uppercase leading-none">
+              <span className="font-montserrat font-normal text-[9px] sm:text-[10px] text-[rgba(255,255,255,0.4)] tracking-[0.4px] uppercase leading-none">
                 ALWAYS ON
               </span>
-              <span className="font-montserrat font-medium text-[16px] text-white tracking-[0.64px] leading-none">
+              <span className="font-montserrat font-medium text-[14px] sm:text-[16px] text-white tracking-[0.5px] sm:tracking-[0.64px] leading-none">
                 IT RUNS WHILE YOU SLEEP
               </span>
             </div>

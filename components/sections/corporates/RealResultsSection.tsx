@@ -152,13 +152,13 @@ export default function RealResultsSection() {
         </div>
 
         {/* Right stat cards */}
-        <div className="flex flex-col gap-[9.684px] items-center">
-          <div className="flex gap-[10px]">
+        <div className="flex flex-col gap-[9.684px] items-center w-full lg:w-auto">
+          <div className="flex flex-wrap justify-center gap-[10px]">
             {statsRow1.map((stat, i) => (
               <StatCard key={i} {...stat} delay={i * 100} />
             ))}
           </div>
-          <div className="flex gap-[10px]">
+          <div className="flex flex-wrap justify-center gap-[10px]">
             {statsRow2.map((stat, i) => (
               <StatCard key={i} {...stat} delay={(i + statsRow1.length) * 100} />
             ))}
