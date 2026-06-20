@@ -4,11 +4,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const items = [
+  "99.9% platform uptime",
+  "Enterprise Grade Security",
+  "SOC 2 Compliant",
+  "ISO 27001 Certified",
+  "GDPR compliant",
   "Secure & Compliant",
-  "CANCEL ANYTIME",
   "USED BY 1000+ TEAMS",
   "Secure & Compliant",
-  "CANCEL ANYTIME",
   "USED BY 1000+ TEAMS",
 ];
 
