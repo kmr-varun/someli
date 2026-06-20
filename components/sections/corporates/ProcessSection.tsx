@@ -219,7 +219,7 @@ export default function ProcessSection() {
         </div>
 
         {/* Bottom badge */}
-        <div className="lg:hidden flex justify-center mt-16">
+        <div className="flex justify-center mt-16">
           <div className="bg-[#111] border border-white rounded-full px-8 py-6 flex items-center gap-2.5">
             <div className="relative w-[17px] h-[17px]">
               <Image
