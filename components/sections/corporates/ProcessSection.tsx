@@ -55,10 +55,10 @@ export default function ProcessSection() {
         </div>
 
         {/* Timeline - Desktop only, centered at 1200px */}
-        <div className="hidden lg:flex flex-col items-center">
+        <div className="hidden lg:flex flex-col items-center relative">
           <div className="relative w-[1200px]">
-            {/* Continuous vertical center line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-[1px] -translate-x-1/2 bg-gradient-to-b from-[#DF8251] via-[#D54050] to-[#DF8251] opacity-30" />
+            {/* Continuous vertical center line - extends through entire timeline including badge */}
+            <div className="absolute left-1/2 top-0 w-[1px] -translate-x-1/2 bg-[#F76739]" style={{ height: 'calc(100% + 39px)' }} />
             {/* Step 1 - Left aligned */}
             <div className="relative flex gap-[140px] items-center py-8">
               <div className="flex flex-col gap-6 items-end w-[500px]">
@@ -219,7 +219,7 @@ export default function ProcessSection() {
         </div>
 
         {/* Bottom badge */}
-        <div className="flex justify-center mt-16">
+        <div className="lg:hidden flex justify-center mt-16">
           <div className="bg-[#111] border border-white rounded-full px-8 py-6 flex items-center gap-2.5">
             <div className="relative w-[17px] h-[17px]">
               <Image
