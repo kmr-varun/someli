@@ -94,6 +94,24 @@ body {
   padding-left: 4px;
 }
 
+.outlined-stat-number-black {
+  font-weight: 700;
+  color: black;
+  -webkit-text-stroke: none;
+  -webkit-text-stroke-width: 0;
+  -webkit-text-fill-color: black;
+  text-shadow:
+    -2px -2px 0 #ED6B52,
+     2px -2px 0 #ED6B52,
+    -2px  2px 0 #ED6B52,
+     2px  2px 0 #ED6B52,
+    -2px  0   0 #ED6B52,
+     2px  0   0 #ED6B52,
+     0   -2px 0 #ED6B52,
+     0    2px 0 #ED6B52;
+  padding-left: 4px;
+}
+
 .outlined-text-orange {
   font-weight: 700;
   color: white;
@@ -107,4 +125,28 @@ body {
      1px  0   0 #ED6B52,
      0   -1px 0 #ED6B52,
      0    1px 0 #ED6B52;
+}
+
+.outlined-text-orange-transparent {
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0;
+  text-shadow:
+    -1px -1px 0 #ED6B52,
+     1px -1px 0 #ED6B52,
+    -1px  1px 0 #ED6B52,
+     1px  1px 0 #ED6B52,
+    -1px  0   0 #ED6B52,
+     1px  0   0 #ED6B52,
+     0   -1px 0 #ED6B52,
+     0    1px 0 #ED6B52,
+    -2px -2px 0 #ED6B52,
+     2px -2px 0 #ED6B52,
+    -2px  2px 0 #ED6B52,
+     2px  2px 0 #ED6B52,
+    -2px  0   0 #ED6B52,
+     2px  0   0 #ED6B52,
+     0   -2px 0 #ED6B52,
+     0    2px 0 #ED6B52;
 }
