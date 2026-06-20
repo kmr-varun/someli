@@ -20,7 +20,7 @@ export default function PartnershipProcessSection() {
         />
       </div>
 
-      <div className="relative max-w-[1440px] mx-auto px-24 py-[100px] flex flex-col gap-[56px] items-center">
+      <div className="relative max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-16 sm:py-20 lg:py-[100px] flex flex-col gap-10 sm:gap-[56px] items-center">
         {/* Header */}
         <div className="flex flex-col gap-4 items-center">
           <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full px-[15px] py-[7px]">
@@ -28,7 +28,7 @@ export default function PartnershipProcessSection() {
               OUR TEAM
             </span>
           </div>
-          <h2 className="font-montserrat font-bold text-[60px] leading-[1.19] tracking-[-2px] text-white text-center">
+          <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.19] tracking-[-2px] text-white text-center">
             Our Partnership Process
           </h2>
         </div>
@@ -36,42 +36,33 @@ export default function PartnershipProcessSection() {
         {/* Steps + CTA */}
         <div className="flex flex-col gap-8 items-center w-full">
           {/* Steps row */}
-          <div className="flex gap-4 items-center w-full">
-            {steps.map((step, i) => (
-              <div key={step.number} className="contents">
-                <div className="flex-1 glass-border-card bg-[rgba(255,255,255,0.04)] rounded-[16px] px-8 py-10">
-                  <div className="flex flex-col gap-[18px]">
-                    <div className="w-[52px] h-[52px] rounded-[10px] bg-[rgba(237,107,82,0.1)] flex items-center justify-center">
-                      <span className="font-montserrat font-bold text-[28px] leading-none tracking-[-0.56px] text-[#ED6B52]">
-                        {step.number}
-                      </span>
-                    </div>
-                    <div className="flex flex-col gap-[3px]">
-                      <p className="font-montserrat font-bold text-[14px] leading-[1.5] tracking-[-0.28px] text-white">
-                        {step.title}
-                      </p>
-                      <p className="font-montserrat text-[14px] font-normal leading-[1.5] tracking-[-0.28px] text-white">
-                        {step.description}
-                      </p>
-                    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+            {steps.map((step) => (
+              <div
+                key={step.number}
+                className="glass-border-card bg-[rgba(255,255,255,0.04)] rounded-[16px] px-6 sm:px-8 py-8 sm:py-10"
+              >
+                <div className="flex flex-col gap-[18px]">
+                  <div className="w-[52px] h-[52px] rounded-[10px] bg-[rgba(237,107,82,0.1)] flex items-center justify-center">
+                    <span className="font-montserrat font-bold text-[28px] leading-none tracking-[-0.56px] text-[#ED6B52]">
+                      {step.number}
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-[3px]">
+                    <p className="font-montserrat font-bold text-[14px] leading-[1.5] tracking-[-0.28px] text-white">
+                      {step.title}
+                    </p>
+                    <p className="font-montserrat text-[14px] font-normal leading-[1.5] tracking-[-0.28px] text-white">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
-                {i < steps.length - 1 && (
-                  <div className="shrink-0 w-[62px]">
-                    <Image
-                      src="/assets/careers/process-arrow.svg"
-                      alt=""
-                      width={62}
-                      height={6}
-                    />
-                  </div>
-                )}
               </div>
             ))}
           </div>
 
           {/* CTA */}
-          <button className="border border-[#ED6B52] rounded-full pl-7 pr-10 py-4 font-montserrat font-bold text-[16px] text-[#ED6B52] leading-none text-center cursor-pointer">
+          <button className="border border-[#ED6B52] rounded-full pl-7 pr-10 py-4 font-montserrat font-bold text-[14px] sm:text-[16px] text-[#ED6B52] leading-none text-center cursor-pointer">
             • Become a Partner →
           </button>
         </div>

@@ -38,7 +38,7 @@ const columns = [
 export default function LifeAtSomeliSection() {
   return (
     <section className="w-full overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-24 py-[80px] flex flex-col items-center">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-16 sm:py-20 lg:py-[80px] flex flex-col items-center">
         {/* Photo grid */}
         <div className="flex gap-3 items-start w-full mb-[-73px]">
           {columns.map((col, colIdx) => (
@@ -62,7 +62,7 @@ export default function LifeAtSomeliSection() {
         </div>
 
         {/* Title */}
-        <h2 className="font-montserrat font-bold text-[60px] leading-[1.19] tracking-[-2px] text-black text-center relative z-10">
+        <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.19] tracking-[-2px] text-black text-center relative z-10">
           Life at Someli
         </h2>
       </div>

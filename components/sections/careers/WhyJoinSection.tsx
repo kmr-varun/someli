@@ -20,7 +20,7 @@ export default function WhyJoinSection() {
         />
       </div>
 
-      <div className="relative max-w-[1440px] mx-auto px-24 py-[100px] flex flex-col gap-[56px] items-center">
+      <div className="relative max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-16 sm:py-20 lg:py-[100px] flex flex-col gap-10 sm:gap-[56px] items-center">
         {/* Header */}
         <div className="flex flex-col gap-4 items-center">
           <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full px-[15px] py-[7px]">
@@ -28,18 +28,18 @@ export default function WhyJoinSection() {
               OUR TEAM
             </span>
           </div>
-          <h2 className="font-montserrat font-bold text-[60px] leading-[1.19] tracking-[-2px] text-white text-center">
+          <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.19] tracking-[-2px] text-white text-center">
             Why Join Someli
           </h2>
         </div>
 
         {/* Cards + CTA */}
         <div className="flex flex-col gap-8 items-center w-full">
-          <div className="flex gap-4 items-center w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
             {reasons.map((reason) => (
               <div
                 key={reason.number}
-                className="flex-1 glass-border-card bg-[rgba(255,255,255,0.04)] rounded-[16px] px-8 py-10"
+                className="glass-border-card bg-[rgba(255,255,255,0.04)] rounded-[16px] px-6 sm:px-8 py-8 sm:py-10"
               >
                 <div className="flex flex-col gap-[18px]">
                   <div className="w-[52px] h-[52px] rounded-[10px] bg-[rgba(237,107,82,0.1)] flex items-center justify-center">
@@ -61,7 +61,7 @@ export default function WhyJoinSection() {
           </div>
 
           {/* CTA */}
-          <button className="border border-[#ED6B52] rounded-full pl-7 pr-10 py-4 font-montserrat font-bold text-[16px] text-[#ED6B52] leading-none text-center cursor-pointer">
+          <button className="border border-[#ED6B52] rounded-full pl-7 pr-10 py-4 font-montserrat font-bold text-[14px] sm:text-[16px] text-[#ED6B52] leading-none text-center cursor-pointer">
             • Become a Partner →
           </button>
         </div>

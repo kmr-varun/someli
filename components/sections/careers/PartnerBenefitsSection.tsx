@@ -30,7 +30,7 @@ const benefits = [
 export default function PartnerBenefitsSection() {
   return (
     <section className="w-full">
-      <div className="max-w-[1440px] mx-auto px-24 py-[80px] flex flex-col gap-[56px] items-center">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-16 sm:py-20 lg:py-[80px] flex flex-col gap-10 sm:gap-[56px] items-center">
         {/* Header */}
         <div className="flex flex-col gap-4 items-center">
           <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full px-[15px] py-[7px]">
@@ -38,17 +38,17 @@ export default function PartnerBenefitsSection() {
               WHAT WE GIVE
             </span>
           </div>
-          <h2 className="font-montserrat font-bold text-[60px] leading-[1.19] tracking-[-2px] text-black text-center">
+          <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.19] tracking-[-2px] text-black text-center">
             Our Partner Benefits
           </h2>
         </div>
 
         {/* Cards */}
-        <div className="flex gap-4 items-stretch w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
           {benefits.map((benefit) => (
             <div
               key={benefit.title}
-              className="flex-1 bg-white border-2 border-[rgba(0,0,0,0.08)] rounded-[20px] p-6"
+              className="bg-white border-2 border-[rgba(0,0,0,0.08)] rounded-[20px] p-6"
             >
               <div className="flex flex-col gap-[18px]">
                 <div className="w-[52px] h-[52px] rounded-[10px] bg-[rgba(237,107,82,0.1)] flex items-center justify-center">
