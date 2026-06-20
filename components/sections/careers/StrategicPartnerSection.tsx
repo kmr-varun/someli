@@ -1,0 +1,118 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+
+const regions = [
+  {
+    name: "MENA",
+    priority: true,
+    countries: ["UAE", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman"],
+  },
+  { name: "INDIA", priority: false, countries: [] },
+  { name: "AUSTRALIA", priority: false, countries: [] },
+  { name: "USA", priority: false, countries: [] },
+];
+
+export default function StrategicPartnerSection() {
+  const [expandedRegion, setExpandedRegion] = useState<string>("MENA");
+
+  return (
+    <section className="relative w-full overflow-hidden">
+      {/* Grid background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Image
+          src="/assets/careers/hero-grid-pattern.svg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      <div className="relative max-w-[1440px] mx-auto px-24 py-[80px]">
+        {/* Header */}
+        <div className="flex flex-col gap-4 items-center text-center mb-[60px]">
+          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full px-[15px] py-[7px]">
+            <span className="font-montserrat text-[12px] font-normal tracking-[0.96px] uppercase text-[#ED6B52] leading-[15px]">
+              PARTNERSHIPS
+            </span>
+          </div>
+          <div className="flex flex-col gap-6 items-center">
+            <h2 className="font-montserrat font-bold text-[60px] leading-[1.19] tracking-[-2px] text-black">
+              Become a strategic growth partner
+            </h2>
+            <p className="font-montserrat text-[18px] font-normal leading-[1.5] text-[#444] max-w-[900px]">
+              We are building a carefully selected partner ecosystem across key global markets. We are seeking high-performing agencies and consulting firms that serve enterprise and mid-market organizations looking to increase employee engagement, brand reach, and social impact
+            </p>
+          </div>
+        </div>
+
+        {/* Map + Region cards */}
+        <div className="flex items-start gap-[64px]">
+          {/* Left - Region cards */}
+          <div className="flex flex-col gap-2 w-[477px] shrink-0">
+            {regions.map((region) => {
+              const isExpanded = expandedRegion === region.name;
+              return (
+                <button
+                  key={region.name}
+                  onClick={() => setExpandedRegion(isExpanded ? "" : region.name)}
+                  className={`w-full rounded-[20px] border-2 p-6 text-left transition-all duration-300 cursor-pointer ${
+                    isExpanded
+                      ? "bg-gradient-to-b from-[#DF8251] to-[#D54050] border-[rgba(0,0,0,0.08)]"
+                      : "bg-white border-[rgba(0,0,0,0.08)]"
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span
+                      className={`font-montserrat font-bold text-[14px] tracking-[-0.28px] leading-[1.5] ${
+                        isExpanded ? "text-white" : "text-[#222]"
+                      }`}
+                    >
+                      {region.name}
+                    </span>
+                    {region.priority && (
+                      <div
+                        className={`rounded-full px-[15px] py-[7px] border ${
+                          isExpanded
+                            ? "bg-[rgba(255,255,255,0.2)] border-white"
+                            : "bg-[rgba(237,107,82,0.16)] border-[rgba(237,107,82,0.16)]"
+                        }`}
+                      >
+                        <span
+                          className={`font-montserrat text-[12px] font-normal tracking-[0.96px] uppercase leading-[15px] ${
+                            isExpanded ? "text-white" : "text-[#ED6B52]"
+                          }`}
+                        >
+                          PRIORITY REGION
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                  {isExpanded && region.countries.length > 0 && (
+                    <ul className="mt-3 font-montserrat text-[18px] font-normal text-white leading-[1.5] list-disc pl-7">
+                      {region.countries.map((country) => (
+                        <li key={country}>{country}</li>
+                      ))}
+                    </ul>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Right - World map */}
+          <div className="flex-1 relative">
+            <Image
+              src="/assets/careers/world-map.svg"
+              alt="World map showing partner regions"
+              width={707}
+              height={458}
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
