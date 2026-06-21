@@ -179,19 +179,81 @@ export default function BlogDetailPage() {
                 Stay in Touch
               </h3>
 
-              <div className="flex items-center justify-center gap-4">
-                {/* Social Icons - Using placeholder circles for now */}
-                <div className="w-[51px] h-[51px] rounded-full bg-[#F5F5F5] flex items-center justify-center hover:bg-[#ED6B52] transition-colors cursor-pointer">
-                  <span className="text-[24px]">f</span>
+              <div className="flex items-center justify-center gap-[17px]">
+                {/* Facebook */}
+                <div className="relative w-[51px] h-[51px] cursor-pointer hover:opacity-80 transition-opacity">
+                  <Image
+                    src="/assets/blog-detail/social-icon-bg.svg"
+                    alt=""
+                    fill
+                    className="object-contain"
+                    sizes="51px"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Image
+                      src="/assets/blog-detail/facebook-icon.svg"
+                      alt="Facebook"
+                      width={27}
+                      height={27}
+                    />
+                  </div>
                 </div>
-                <div className="w-[51px] h-[51px] rounded-full bg-[#F5F5F5] flex items-center justify-center hover:bg-[#ED6B52] transition-colors cursor-pointer">
-                  <span className="text-[24px]">𝕏</span>
+
+                {/* Twitter */}
+                <div className="relative w-[51px] h-[51px] cursor-pointer hover:opacity-80 transition-opacity">
+                  <Image
+                    src="/assets/blog-detail/social-icon-bg.svg"
+                    alt=""
+                    fill
+                    className="object-contain"
+                    sizes="51px"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Image
+                      src="/assets/blog-detail/twitter-icon.svg"
+                      alt="Twitter"
+                      width={27}
+                      height={27}
+                    />
+                  </div>
                 </div>
-                <div className="w-[51px] h-[51px] rounded-full bg-[#F5F5F5] flex items-center justify-center hover:bg-[#ED6B52] transition-colors cursor-pointer">
-                  <span className="text-[24px]">in</span>
+
+                {/* LinkedIn */}
+                <div className="relative w-[51px] h-[51px] cursor-pointer hover:opacity-80 transition-opacity">
+                  <Image
+                    src="/assets/blog-detail/social-icon-bg.svg"
+                    alt=""
+                    fill
+                    className="object-contain"
+                    sizes="51px"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Image
+                      src="/assets/blog-detail/linkedin-icon.svg"
+                      alt="LinkedIn"
+                      width={27}
+                      height={27}
+                    />
+                  </div>
                 </div>
-                <div className="w-[51px] h-[51px] rounded-full bg-[#F5F5F5] flex items-center justify-center hover:bg-[#ED6B52] transition-colors cursor-pointer">
-                  <span className="text-[24px]">yt</span>
+
+                {/* YouTube */}
+                <div className="relative w-[51px] h-[51px] cursor-pointer hover:opacity-80 transition-opacity">
+                  <Image
+                    src="/assets/blog-detail/social-icon-bg.svg"
+                    alt=""
+                    fill
+                    className="object-contain"
+                    sizes="51px"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Image
+                      src="/assets/blog-detail/youtube-icon.svg"
+                      alt="YouTube"
+                      width={27}
+                      height={27}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
