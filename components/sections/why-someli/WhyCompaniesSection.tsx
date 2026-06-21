@@ -35,25 +35,25 @@ const benefitCards = [
 
 export default function WhyCompaniesSection() {
   return (
-    <section className="relative w-full bg-white py-[80px]">
-      <div className="max-w-[1440px] mx-auto px-24">
+    <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-[80px]">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
         {/* Header */}
-        <div className="flex flex-col items-center gap-4 mb-14">
+        <div className="flex flex-col items-center gap-3 sm:gap-4 mb-10 sm:mb-12 lg:mb-14">
           {/* Pill label */}
           <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] px-[15px] py-[7px] rounded-full">
-            <p className="font-montserrat font-normal text-[12px] text-[#ED6B52] tracking-[0.96px] uppercase leading-[15px]">
+            <p className="font-montserrat font-normal text-[10px] sm:text-[12px] text-[#ED6B52] tracking-[0.96px] uppercase leading-[15px]">
               WHAT WE GIVE
             </p>
           </div>
 
           {/* Heading */}
-          <h2 className="font-montserrat font-bold text-[60px] text-black tracking-[-2px] leading-[71.4px] text-center">
+          <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-black tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] leading-[1.2] lg:leading-[71.4px] text-center">
             Why companies choose Someli
           </h2>
         </div>
 
-        {/* Cards - 5 in a row */}
-        <div className="grid grid-cols-5 gap-4">
+        {/* Cards - Responsive */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
           {benefitCards.map((card, index) => (
             <div
               key={index}

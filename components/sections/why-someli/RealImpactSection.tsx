@@ -142,10 +142,10 @@ export default function RealImpactSection() {
         className="object-cover pointer-events-none"
       />
 
-      <div className="relative max-w-[1440px] mx-auto px-24 py-[100px] flex items-center justify-between">
+      <div className="relative max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-[100px] flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0">
         {/* Left heading */}
-        <div className="w-[541px]">
-          <h2 className="font-montserrat font-bold text-[60px] text-black leading-[71.4px] tracking-[-2px]">
+        <div className="w-full lg:w-[541px]">
+          <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-black leading-[1.2] lg:leading-[71.4px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px]">
             Real Impact.
             <br />
             Real Results
@@ -153,13 +153,13 @@ export default function RealImpactSection() {
         </div>
 
         {/* Right stat cards */}
-        <div className="flex flex-col gap-[9.684px] items-center">
-          <div className="flex gap-[10px]">
+        <div className="flex flex-col gap-[9.684px] items-center w-full lg:w-auto">
+          <div className="flex flex-wrap justify-center gap-[10px]">
             {statsRow1.map((stat, i) => (
               <StatCard key={i} {...stat} delay={i * 100} />
             ))}
           </div>
-          <div className="flex gap-[10px]">
+          <div className="flex flex-wrap justify-center gap-[10px]">
             {statsRow2.map((stat, i) => (
               <StatCard key={i} {...stat} delay={(i + statsRow1.length) * 100} />
             ))}
