@@ -30,78 +30,50 @@ const services = [
 export default function WhatsIncludedSection() {
   return (
     <section className="relative w-full bg-white">
-      <div className="max-w-[1440px] mx-auto px-24 py-[100px] flex flex-col gap-14 items-center">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px] flex flex-col gap-10 sm:gap-12 md:gap-14 items-center">
         {/* Header */}
-        <div className="flex flex-col gap-4 items-center w-full">
+        <div className="flex flex-col gap-3 sm:gap-4 items-center w-full max-w-4xl">
           {/* Pill Label */}
-          <div className="inline-flex items-center px-[15px] py-[7px] bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full">
-            <span className="text-[#ED6B52] text-[12px] font-normal uppercase tracking-[0.96px] leading-[15px]">
+          <div className="inline-flex items-center px-3 sm:px-4 md:px-[15px] py-[6px] md:py-[7px] bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full">
+            <span className="text-[#ED6B52] text-[10px] sm:text-[11px] md:text-[12px] font-normal uppercase tracking-[0.8px] md:tracking-[0.96px] leading-[15px]">
               Transparent pricing
             </span>
           </div>
 
           {/* Heading + Description */}
-          <div className="flex flex-col gap-6 items-center text-center">
-            <h2 className="text-[60px] font-bold leading-[71.4px] tracking-[-2px] text-black">
+          <div className="flex flex-col gap-4 sm:gap-5 md:gap-6 items-center text-center w-full">
+            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-bold leading-[1.2] tracking-[-1.5px] lg:tracking-[-2px] text-black">
               What's Included
             </h2>
-            <p className="text-[18px] font-normal leading-[24.5px] text-black w-[808px]">
+            <p className="text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[1.4] text-black max-w-[808px]">
               A dedicated marketing team consisting of a video editor, a graphic designer, and a customer support manager — all done for you.
             </p>
           </div>
         </div>
 
-        {/* Services Grid - 3 columns, 2 rows */}
-        <div className="flex flex-col gap-6 w-full">
-          {/* Row 1 */}
-          <div className="flex gap-8 items-center justify-center">
-            {services.slice(0, 3).map((service, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-3 w-[394.667px] flex flex-col gap-3"
-              >
-                <div className="relative w-full aspect-[293/184] rounded-xl overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    sizes="(max-width: 1440px) 100vw, 395px"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="flex flex-col gap-2 items-start pb-4">
-                  <p className="text-[16px] font-bold leading-[1.5] tracking-[-0.32px] text-[#222222] text-center w-full">
-                    {service.title}
-                  </p>
-                </div>
+        {/* Services Grid - Responsive */}
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl p-3 flex flex-col gap-3"
+            >
+              <div className="relative w-full aspect-[293/184] rounded-xl overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 395px"
+                  className="object-cover"
+                />
               </div>
-            ))}
-          </div>
-
-          {/* Row 2 */}
-          <div className="flex gap-8 items-center justify-center">
-            {services.slice(3, 6).map((service, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-3 w-[394.667px] flex flex-col gap-3"
-              >
-                <div className="relative w-full aspect-[293/184] rounded-xl overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    sizes="(max-width: 1440px) 100vw, 395px"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="flex flex-col gap-2 items-start pb-4">
-                  <p className="text-[16px] font-bold leading-[1.5] tracking-[-0.32px] text-[#222222] text-center w-full">
-                    {service.title}
-                  </p>
-                </div>
+              <div className="flex flex-col gap-2 items-start pb-4">
+                <p className="text-[14px] sm:text-[15px] md:text-[16px] font-bold leading-[1.5] tracking-[-0.32px] text-[#222222] text-center w-full">
+                  {service.title}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
