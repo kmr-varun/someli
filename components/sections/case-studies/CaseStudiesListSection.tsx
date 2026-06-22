@@ -126,9 +126,9 @@ export default function CaseStudiesListSection() {
   ];
 
   return (
-    <section className="w-full bg-white px-24 py-[100px] flex flex-col items-center gap-16">
+    <section className="w-full bg-white px-6 md:px-12 lg:px-24 py-12 md:py-16 lg:py-[100px] flex flex-col items-center gap-10 md:gap-12 lg:gap-16">
       {/* Section Header */}
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-3 md:gap-4 max-w-4xl mx-auto px-4">
         {/* Pill Label */}
         <div className="inline-flex items-center px-[15px] py-[7px] rounded-full bg-[rgba(247,103,57,0.16)] border border-[rgba(247,103,57,0.15)]">
           <span className="font-['Montserrat'] text-[10px] font-normal tracking-[1px] uppercase text-[#f76739] leading-[15px]">
@@ -137,18 +137,18 @@ export default function CaseStudiesListSection() {
         </div>
 
         {/* Heading */}
-        <h2 className="font-['Montserrat'] text-[60px] font-bold leading-[71.4px] tracking-[-2px] text-[#222] text-center">
+        <h2 className="font-['Montserrat'] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[60px] font-bold leading-[1.19] tracking-[-0.033em] text-[#222] text-center">
           Proven Results Across Industries
         </h2>
 
         {/* Subheading */}
-        <p className="font-['Montserrat'] text-[18px] font-normal leading-[1.5] text-[#444] text-center">
+        <p className="font-['Montserrat'] text-[16px] md:text-[18px] font-normal leading-[1.5] text-[#444] text-center max-w-3xl">
           AI + Strategy + Consistency + Influence that grows your businesss
         </p>
       </div>
 
       {/* Case Study Cards */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-3 md:gap-4 w-full items-center">
         {caseStudies.map((caseStudy, index) => (
           <CaseStudyCard key={index} {...caseStudy} />
         ))}

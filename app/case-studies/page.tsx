@@ -14,8 +14,8 @@ export default function CaseStudiesPage() {
     <main className="min-h-screen bg-white">
       <Header />
       <CaseStudiesHeroSection />
-      {/* Empty spacer matching Figma */}
-      <div className="w-full h-[132px]" />
+      {/* Empty spacer matching Figma - responsive */}
+      <div className="w-full h-[60px] md:h-[90px] lg:h-[132px]" />
       <CaseStudiesListSection />
       <LogosSection label="OUR PARTNERSHIPS" />
       <Footer />

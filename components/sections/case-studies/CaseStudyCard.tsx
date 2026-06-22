@@ -36,27 +36,27 @@ export default function CaseStudyCard({
   const isGradient = variant === 'gradient';
 
   return (
-    <div className="w-[1200px] border-2 border-[rgba(0,0,0,0.06)] rounded-[24px] overflow-hidden flex group hover:shadow-[0px_4px_25px_0px_rgba(0,0,0,0.25)] transition-shadow duration-300">
+    <div className="w-full max-w-[1200px] border-2 border-[rgba(0,0,0,0.06)] rounded-[16px] md:rounded-[24px] overflow-hidden flex flex-col md:flex-row group hover:shadow-[0px_4px_25px_0px_rgba(0,0,0,0.25)] transition-shadow duration-300">
       {/* Left Sidebar */}
-      <div className="w-[243px] px-8 py-10 flex flex-col justify-between border-r border-[rgba(0,0,0,0.08)] bg-[#fff6f3] group-hover:bg-gradient-to-b group-hover:from-[#df8251] group-hover:to-[#d54050] transition-all duration-300">
+      <div className="w-full md:w-[243px] px-6 md:px-8 py-6 md:py-10 flex flex-row md:flex-col justify-between md:border-r border-b md:border-b-0 border-[rgba(0,0,0,0.08)] bg-[#fff6f3] group-hover:bg-gradient-to-b group-hover:from-[#df8251] group-hover:to-[#d54050] transition-all duration-300">
         {/* Company Logo Placeholder */}
-        <div className="w-full h-24 rounded-lg bg-white flex items-center justify-center overflow-hidden">
+        <div className="w-[100px] md:w-full h-[60px] md:h-24 rounded-lg bg-white flex items-center justify-center overflow-hidden flex-shrink-0">
           <Image
             src={companyLogo}
             alt="Company logo"
             width={179}
             height={96}
-            className="object-contain"
+            className="object-contain w-full h-full p-2"
           />
         </div>
 
         {/* Industry + Category */}
-        <div className="flex flex-col gap-3">
-          <h3 className="font-['Montserrat'] text-[24px] font-bold leading-[1.4] tracking-[-1px] text-[#222] group-hover:text-white">
+        <div className="flex flex-col gap-2 md:gap-3 flex-1 md:flex-initial justify-center md:justify-start">
+          <h3 className="font-['Montserrat'] text-[18px] md:text-[24px] font-bold leading-[1.4] tracking-[-1px] text-[#222] group-hover:text-white">
             {industry}
           </h3>
           <div className="inline-block self-start">
-            <span className="font-['Montserrat'] text-[12px] font-normal leading-[15px] tracking-[0.96px] uppercase text-[#222] group-hover:text-white">
+            <span className="font-['Montserrat'] text-[10px] md:text-[12px] font-normal leading-[15px] tracking-[0.96px] uppercase text-[#222] group-hover:text-white">
               {category}
             </span>
           </div>
@@ -64,38 +64,39 @@ export default function CaseStudyCard({
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 p-8 flex flex-col gap-6">
+      <div className="flex-1 p-4 md:p-6 lg:p-8 flex flex-col gap-4 md:gap-6">
         {/* Goal + Outcome + Stats */}
-        <div className="flex justify-between gap-[76px] pb-6 border-b border-[rgba(0,0,0,0.12)]">
+        <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-[76px] pb-4 md:pb-6 border-b border-[rgba(0,0,0,0.12)]">
           {/* Goal + Outcome (Left Column) */}
-          <div className="w-[399px] flex flex-col gap-8">
+          <div className="w-full lg:w-[399px] flex flex-col gap-6 md:gap-8">
             {/* Goal */}
             <div className="flex flex-col gap-2">
-              <h4 className="font-['Montserrat'] text-[16px] font-bold leading-[1.5] tracking-[-0.32px] text-[#222]">
+              <h4 className="font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-[1.5] tracking-[-0.32px] text-[#222]">
                 Goal:
               </h4>
-              <p className="font-['Montserrat'] text-[16px] font-normal leading-[1.5] text-[#222]">
+              <p className="font-['Montserrat'] text-[14px] md:text-[16px] font-normal leading-[1.5] text-[#222]">
                 {goal}
               </p>
             </div>
 
             {/* Outcome */}
             <div className="flex flex-col gap-2">
-              <h4 className="font-['Montserrat'] text-[16px] font-bold leading-[1.5] tracking-[-0.32px] text-[#222]">
+              <h4 className="font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-[1.5] tracking-[-0.32px] text-[#222]">
                 Outcome:
               </h4>
               <div className="flex flex-col gap-2">
                 {outcomes.map((outcome, index) => (
-                  <div key={index} className="flex gap-3 items-start">
-                    <div className="w-[15.86px] h-[23.86px] flex-shrink-0">
+                  <div key={index} className="flex gap-2 md:gap-3 items-start">
+                    <div className="w-[14px] h-[20px] md:w-[15.86px] md:h-[23.86px] flex-shrink-0">
                       <Image
                         src="/assets/case-studies/checkmark.svg"
                         alt=""
                         width={16}
                         height={24}
+                        className="w-full h-full"
                       />
                     </div>
-                    <p className="flex-1 font-['Montserrat'] text-[16px] font-normal leading-[1.5] text-[#222]">
+                    <p className="flex-1 font-['Montserrat'] text-[14px] md:text-[16px] font-normal leading-[1.5] text-[#222]">
                       {outcome}
                     </p>
                   </div>
@@ -105,9 +106,9 @@ export default function CaseStudyCard({
           </div>
 
           {/* Stats + Testimonial (Right Column) */}
-          <div className="w-[418px] flex flex-col gap-2">
+          <div className="w-full lg:w-[418px] flex flex-col gap-2">
             {/* Three Stat Cards */}
-            <div className="flex gap-[6.9px]">
+            <div className="flex gap-2 md:gap-[6.9px]">
               {stats.map((stat, index) => (
                 <div
                   key={index}
@@ -201,8 +202,8 @@ export default function CaseStudyCard({
         </div>
 
         {/* CTA Button */}
-        <button className="self-start py-4 text-[#ed6b52] font-['Montserrat'] text-[16px] font-bold leading-none flex items-center">
-          <span className="mr-3">•</span> View Case Study
+        <button className="self-start py-3 md:py-4 text-[#ed6b52] font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-none flex items-center">
+          <span className="mr-2 md:mr-3">•</span> View Case Study
         </button>
       </div>
     </div>
