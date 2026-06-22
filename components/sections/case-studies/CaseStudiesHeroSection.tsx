@@ -86,7 +86,7 @@ export default function CaseStudiesHeroSection() {
         {/* Stat Card 1 - Gradient (Bottom Left) */}
         <div
           className="absolute w-[140px] sm:w-[160px] lg:w-[195px] p-[16px] sm:p-[20px] lg:p-[22.4px] rounded-[9px] bg-gradient-to-b from-[#df8251] to-[#d54050] flex flex-col gap-[6px] lg:gap-[9px]"
-          style={{ left: '5%', top: '60%' }}
+          style={{ left: '18.5%', top: '50.4%' }}
         >
           <div className="flex items-center justify-between">
             <div className="flex-1">
@@ -98,13 +98,14 @@ export default function CaseStudiesHeroSection() {
               </p>
             </div>
             <div className="w-[28px] sm:w-[34px] lg:w-[39.2px] h-[28px] sm:h-[34px] lg:h-[39.2px] rounded-[7.5px] bg-[rgba(255,255,255,0.2)] flex items-center justify-center flex-shrink-0">
-              <Image
-                src="/assets/case-studies/stat-card-icon-group.svg"
-                alt=""
-                width={16}
-                height={17}
-                className="w-[12px] sm:w-[14px] lg:w-[16px] h-auto"
-              />
+              <div className="relative w-[12px] sm:w-[14px] lg:w-[15.614px] h-[13px] sm:h-[15px] lg:h-[17.349px]">
+                <Image
+                  src="/assets/case-studies/stat-card-icon-group.svg"
+                  alt=""
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
           <p className="font-['Montserrat'] text-[7px] sm:text-[8px] lg:text-[8.97px] font-medium leading-[1.5] tracking-[-0.179px] text-white">
@@ -115,7 +116,7 @@ export default function CaseStudiesHeroSection() {
         {/* Stat Card 2 - White with Orange Border (Top Left) */}
         <div
           className="absolute w-[165px] sm:w-[190px] lg:w-[230px] p-[18px] sm:p-[22px] lg:p-[26.4px] rounded-[10.6px] bg-white border-[1.32px] border-[#df8251] flex flex-col gap-[8px] lg:gap-[10.6px]"
-          style={{ left: '0', top: '5%' }}
+          style={{ left: '0', top: '14.6%' }}
         >
           <div className="flex items-center justify-between">
             <div className="flex-1">
@@ -126,14 +127,15 @@ export default function CaseStudiesHeroSection() {
                 8.7X
               </p>
             </div>
-            <div className="w-[34px] sm:w-[40px] lg:w-[46.2px] h-[34px] sm:h-[40px] lg:h-[46.2px] flex-shrink-0">
-              <Image
-                src="/assets/case-studies/stat-card-icon-1.svg"
-                alt=""
-                width={46}
-                height={46}
-                className="w-full h-full"
-              />
+            <div className="w-[34px] sm:w-[40px] lg:w-[46.2px] h-[34px] sm:h-[40px] lg:h-[46.2px] flex-shrink-0 flex items-center justify-center">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/assets/case-studies/stat-card-icon-1.svg"
+                  alt=""
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
           <p className="font-['Montserrat'] text-[8px] sm:text-[9px] lg:text-[10.56px] font-medium leading-[1.5] tracking-[-0.211px] text-[#222]">
@@ -144,7 +146,7 @@ export default function CaseStudiesHeroSection() {
         {/* Stat Card 3 - White with Orange Border (Top Right) */}
         <div
           className="absolute w-[130px] sm:w-[150px] lg:w-[176px] p-[14px] sm:p-[18px] lg:p-[20.3px] rounded-[8.1px] bg-white border-[1.01px] border-[#df8251] flex flex-col gap-[6px] lg:gap-[8.1px]"
-          style={{ left: '55%', top: '0' }}
+          style={{ left: '51.6%', top: '0' }}
         >
           <div className="flex items-center justify-between">
             <div className="flex-1">
@@ -155,14 +157,15 @@ export default function CaseStudiesHeroSection() {
                 2.4X
               </p>
             </div>
-            <div className="w-[26px] sm:w-[30px] lg:w-[35.5px] h-[26px] sm:h-[30px] lg:h-[35.5px] flex-shrink-0">
-              <Image
-                src="/assets/case-studies/stat-card-icon-2.svg"
-                alt=""
-                width={36}
-                height={36}
-                className="w-full h-full"
-              />
+            <div className="w-[26px] sm:w-[30px] lg:w-[35.5px] h-[26px] sm:h-[30px] lg:h-[35.5px] flex-shrink-0 flex items-center justify-center">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/assets/case-studies/stat-card-icon-2.svg"
+                  alt=""
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
           <p className="font-['Montserrat'] text-[6.5px] sm:text-[7.5px] lg:text-[8.11px] font-medium leading-[1.5] tracking-[-0.162px] text-[#222]">

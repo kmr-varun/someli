@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CaseStudiesHeroSection from '@/components/sections/case-studies/CaseStudiesHeroSection';
+import PricingMarqueeBar from '@/components/sections/pricing/PricingMarqueeBar';
 import CaseStudiesListSection from '@/components/sections/case-studies/CaseStudiesListSection';
 import LogosSection from '@/components/sections/LogosSection';
 
@@ -14,8 +15,7 @@ export default function CaseStudiesPage() {
     <main className="min-h-screen bg-white">
       <Header />
       <CaseStudiesHeroSection />
-      {/* Empty spacer matching Figma - responsive */}
-      <div className="w-full h-[60px] md:h-[90px] lg:h-[132px]" />
+      <PricingMarqueeBar />
       <CaseStudiesListSection />
       <LogosSection label="OUR PARTNERSHIPS" />
       <Footer />
