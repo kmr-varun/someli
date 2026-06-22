@@ -26,7 +26,7 @@ const NAV_ITEMS = [
       { label: "Product Tour", href: "/product" },
       { label: "Client Cases", href: "#" },
       { label: "Blogs & Insights", href: "/blogs-insights" },
-      { label: "Tools & Calculators", href: "#" },
+      { label: "Tools & Calculators", href: "/boost-10x-corporates" },
       { label: "Guides & Playbooks", href: "#" },
       { label: "Help Center", href: "#" },
     ],
