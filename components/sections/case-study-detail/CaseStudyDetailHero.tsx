@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function CaseStudyDetailHero() {
   return (
-    <section className="relative w-full h-[560px] bg-white overflow-clip px-24 py-[100px] flex items-center justify-between">
+    <section className="relative w-full min-h-[400px] md:min-h-[500px] lg:h-[560px] bg-white overflow-clip px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-[100px] flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0">
       {/* Background decorative pattern (right side) */}
       <div className="absolute inset-[16.96%_16.74%_17.53%_54.93%]">
         <Image
@@ -24,7 +24,7 @@ export default function CaseStudyDetailHero() {
       </div>
 
       {/* Left content */}
-      <div className="relative z-10 flex flex-col gap-10 items-start w-[503px]">
+      <div className="relative z-10 flex flex-col gap-6 lg:gap-10 items-start w-full lg:w-[503px]">
         <div className="flex flex-col gap-4 items-start w-full">
           {/* Case Study Label */}
           <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.15)] px-[15px] py-[7px] rounded-full">
@@ -35,7 +35,7 @@ export default function CaseStudyDetailHero() {
 
           {/* Company Name */}
           <div className="w-full pb-[0.67px]">
-            <h1 className="font-montserrat font-bold text-[60px] text-[#222] tracking-[-2.04px] leading-[71.4px]">
+            <h1 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-[#222] tracking-[-2.04px] leading-[1.19]">
               DP WORLD
             </h1>
           </div>
@@ -43,14 +43,14 @@ export default function CaseStudyDetailHero() {
 
         {/* Description */}
         <div className="w-full">
-          <p className="font-montserrat font-normal text-[18px] text-[#444] leading-[1.5]">
+          <p className="font-montserrat font-normal text-[14px] sm:text-[16px] lg:text-[18px] text-[#444] leading-[1.5]">
             Someli helps mid-sized organizations turn employees into trusted brand advocates and measurable growth drivers
           </p>
         </div>
       </div>
 
       {/* Right info card */}
-      <div className="relative z-10 bg-gradient-to-b from-[#df8251] to-[#d54050] rounded-[22.298px] w-[348.957px] px-[35.676px] py-[55.833px] flex flex-col gap-8">
+      <div className="relative z-10 bg-gradient-to-b from-[#df8251] to-[#d54050] rounded-[22.298px] w-full sm:w-[320px] md:w-[340px] lg:w-[348.957px] px-6 sm:px-7 lg:px-[35.676px] py-8 sm:py-10 lg:py-[55.833px] flex flex-col gap-6 lg:gap-8 shrink-0">
         {/* Logo container */}
         <div className="relative w-full h-[145px] rounded-lg overflow-hidden">
           <div className="absolute inset-0 bg-white rounded-lg" />

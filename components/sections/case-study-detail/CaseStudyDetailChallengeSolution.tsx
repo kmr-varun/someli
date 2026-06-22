@@ -17,14 +17,14 @@ const solutions = [
 
 export default function CaseStudyDetailChallengeSolution() {
   return (
-    <section id="challenge" className="bg-white w-full px-24 py-[100px]">
-      <div className="flex items-center w-full">
+    <section id="challenge" className="bg-white w-full px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-[100px]">
+      <div className="flex flex-col lg:flex-row items-stretch w-full gap-6 lg:gap-0">
         {/* Left card - The Challenges */}
-        <div className="flex-1 min-w-px bg-white border-[2.23px] border-[#df8251] rounded-[22.298px] px-[31.217px] py-[44.595px] flex flex-col gap-[35.676px] mr-[-35.676px] relative z-0">
-          <h3 className="font-montserrat font-medium text-[24.527px] text-black tracking-[-0.4905px] leading-none">
+        <div className="flex-1 min-w-px bg-white border-[2.23px] border-[#df8251] rounded-[22.298px] px-6 sm:px-7 lg:px-[31.217px] py-8 sm:py-10 lg:py-[44.595px] flex flex-col gap-6 lg:gap-[35.676px] lg:mr-[-35.676px] relative z-0">
+          <h3 className="font-montserrat font-medium text-[18px] sm:text-[20px] lg:text-[24.527px] text-black tracking-[-0.4905px] leading-none">
             The Challenges
           </h3>
-          <div className="flex flex-col gap-[11.149px] w-[512px]">
+          <div className="flex flex-col gap-[11.149px] w-full lg:w-[512px]">
             {challenges.map((challenge, index) => (
               <div key={index} className="flex gap-[13.379px] items-center w-full">
                 <div className="relative shrink-0 w-[8.919px] h-[8.919px]">
@@ -44,8 +44,8 @@ export default function CaseStudyDetailChallengeSolution() {
         </div>
 
         {/* Right card - The Solutions */}
-        <div className="flex-1 min-w-px bg-gradient-to-b from-[#df8251] to-[#d54050] rounded-[22.298px] px-[35.676px] py-[55.833px] flex flex-col gap-[44.666px] relative z-10">
-          <h3 className="font-montserrat font-medium text-[30.708px] text-white tracking-[-0.6142px] leading-none">
+        <div className="flex-1 min-w-px bg-gradient-to-b from-[#df8251] to-[#d54050] rounded-[22.298px] px-6 sm:px-7 lg:px-[35.676px] py-8 sm:py-10 lg:py-[55.833px] flex flex-col gap-6 lg:gap-[44.666px] relative z-10">
+          <h3 className="font-montserrat font-medium text-[20px] sm:text-[24px] lg:text-[30.708px] text-white tracking-[-0.6142px] leading-none">
             The Solutions
           </h3>
           <div className="flex flex-col gap-[13.958px] w-full">

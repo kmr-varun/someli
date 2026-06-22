@@ -19,7 +19,7 @@ export default function CaseStudyDetailTabNav() {
   };
 
   return (
-    <section className="relative w-full overflow-clip px-24 py-10">
+    <section className="relative w-full overflow-clip px-4 sm:px-8 md:px-16 lg:px-24 py-6 md:py-10">
       {/* Dark background with pattern overlay */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="absolute inset-0 bg-[#111]" />
@@ -37,15 +37,15 @@ export default function CaseStudyDetailTabNav() {
       </div>
 
       {/* Tab buttons */}
-      <div className="relative z-10 flex gap-2 items-start w-full">
+      <div className="relative z-10 flex flex-wrap gap-2 items-start w-full">
         {tabs.map((tab, index) => (
           <button
             key={tab.id}
             onClick={() => handleTabClick(tab.id)}
             className={`
-              flex-1 min-w-px flex items-center justify-center
-              pl-7 pr-10 py-4 rounded-full
-              font-montserrat font-bold text-[16px] leading-none
+              flex-1 min-w-[140px] flex items-center justify-center
+              px-4 sm:pl-7 sm:pr-10 py-3 sm:py-4 rounded-full
+              font-montserrat font-bold text-[13px] sm:text-[14px] lg:text-[16px] leading-none
               transition-all duration-300
               ${
                 index === 0

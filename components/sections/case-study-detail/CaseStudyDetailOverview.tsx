@@ -43,7 +43,7 @@ const stats = [
 
 export default function CaseStudyDetailOverview() {
   return (
-    <section id="overview" className="relative w-full px-24 py-[100px] flex items-center justify-between">
+    <section id="overview" className="relative w-full overflow-hidden px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-[100px] flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0">
       {/* Union decorative pattern */}
       <div className="absolute inset-[-42.75%_-1.53%_-40.19%_-1.53%]">
         <Image
@@ -55,19 +55,19 @@ export default function CaseStudyDetailOverview() {
       </div>
 
       {/* Left content */}
-      <div className="relative z-10 flex flex-col gap-8 items-start w-[541px] pb-[0.67px]">
-        <h2 className="font-montserrat font-bold text-[60px] text-[#222] tracking-[-2px] leading-[71.4px]">
+      <div className="relative z-10 flex flex-col gap-6 lg:gap-8 items-start w-full lg:w-[541px] pb-[0.67px]">
+        <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-[#222] tracking-[-2px] leading-[1.19]">
           Overview
         </h2>
-        <p className="font-['Space_Grotesk'] font-normal text-[17px] text-[#444] leading-[1.5]">
+        <p className="font-['Space_Grotesk'] font-normal text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] text-[#444] leading-[1.5]">
           Most social media tools help you post. We help you grow. Every feature in Someli is designed around a single question: will this drive real business results? That&apos;s why we pair smart automation with dedicated marketing support, engagement reports, and actionable AI recommendations — not just dashboards.
         </p>
       </div>
 
       {/* Right stat cards grid */}
-      <div className="relative z-10 flex flex-col gap-[10.667px] items-center justify-center">
+      <div className="relative z-10 flex flex-col gap-[10.667px] items-center justify-center w-full lg:w-auto">
         {/* Row 1 */}
-        <div className="flex gap-[11.015px] items-center">
+        <div className="flex flex-wrap justify-center gap-[11.015px] items-center w-full">
           {stats.slice(0, 3).map((stat, index) => (
             <div
               key={index}
@@ -101,7 +101,7 @@ export default function CaseStudyDetailOverview() {
         </div>
 
         {/* Row 2 */}
-        <div className="flex gap-[11.015px] items-center">
+        <div className="flex flex-wrap justify-center gap-[11.015px] items-center w-full">
           {stats.slice(3, 6).map((stat, index) => (
             <div
               key={index}

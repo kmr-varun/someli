@@ -9,7 +9,7 @@ const statsLeft = [
 
 export default function CaseStudyDetailResults() {
   return (
-    <section id="results" className="relative w-full overflow-clip px-24 py-[100px]">
+    <section id="results" className="relative w-full overflow-clip px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-[100px]">
       {/* Dark background with pattern */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="absolute inset-0 bg-[#111]" />
@@ -24,16 +24,16 @@ export default function CaseStudyDetailResults() {
         </div>
       </div>
 
-      <div className="relative z-10 flex flex-col gap-14 items-center justify-center w-full">
+      <div className="relative z-10 flex flex-col gap-8 md:gap-10 lg:gap-14 items-center justify-center w-full">
         {/* Heading */}
-        <h2 className="font-montserrat font-bold text-[60px] text-white tracking-[-2px] leading-[71.4px] text-center w-full">
+        <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-white tracking-[-2px] leading-[1.19] text-center w-full">
           The Results
         </h2>
 
         {/* Two-column layout */}
-        <div className="flex gap-5 items-start w-full">
+        <div className="flex flex-col lg:flex-row gap-5 items-stretch w-full">
           {/* Left column - Stats list */}
-          <div className="glass-border-card bg-[rgba(255,255,255,0.04)] rounded-[16px] px-8 py-10 w-[375px] flex flex-col gap-8">
+          <div className="glass-border-card bg-[rgba(255,255,255,0.04)] rounded-[16px] px-6 sm:px-7 lg:px-8 py-8 lg:py-10 w-full lg:w-[375px] flex flex-col gap-6 lg:gap-8 shrink-0">
             <p className="font-montserrat font-semibold text-[18px] text-white leading-[1.3]">
               Within 12 Months of Launching their platform with Someli
             </p>
@@ -53,7 +53,7 @@ export default function CaseStudyDetailResults() {
           </div>
 
           {/* Right column - Potential with chart */}
-          <div className="flex-1 min-w-px bg-gradient-to-b from-[#df8251] to-[#d54050] rounded-[16px] px-8 py-10 flex flex-col gap-8 self-stretch">
+          <div className="flex-1 min-w-px bg-gradient-to-b from-[#df8251] to-[#d54050] rounded-[16px] px-6 sm:px-7 lg:px-8 py-8 lg:py-10 flex flex-col gap-6 lg:gap-8 self-stretch">
             <p className="font-montserrat font-semibold text-[24px] text-white leading-none">
               Potential with Someli Boost 10X
             </p>

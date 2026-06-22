@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function CaseStudyDetailClientSays() {
   return (
-    <section className="relative w-full px-24 py-[100px] flex items-center justify-between">
+    <section className="relative w-full overflow-hidden px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-[100px] flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0">
       {/* Union decorative pattern */}
       <div className="absolute inset-[-44.18%_-1.53%_-41.46%_-1.53%]">
         <Image
@@ -14,15 +14,15 @@ export default function CaseStudyDetailClientSays() {
       </div>
 
       {/* Left side - "Our Client Says" text (outline) */}
-      <div className="relative z-10 flex items-center w-[541px]">
-        <h2 className="font-montserrat font-bold text-[100px] tracking-[2px] leading-none outlined-text-orange">
+      <div className="relative z-10 flex items-center w-full lg:w-[541px]">
+        <h2 className="font-montserrat font-bold text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] tracking-[2px] leading-none outlined-text-orange">
           Our Client Says
         </h2>
       </div>
 
       {/* Right side - Testimonial card */}
       <div className="relative z-10 flex-1 min-w-px">
-        <div className="bg-white border border-[#df8251] rounded-lg p-[40.435px] flex flex-col gap-[30.326px]">
+        <div className="bg-white border border-[#df8251] rounded-lg p-6 sm:p-8 lg:p-[40.435px] flex flex-col gap-6 lg:gap-[30.326px]">
           {/* Top section - quote icon and text */}
           <div className="flex flex-col items-start justify-between flex-1 min-h-px w-full">
             {/* Quote icon */}
@@ -40,7 +40,7 @@ export default function CaseStudyDetailClientSays() {
             </div>
 
             {/* Quote text */}
-            <p className="font-['Space_Grotesk'] font-normal text-[32px] text-[#444] leading-[1.5]">
+            <p className="font-['Space_Grotesk'] font-normal text-[18px] sm:text-[22px] md:text-[26px] lg:text-[32px] text-[#444] leading-[1.5]">
               Most founders think growth comes from ads. It doesn&apos;t. It comes from consistent visibility.
             </p>
           </div>

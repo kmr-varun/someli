@@ -25,19 +25,19 @@ const takeaways = [
 
 export default function CaseStudyDetailKeyTakeaways() {
   return (
-    <section id="takeaways" className="bg-white w-full px-24 py-[100px] flex flex-col gap-16 items-center">
+    <section id="takeaways" className="bg-white w-full px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-[100px] flex flex-col gap-10 lg:gap-16 items-center">
       {/* Heading */}
-      <div className="flex flex-col gap-4 items-center w-[616px]">
-        <h2 className="font-montserrat font-bold text-[60px] text-[#222] tracking-[-2px] leading-[71.4px] text-center pb-[0.67px]">
+      <div className="flex flex-col gap-4 items-center w-full lg:w-[616px]">
+        <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-[#222] tracking-[-2px] leading-[1.19] text-center pb-[0.67px]">
           Key Takeaways
         </h2>
-        <p className="font-montserrat font-normal text-[18px] text-[#444] leading-[1.5] text-center">
+        <p className="font-montserrat font-normal text-[14px] sm:text-[16px] lg:text-[18px] text-[#444] leading-[1.5] text-center">
           AI + Strategy + Consistency + Influence that grows your businesss
         </p>
       </div>
 
       {/* 4 cards */}
-      <div className="flex gap-4 items-start w-full">
+      <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap gap-4 items-stretch w-full">
         {takeaways.map((item, index) => (
           <div
             key={index}
