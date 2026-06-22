@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -29,11 +30,11 @@ export default function Footer() {
           </div>
 
           {/* Book Demo Button */}
-          <button className="inline-flex items-center rounded-full border border-[#ED6B52] py-3 sm:py-3.5 md:py-4 pl-5 pr-8 sm:pl-6 sm:pr-9 md:pl-7 md:pr-10">
+          <Link href="/contact" className="inline-flex items-center rounded-full border border-[#ED6B52] py-3 sm:py-3.5 md:py-4 pl-5 pr-8 sm:pl-6 sm:pr-9 md:pl-7 md:pr-10">
             <span className="font-['Montserrat'] text-[14px] sm:text-[15px] md:text-[16px] font-bold text-[#ED6B52]">
               • Book a Demo →
             </span>
-          </button>
+          </Link>
 
           {/* 30 day guarantee badge - hidden on mobile */}
           <div className="hidden lg:flex absolute right-[5%] xl:left-[1011px] xl:right-auto top-[53.22px] w-[224px] items-center gap-3 rounded-full bg-[rgba(17,17,17,0.4)] px-5 py-3">
@@ -55,14 +56,14 @@ export default function Footer() {
         <div className="flex w-full flex-col items-center gap-8 sm:gap-10">
           <div className="flex w-full flex-col items-center gap-12 sm:gap-14 md:gap-16 lg:gap-20">
             {/* Logo */}
-            <div className="relative h-[80px] sm:h-[120px] md:h-[150px] lg:h-[186px] w-[260px] sm:w-[380px] md:w-[480px] lg:w-[602px] shrink-0">
+            <Link href="/" className="relative h-[80px] sm:h-[120px] md:h-[150px] lg:h-[186px] w-[260px] sm:w-[380px] md:w-[480px] lg:w-[602px] shrink-0">
               <Image
                 src="/assets/footer/logo.png"
                 alt="Someli AI"
                 fill
-                className="pointer-events-none object-contain"
+                className="object-contain"
               />
-            </div>
+            </Link>
 
             {/* Navigation Columns */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-6 lg:gap-4 w-full">
@@ -70,12 +71,12 @@ export default function Footer() {
               <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-['Montserrat'] font-medium">
                 <h3 className="text-[16px] sm:text-[18px] md:text-[20px] leading-normal text-white">Product</h3>
                 <ul className="flex flex-col gap-[10px] sm:gap-[12px] md:gap-[14px] text-[13px] sm:text-[14px] leading-normal text-[rgba(255,255,255,0.9)]">
-                  <li className="list-disc ms-[21px]">Platform</li>
-                  <li className="list-disc ms-[21px]">How Someli Works</li>
-                  <li className="list-disc ms-[21px]">Pricing</li>
-                  <li className="list-disc ms-[21px]">For Corporates</li>
-                  <li className="list-disc ms-[21px]">Supercharge Plan</li>
-                  <li className="list-disc ms-[21px]">AI powered Personal Branding</li>
+                  <li className="list-disc ms-[21px]"><Link href="/" className="hover:text-white transition-colors">Platform</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="/how-someli-works" className="hover:text-white transition-colors">How Someli Works</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="/for-corporates" className="hover:text-white transition-colors">For Corporates</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="#" className="hover:text-white transition-colors">Supercharge Plan</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="#" className="hover:text-white transition-colors">AI powered Personal Branding</Link></li>
                 </ul>
               </div>
 
@@ -83,12 +84,12 @@ export default function Footer() {
               <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-['Montserrat'] font-medium">
                 <h3 className="text-[16px] sm:text-[18px] md:text-[20px] leading-normal text-white">Resources</h3>
                 <ul className="flex flex-col gap-[10px] sm:gap-[12px] md:gap-[14px] text-[13px] sm:text-[14px] leading-normal text-[rgba(255,255,255,0.9)]">
-                  <li className="list-disc ms-[21px]">Product Tour</li>
-                  <li className="list-disc ms-[21px]">Client Cases</li>
-                  <li className="list-disc ms-[21px]">Blogs & Insights</li>
-                  <li className="list-disc ms-[21px]">Tools & Calculators</li>
-                  <li className="list-disc ms-[21px]">Guides & Playbooks</li>
-                  <li className="list-disc ms-[21px]">Help Center</li>
+                  <li className="list-disc ms-[21px]"><Link href="/product" className="hover:text-white transition-colors">Product Tour</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="#" className="hover:text-white transition-colors">Client Cases</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="/blogs-insights" className="hover:text-white transition-colors">Blogs & Insights</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="#" className="hover:text-white transition-colors">Tools & Calculators</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="#" className="hover:text-white transition-colors">Guides & Playbooks</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="#" className="hover:text-white transition-colors">Help Center</Link></li>
                 </ul>
               </div>
 
@@ -96,10 +97,10 @@ export default function Footer() {
               <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-['Montserrat'] font-medium">
                 <h3 className="text-[16px] sm:text-[18px] md:text-[20px] leading-normal text-white">Company</h3>
                 <ul className="flex flex-col gap-[10px] sm:gap-[12px] md:gap-[14px] text-[13px] sm:text-[14px] leading-normal text-[rgba(255,255,255,0.9)]">
-                  <li className="list-disc ms-[21px]">Our Story</li>
-                  <li className="list-disc ms-[21px]">Why Someli</li>
-                  <li className="list-disc ms-[21px]">Careers & Partnership</li>
-                  <li className="list-disc ms-[21px]">Contact Us</li>
+                  <li className="list-disc ms-[21px]"><Link href="/our-story" className="hover:text-white transition-colors">Our Story</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="/why-someli" className="hover:text-white transition-colors">Why Someli</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="/careers" className="hover:text-white transition-colors">Careers & Partnership</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
                 </ul>
               </div>
 
@@ -107,10 +108,10 @@ export default function Footer() {
               <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-['Montserrat'] font-medium">
                 <h3 className="text-[16px] sm:text-[18px] md:text-[20px] leading-normal text-white">Support</h3>
                 <ul className="flex flex-col gap-[10px] sm:gap-[12px] md:gap-[14px] text-[13px] sm:text-[14px] leading-normal text-[rgba(255,255,255,0.9)]">
-                  <li className="list-disc ms-[21px]">Book a Demo</li>
-                  <li className="list-disc ms-[21px]">FAQ</li>
-                  <li className="list-disc ms-[21px]">Privacy Policy</li>
-                  <li className="list-disc ms-[21px]">Terms of Use</li>
+                  <li className="list-disc ms-[21px]"><Link href="/contact" className="hover:text-white transition-colors">Book a Demo</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="#" className="hover:text-white transition-colors">FAQ</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                  <li className="list-disc ms-[21px]"><Link href="#" className="hover:text-white transition-colors">Terms of Use</Link></li>
                 </ul>
               </div>
 
@@ -155,30 +156,30 @@ export default function Footer() {
               © 2026 Someli AI. All rights reserved.
             </p>
             <div className="flex items-center gap-4 sm:gap-5">
-              <div className="relative h-[26px] w-[26px] sm:h-[30px] sm:w-[30px]">
+              <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="relative h-[26px] w-[26px] sm:h-[30px] sm:w-[30px] opacity-90 hover:opacity-100 transition-opacity">
                 <Image
                   src="/assets/footer/icon-facebook.svg"
                   alt="Facebook"
                   fill
                   className="object-contain"
                 />
-              </div>
-              <div className="relative h-[26px] w-[26px] sm:h-[30px] sm:w-[30px]">
+              </Link>
+              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="relative h-[26px] w-[26px] sm:h-[30px] sm:w-[30px] opacity-90 hover:opacity-100 transition-opacity">
                 <Image
                   src="/assets/footer/icon-linkedin.svg"
                   alt="LinkedIn"
                   fill
                   className="object-contain"
                 />
-              </div>
-              <div className="relative h-[26px] w-[26px] sm:h-[30px] sm:w-[30px]">
+              </Link>
+              <Link href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="relative h-[26px] w-[26px] sm:h-[30px] sm:w-[30px] opacity-90 hover:opacity-100 transition-opacity">
                 <Image
                   src="/assets/footer/icon-youtube.svg"
                   alt="YouTube"
                   fill
                   className="object-contain"
                 />
-              </div>
+              </Link>
             </div>
           </div>
         </div>

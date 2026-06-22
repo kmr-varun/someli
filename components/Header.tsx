@@ -2,34 +2,46 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const NAV_ITEMS = [
-  { label: "Platform", hasChevron: false, active: true, dropdown: null },
+  { label: "Platform", hasChevron: false, active: true, dropdown: null, href: "/" },
   {
     label: "Solutions",
     hasChevron: true,
     active: false,
-    dropdown: ["For Corporates", "How Someli Works", "Why Someli"],
+    href: "#",
+    dropdown: [
+      { label: "For Corporates", href: "/for-corporates" },
+      { label: "How Someli Works", href: "/how-someli-works" },
+      { label: "Why Someli", href: "/why-someli" },
+    ],
   },
   {
     label: "Resources",
     hasChevron: true,
     active: false,
+    href: "#",
     dropdown: [
-      "Product Tour",
-      "Client Cases",
-      "Blogs & Insights",
-      "Tools & Calculators",
-      "Guides & Playbooks",
-      "Help Center",
+      { label: "Product Tour", href: "/product" },
+      { label: "Client Cases", href: "#" },
+      { label: "Blogs & Insights", href: "/blogs-insights" },
+      { label: "Tools & Calculators", href: "#" },
+      { label: "Guides & Playbooks", href: "#" },
+      { label: "Help Center", href: "#" },
     ],
   },
-  { label: "Pricing", hasChevron: false, active: false, dropdown: null },
+  { label: "Pricing", hasChevron: false, active: false, dropdown: null, href: "/pricing" },
   {
     label: "Company",
     hasChevron: true,
     active: false,
-    dropdown: ["Our Story", "Careers & Partnerships", "Contact us"],
+    href: "#",
+    dropdown: [
+      { label: "Our Story", href: "/our-story" },
+      { label: "Careers & Partnerships", href: "/careers" },
+      { label: "Contact us", href: "/contact" },
+    ],
   },
 ];
 
@@ -43,7 +55,7 @@ export default function Header() {
         {/* Left: logo + nav */}
         <div className="flex items-center gap-4 md:gap-6 lg:gap-10">
           {/* Logo */}
-          <div className="relative w-[100px] sm:w-[120px] md:w-[140px] xl:w-[158px] h-10 sm:h-12 md:h-14 xl:h-16 shrink-0">
+          <Link href="/" className="relative w-[100px] sm:w-[120px] md:w-[140px] xl:w-[158px] h-10 sm:h-12 md:h-14 xl:h-16 shrink-0">
             <Image
               src="/assets/logo.png"
               alt="Someli"
@@ -52,14 +64,14 @@ export default function Header() {
               sizes="(max-width: 640px) 100px, (max-width: 768px) 120px, (max-width: 1024px) 140px, 158px"
               priority
             />
-          </div>
+          </Link>
 
           {/* Nav links - hidden on mobile, visible from md */}
           <nav className="hidden lg:flex items-center gap-3 lg:gap-4 xl:gap-6">
             {NAV_ITEMS.map((item) => (
               <div key={item.label} className="relative group">
-                <a
-                  href="#"
+                <Link
+                  href={item.href}
                   className={`flex items-center gap-1 lg:gap-2 text-[12px] lg:text-[13px] xl:text-[14px] leading-none text-[#222] whitespace-nowrap ${
                     item.active ? "font-bold" : "font-normal"
                   }`}
@@ -74,24 +86,24 @@ export default function Header() {
                       height={4}
                     />
                   )}
-                </a>
+                </Link>
 
                 {/* Dropdown menu */}
                 {item.dropdown && (
                   <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute top-full left-0 pt-2 z-50">
                     <div className="bg-white border border-[rgba(0,0,0,0.2)] rounded-[12px] overflow-hidden shadow-[0px_4px_12px_rgba(0,0,0,0.08)]">
                       {item.dropdown.map((link, i) => (
-                        <a
-                          key={link}
-                          href="#"
+                        <Link
+                          key={link.label}
+                          href={link.href}
                           className={`flex items-center px-[24px] py-[16px] text-[#ed6b52] font-medium text-[14px] leading-none whitespace-nowrap hover:bg-[rgba(237,107,82,0.05)] transition-colors ${
                             i < item.dropdown!.length - 1
                               ? "border-b border-[rgba(237,107,82,0.2)]"
                               : ""
                           }`}
                         >
-                          {link}
-                        </a>
+                          {link.label}
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -104,22 +116,22 @@ export default function Header() {
         {/* Right: buttons + hamburger */}
         <div className="flex items-center gap-1 sm:gap-2">
           {/* Log in — ghost, no border */}
-          <a
+          <Link
             href="#"
             className="hidden lg:flex items-center gap-1 sm:gap-2 px-3 sm:pl-4 sm:pr-6 md:pl-5 md:pr-8 lg:pl-7 lg:pr-10 py-2 sm:py-3 md:py-4 rounded-full text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap"
           >
             <span>•</span>
             <span>Log in</span>
-          </a>
+          </Link>
 
           {/* Book a Demo — outlined */}
-          <a
-            href="#"
+          <Link
+            href="/contact"
             className="hidden lg:flex items-center gap-1 sm:gap-2 px-3 sm:pl-4 sm:pr-6 md:pl-5 md:pr-8 lg:pl-7 lg:pr-10 py-2 sm:py-3 md:py-4 rounded-full border border-[#ED6B52] text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap"
           >
             <span>•</span>
             <span>Book a Demo</span>
-          </a>
+          </Link>
 
           {/* Hamburger button - visible on mobile only */}
           <button
@@ -168,13 +180,14 @@ export default function Header() {
                 {item.dropdown && openDropdown === item.label && (
                   <div className="flex flex-col pl-6 pb-3">
                     {item.dropdown.map((link) => (
-                      <a
-                        key={link}
-                        href="#"
+                      <Link
+                        key={link.label}
+                        href={link.href}
                         className="py-3 text-[14px] font-medium text-[#ed6b52] leading-none"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
-                        {link}
-                      </a>
+                        {link.label}
+                      </Link>
                     ))}
                   </div>
                 )}
@@ -183,20 +196,21 @@ export default function Header() {
 
             {/* Mobile CTA buttons */}
             <div className="flex flex-col gap-3 pt-4 mt-2 border-t border-[rgba(0,0,0,0.08)]">
-              <a
+              <Link
                 href="#"
                 className="flex items-center justify-center gap-2 py-3 rounded-full text-[15px] font-bold text-[#ED6B52]"
               >
                 <span>•</span>
                 <span>Log in</span>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/contact"
                 className="flex items-center justify-center gap-2 py-3 rounded-full border border-[#ED6B52] text-[15px] font-bold text-[#ED6B52]"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 <span>•</span>
                 <span>Book a Demo</span>
-              </a>
+              </Link>
             </div>
           </nav>
         </div>
