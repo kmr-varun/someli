@@ -62,7 +62,7 @@ export default function PartnershipProcessSection() {
           </div>
 
           {/* CTA */}
-          <button className="border border-[#ED6B52] rounded-full pl-7 pr-10 py-4 font-montserrat font-bold text-[14px] sm:text-[16px] text-[#ED6B52] leading-none text-center cursor-pointer">
+          <button className="border border-[#ED6B52] rounded-full pl-7 pr-10 py-4 font-montserrat font-bold text-[14px] sm:text-[16px] text-[#ED6B52] leading-none text-center cursor-pointer hover:bg-[#ED6B52] hover:text-white transition-colors">
             • Become a Partner →
           </button>
         </div>

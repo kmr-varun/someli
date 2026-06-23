@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
 const NAV_ITEMS = [
-  { label: "Platform", hasChevron: false, active: true, dropdown: null, href: "/" },
+  { label: "Platform", hasChevron: false, dropdown: null, href: "/" },
   {
     label: "Solutions",
     hasChevron: true,
-    active: false,
     href: "#",
     dropdown: [
       { label: "For Corporates", href: "/for-corporates" },
@@ -20,7 +20,6 @@ const NAV_ITEMS = [
   {
     label: "Resources",
     hasChevron: true,
-    active: false,
     href: "#",
     dropdown: [
       { label: "Product Tour", href: "/product" },
@@ -31,11 +30,10 @@ const NAV_ITEMS = [
       { label: "Help Center", href: "#" },
     ],
   },
-  { label: "Pricing", hasChevron: false, active: false, dropdown: null, href: "/pricing" },
+  { label: "Pricing", hasChevron: false, dropdown: null, href: "/pricing" },
   {
     label: "Company",
     hasChevron: true,
-    active: false,
     href: "#",
     dropdown: [
       { label: "Our Story", href: "/our-story" },
@@ -45,9 +43,19 @@ const NAV_ITEMS = [
   },
 ];
 
+function isNavActive(item: typeof NAV_ITEMS[0], pathname: string) {
+  if (item.href !== "#" && item.href !== "/" && pathname.startsWith(item.href)) return true;
+  if (item.href === "/" && pathname === "/") return true;
+  if (item.dropdown) {
+    return item.dropdown.some((link) => link.href !== "#" && pathname.startsWith(link.href));
+  }
+  return false;
+}
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 bg-white w-full">
@@ -72,8 +80,8 @@ export default function Header() {
               <div key={item.label} className="relative group">
                 <Link
                   href={item.href}
-                  className={`flex items-center gap-1 lg:gap-2 text-[12px] lg:text-[13px] xl:text-[14px] leading-none text-[#222] whitespace-nowrap ${
-                    item.active ? "font-bold" : "font-normal"
+                  className={`flex items-center gap-1 lg:gap-2 text-[12px] lg:text-[13px] xl:text-[14px] leading-none text-[#222] whitespace-nowrap hover:font-bold transition-all ${
+                    isNavActive(item, pathname) ? "font-bold" : "font-normal"
                   }`}
                 >
                   <span className="text-[#222]">•</span>
@@ -118,7 +126,7 @@ export default function Header() {
           {/* Log in — ghost, no border */}
           <Link
             href="#"
-            className="hidden lg:flex items-center gap-1 sm:gap-2 px-3 sm:pl-4 sm:pr-6 md:pl-5 md:pr-8 lg:pl-7 lg:pr-10 py-2 sm:py-3 md:py-4 rounded-full text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap"
+            className="hidden lg:flex items-center gap-1 sm:gap-2 px-3 sm:pl-4 sm:pr-6 md:pl-5 md:pr-8 lg:pl-7 lg:pr-10 py-2 sm:py-3 md:py-4 rounded-full text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap border border-transparent hover:border-[#ED6B52] transition-colors"
           >
             <span>•</span>
             <span>Log in</span>
@@ -127,7 +135,7 @@ export default function Header() {
           {/* Book a Demo — outlined */}
           <Link
             href="/contact"
-            className="hidden lg:flex items-center gap-1 sm:gap-2 px-3 sm:pl-4 sm:pr-6 md:pl-5 md:pr-8 lg:pl-7 lg:pr-10 py-2 sm:py-3 md:py-4 rounded-full border border-[#ED6B52] text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap"
+            className="hidden lg:flex items-center gap-1 sm:gap-2 px-3 sm:pl-4 sm:pr-6 md:pl-5 md:pr-8 lg:pl-7 lg:pr-10 py-2 sm:py-3 md:py-4 rounded-full border border-[#ED6B52] text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap hover:bg-[#ED6B52] hover:text-white transition-colors"
           >
             <span>•</span>
             <span>Book a Demo</span>
@@ -153,7 +161,7 @@ export default function Header() {
               <div key={item.label} className={`${idx < NAV_ITEMS.length - 1 ? "border-b border-[rgba(0,0,0,0.06)]" : ""}`}>
                 <button
                   className={`flex items-center justify-between w-full py-4 text-[15px] leading-none text-[#222] ${
-                    item.active ? "font-bold" : "font-normal"
+                    isNavActive(item, pathname) ? "font-bold" : "font-normal"
                   }`}
                   onClick={() => {
                     if (item.dropdown) {
@@ -205,7 +213,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/contact"
-                className="flex items-center justify-center gap-2 py-3 rounded-full border border-[#ED6B52] text-[15px] font-bold text-[#ED6B52]"
+                className="flex items-center justify-center gap-2 py-3 rounded-full border border-[#ED6B52] text-[15px] font-bold text-[#ED6B52] hover:bg-[#ED6B52] hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>•</span>

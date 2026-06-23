@@ -45,7 +45,7 @@ export default function CaseStudiesHeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-2">
-            <button className="flex items-center justify-center px-[28px] pr-10 py-4 rounded-full border border-[#ed6b52] text-[#ed6b52] font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-none whitespace-nowrap">
+            <button className="flex items-center justify-center px-[28px] pr-10 py-4 rounded-full border border-[#ed6b52] text-[#ed6b52] font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-none whitespace-nowrap hover:bg-[#ED6B52] hover:text-white transition-colors">
               <span className="mr-3">•</span> Take a Product Tour
             </button>
             <button className="flex items-center justify-center px-[28px] pr-10 py-4 rounded-full text-[#ed6b52] font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-none whitespace-nowrap">

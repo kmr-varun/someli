@@ -22,7 +22,7 @@ function CounterStat({ value }: { value: string }) {
 
     const target = parseFloat(match[1]);
     const suffix = match[2];
-    const duration = 1500;
+    const duration = 3000;
     const startTime = Date.now();
     const isDecimal = target % 1 !== 0;
 
@@ -88,7 +88,10 @@ const STAT_ITEMS = [
 ];
 
 export default function HeroSection() {
+  const [videoOpen, setVideoOpen] = useState(false);
+
   return (
+    <>
     <section className="relative w-full overflow-hidden min-h-[600px] sm:min-h-[700px] lg:min-h-[790px]">
       {/* Union3 background pattern */}
       <Image
@@ -119,7 +122,7 @@ export default function HeroSection() {
 
               {/* H1 */}
               <h1
-                className="font-extrabold text-[#222] w-full"
+                className="font-bold text-[#222] w-full"
                 style={{
                   fontSize: "clamp(28px, 6vw, 60px)",
                   lineHeight: "1.19",
@@ -152,18 +155,18 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-10">
               <a
                 href="#"
-                className="flex items-center gap-2 pl-5 pr-8 sm:pl-6 sm:pr-9 md:pl-7 md:pr-10 py-3 sm:py-3.5 md:py-4 rounded-full border border-[#ED6B52] text-[14px] sm:text-[15px] md:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap"
+                className="flex items-center gap-2 pl-5 pr-8 sm:pl-6 sm:pr-9 md:pl-7 md:pr-10 py-3 sm:py-3.5 md:py-4 rounded-full border border-[#ED6B52] text-[14px] sm:text-[15px] md:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap hover:bg-[#ED6B52] hover:text-white transition-colors"
               >
                 <span>•</span>
                 <span>Book a Demo</span>
               </a>
-              <a
-                href="#"
-                className="flex items-center gap-2 sm:gap-3 text-[15px] sm:text-[16px] md:text-[17px] font-bold text-[#ED6B52] whitespace-nowrap"
+              <button
+                onClick={() => setVideoOpen(true)}
+                className="flex items-center gap-2 sm:gap-3 text-[15px] sm:text-[16px] md:text-[17px] font-bold text-[#ED6B52] whitespace-nowrap hover:opacity-70 transition-opacity cursor-pointer"
               >
                 <Image src="/assets/hero/arrow-play.svg" alt="" width={6} height={7} className="sm:w-[7px] sm:h-[8px]" />
                 <span>See how it works</span>
-              </a>
+              </button>
             </div>
 
             {/* Social proof */}
@@ -335,5 +338,33 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
+
+    {/* Video Modal */}
+    {videoOpen && (
+      <div
+        className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4"
+        onClick={() => setVideoOpen(false)}
+      >
+        <div
+          className="relative w-full max-w-[900px] aspect-video rounded-2xl overflow-hidden"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            onClick={() => setVideoOpen(false)}
+            className="absolute top-3 right-3 z-10 w-10 h-10 bg-black/60 rounded-full flex items-center justify-center text-white text-xl hover:bg-black/80 transition-colors"
+          >
+            ✕
+          </button>
+          <iframe
+            src="https://www.youtube.com/embed/-liVkedgwBs?autoplay=1"
+            title="How Someli Works"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        </div>
+      </div>
+    )}
+    </>
   );
 }

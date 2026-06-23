@@ -46,7 +46,7 @@ export default function TeamSection() {
           </p>
 
           {/* CTA */}
-          <button className="border border-[#ED6B52] rounded-full pl-[28px] pr-[40px] py-[16px]">
+          <button className="border border-[#ED6B52] rounded-full pl-[28px] pr-[40px] py-[16px] hover:bg-[#ED6B52] hover:text-white transition-colors">
             <span className="font-montserrat font-bold text-[16px] text-[#ED6B52] leading-none">
               • Contact us →
             </span>
