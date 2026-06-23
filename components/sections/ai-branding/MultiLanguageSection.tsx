@@ -75,9 +75,9 @@ export default function MultiLanguageSection() {
           </div>
 
           {/* Right Card - Gradient with post mockups, sits on top of left */}
-          <div className="w-full lg:flex-1 relative z-10 bg-gradient-to-b from-[#DF8251] to-[#D54050] rounded-[22px] p-10 flex flex-col gap-11">
-            {/* Post mockups - overlapping grid layout */}
-            <div className="relative w-full" style={{ minHeight: '380px' }}>
+          <div className="w-full lg:flex-1 relative z-10 bg-gradient-to-b from-[#DF8251] to-[#D54050] rounded-[22px] p-6 sm:p-8 lg:p-10 flex flex-col gap-8 sm:gap-11">
+            {/* Post mockups - stacked on mobile, overlapping on desktop */}
+            <div className="relative w-full hidden lg:block" style={{ minHeight: '380px' }}>
               {/* English Post - left, higher */}
               <div className="absolute left-0 top-0 flex flex-col gap-2" style={{ width: '40%' }}>
                 <div className="bg-[rgba(255,255,255,0.12)] border border-white rounded-full px-[15px] py-[7px] w-fit">
@@ -156,6 +156,24 @@ export default function MultiLanguageSection() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Mobile post cards - simple stacked */}
+            <div className="lg:hidden flex flex-col gap-4">
+              <div className="flex items-center gap-3 justify-center">
+                <div className="bg-[rgba(255,255,255,0.12)] border border-white rounded-full px-3 py-1.5">
+                  <span className="text-[11px] text-white uppercase tracking-[0.8px]">English</span>
+                </div>
+                <div className="w-10 h-10 bg-[rgba(255,255,255,0.08)] border border-white rounded-full flex items-center justify-center">
+                  <span className="text-white text-[16px] font-bold">↔</span>
+                </div>
+                <div className="bg-[rgba(255,255,255,0.12)] border border-white rounded-full px-3 py-1.5">
+                  <span className="text-[11px] text-white uppercase tracking-[0.8px]">Arabic</span>
+                </div>
+              </div>
+              <p className="text-white/80 text-center text-[14px]">
+                AI translates your content across languages while keeping your voice intact
+              </p>
             </div>
 
             {/* Bottom Benefits */}
