@@ -264,7 +264,7 @@ export default function PricingSection() {
           </div>
 
           {/* Right Card - Benefits */}
-          <div className="flex-1 border-2 border-[rgba(0,0,0,0.08)] rounded-[16px] sm:rounded-[18px] md:rounded-[20px] px-5 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10 lg:h-[692px] flex flex-col gap-6 sm:gap-7 md:gap-8">
+          <div className="flex-1 border-2 border-[rgba(0,0,0,0.08)] rounded-[16px] sm:rounded-[18px] md:rounded-[20px] px-5 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10 flex flex-col gap-6 sm:gap-7 md:gap-8">
             <div className="flex flex-col gap-4">
               {/* Scale Your Reach */}
               <div className="flex gap-[18px] items-center pb-4 border-b border-[rgba(0,0,0,0.1)]">
