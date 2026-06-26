@@ -43,7 +43,7 @@ export default function FeaturesSection() {
           {/* Feature Cards positioned absolutely - scale down on smaller screens */}
           <div className="relative w-full max-w-[515px] lg:w-[515.474px]" style={{ aspectRatio: '515.474/569.034' }}>
             {/* Dashboard Mockup - rendered first so cards stack above it */}
-            <div className="absolute top-[21.5%] right-[6%] lg:left-[43.1%] w-[71.4%] lg:w-[367.896px]" style={{ aspectRatio: '367.896/317.37' }}>
+            <div className="absolute top-1/2 -translate-y-1/2 right-0 lg:translate-y-0 lg:top-[21.5%] lg:right-auto lg:left-[43.1%] w-[50%] sm:w-[60%] lg:w-[367.896px]" style={{ aspectRatio: '367.896/317.37' }}>
               <Image
                 src="/assets/features/dashboard-mockup.png"
                 alt="Dashboard mockup showing analytics"
