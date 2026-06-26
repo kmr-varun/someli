@@ -37,7 +37,7 @@ export default function Footer() {
           </Link>
 
           {/* 30 day guarantee badge - hidden on mobile */}
-          <div className="hidden lg:flex absolute right-[5%] xl:left-[1011px] xl:right-auto top-[53.22px] w-[224px] items-center gap-3 rounded-full bg-[rgba(17,17,17,0.4)] px-5 py-3">
+          <div className="hidden lg:flex absolute right-[5%] xl:left-[1011px] xl:right-auto top-[83.22px] w-[224px] items-center gap-3 rounded-full bg-[rgba(17,17,17,0.4)] px-5 py-3 glass-border-card">
             <div className="relative h-[22px] w-[22px] shrink-0">
               <Image
                 src="/assets/footer/guarantee-icon.svg"
