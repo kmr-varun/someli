@@ -44,12 +44,13 @@ export default function PricingHeroSection() {
         </div>
 
         {/* Right illustration */}
-        <div className="relative w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] md:w-[320px] md:h-[320px] lg:w-[362px] lg:h-[362px] flex-shrink-0">
+        <div className="relative w-[280px] h-[187px] sm:w-[360px] sm:h-[241px] md:w-[440px] md:h-[294px] lg:w-[524px] lg:h-[351px] flex-shrink-0">
           <Image
             src="/assets/pricing-page/hero-illustration.png"
             alt="Growth steps illustration"
             fill
             className="object-contain"
+            unoptimized
           />
         </div>
       </div>
