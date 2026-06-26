@@ -252,8 +252,8 @@ export default function PricingSection() {
 
             {/* CTA */}
             <div className="flex flex-col gap-2">
-              <button className="w-full border border-white rounded-full px-[28px] py-4 flex items-center justify-center">
-                <span className="font-montserrat font-bold text-[16px] text-white leading-none">
+              <button className="w-full border border-white rounded-full px-[28px] py-4 flex items-center justify-center hover:bg-white group transition-colors">
+                <span className="font-montserrat font-bold text-[16px] text-white group-hover:text-[#ED6B52] leading-none transition-colors">
                   • Start Your Free Trial →
                 </span>
               </button>

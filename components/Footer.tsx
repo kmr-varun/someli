@@ -30,8 +30,8 @@ export default function Footer() {
           </div>
 
           {/* Book Demo Button */}
-          <Link href="/contact" className="inline-flex items-center rounded-full border border-[#ED6B52] py-3 sm:py-3.5 md:py-4 pl-5 pr-8 sm:pl-6 sm:pr-9 md:pl-7 md:pr-10 hover:bg-[#ED6B52] hover:text-white transition-colors">
-            <span className="font-['Montserrat'] text-[14px] sm:text-[15px] md:text-[16px] font-bold text-[#ED6B52]">
+          <Link href="/contact" className="group inline-flex items-center rounded-full border border-[#ED6B52] py-3 sm:py-3.5 md:py-4 pl-5 pr-8 sm:pl-6 sm:pr-9 md:pl-7 md:pr-10 hover:bg-[#ED6B52] transition-colors">
+            <span className="font-['Montserrat'] text-[14px] sm:text-[15px] md:text-[16px] font-bold text-[#ED6B52] group-hover:text-white transition-colors">
               • Book a Demo →
             </span>
           </Link>

@@ -156,8 +156,8 @@ export default function ReachCalculatorSection() {
           </div>
 
           {/* CTA button */}
-          <button className="self-start border border-[#ED6B52] rounded-full px-5 sm:px-6 py-3 sm:py-4 text-[#ED6B52] text-[15px] sm:text-[16px] md:text-[17px] font-medium hover:bg-[rgba(237,107,82,0.1)] transition-colors">
-            <span className="flex items-center">
+          <button className="group self-start border border-[#ED6B52] rounded-full px-5 sm:px-6 py-3 sm:py-4 text-[#ED6B52] text-[15px] sm:text-[16px] md:text-[17px] font-medium hover:bg-[#ED6B52] transition-colors">
+            <span className="flex items-center group-hover:text-white transition-colors">
               <span className="mr-2">•</span>
               Generate my report
             </span>
