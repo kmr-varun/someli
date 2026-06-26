@@ -25,7 +25,7 @@ export default function StatsTestimonialSection() {
                   <div className="absolute top-8 left-1/2 -translate-x-1/2 pointer-events-none opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300">
                     <Image src="/assets/pricing-page/stat-bg.png" alt="" width={114} height={135} />
                   </div>
-                  <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15.76px] text-white text-center leading-[1.5] px-2 sm:px-3 relative z-10 group-hover/bar:mt-auto">
+                  <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15.76px] text-white text-center leading-[1.5] px-2 sm:px-3 absolute top-[19.7px] group-hover/bar:top-[calc(100%-100px)] transition-all duration-500 z-10 w-full">
                     {stat.description}
                   </p>
                 </div>
