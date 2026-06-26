@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const BENEFIT_PILLS = [
   { text: "More reach across more people",  top: "36px",    right: "120px" },
-  { text: "Higher trust and credibility",   top: "96px",   right: "400px" },
+  { text: "Higher trust and credibility",   top: "110px",   right: "400px" },
   { text: "Stronger employee brand",        top: "554px",   right: "376px" },
   { text: "More inbound opportunities",     top: "634px",   right: "96px" },
 ];
