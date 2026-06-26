@@ -42,8 +42,19 @@ export default function FeaturesSection() {
         <div className="relative shrink-0 w-full lg:w-auto flex justify-center lg:justify-start">
           {/* Feature Cards positioned absolutely - scale down on smaller screens */}
           <div className="relative w-full max-w-[515px] lg:w-[515.474px]" style={{ aspectRatio: '515.474/569.034' }}>
+            {/* Dashboard Mockup - rendered first so cards stack above it */}
+            <div className="absolute top-[21.5%] right-[6%] lg:left-[43.1%] w-[71.4%] lg:w-[367.896px]" style={{ aspectRatio: '367.896/317.37' }}>
+              <Image
+                src="/assets/features/dashboard-mockup.png"
+                alt="Dashboard mockup showing analytics"
+                width={391}
+                height={489}
+                className="absolute top-[-28.05%] left-[-1.43%] w-[106.29%] h-[154.04%] max-w-none"
+              />
+            </div>
+
             {/* Card 01 - Content Discovery */}
-            <div className="absolute top-0 right-0 lg:left-[47.7%] w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center">
+            <div className="absolute top-0 right-0 lg:left-[47.7%] w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center transition-colors duration-300">
               <div className="flex flex-col gap-1 sm:gap-[5.779px] py-1 sm:py-[5.779px]">
                 <p className="font-montserrat text-[11px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none whitespace-nowrap">
                   01/ Content Discovery
@@ -55,7 +66,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* Card 02 - Smart Scheduling */}
-            <div className="absolute top-[18.7%] left-0 w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center">
+            <div className="absolute top-[18.7%] left-0 w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center transition-colors duration-300">
               <div className="flex flex-col gap-1 sm:gap-[5.779px] py-1 sm:py-[5.779px]">
                 <p className="font-montserrat text-[11px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none whitespace-nowrap">
                   02/ Smart Scheduling
@@ -67,7 +78,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* Card 03 - Auto-Distribution */}
-            <div className="absolute top-[42%] left-0 w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center">
+            <div className="absolute top-[42%] left-0 w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center transition-colors duration-300">
               <div className="flex flex-col gap-1 sm:gap-[5.779px] py-1 sm:py-[5.779px]">
                 <p className="font-montserrat text-[11px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none whitespace-nowrap">
                   03/ Auto-Distribution
@@ -79,7 +90,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* Card 04 - Employee Engagement */}
-            <div className="absolute top-[66.5%] left-0 w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center">
+            <div className="absolute top-[66.5%] left-0 w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center transition-colors duration-300">
               <div className="flex flex-col gap-1 sm:gap-[5.779px] py-1 sm:py-[5.779px]">
                 <p className="font-montserrat text-[11px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none whitespace-nowrap">
                   04/ Employee Engagement
@@ -91,7 +102,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* Card 05 - Analytics & Optimization */}
-            <div className="absolute top-[85.2%] right-0 lg:left-[47.7%] w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center">
+            <div className="absolute top-[85.2%] right-0 lg:left-[47.7%] w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center transition-colors duration-300">
               <div className="flex flex-col gap-1 sm:gap-[5.779px] py-1 sm:py-[5.779px]">
                 <p className="font-montserrat text-[11px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none whitespace-nowrap">
                   05/ Analytics &amp; Optimization
@@ -102,16 +113,6 @@ export default function FeaturesSection() {
               </div>
             </div>
 
-            {/* Dashboard Mockup - centered behind cards */}
-            <div className="absolute top-[21.5%] right-[6%] lg:left-[43.1%] w-[71.4%] lg:w-[367.896px]" style={{ aspectRatio: '367.896/317.37' }}>
-              <Image
-                src="/assets/features/dashboard-mockup.png"
-                alt="Dashboard mockup showing analytics"
-                width={391}
-                height={489}
-                className="absolute top-[-28.05%] left-[-1.43%] w-[106.29%] h-[154.04%] max-w-none"
-              />
-            </div>
           </div>
         </div>
       </div>
