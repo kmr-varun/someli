@@ -167,7 +167,7 @@ export default function ReachCalculatorSection() {
 
       {/* Floating "Trusted by" card - hidden on mobile/tablet */}
       <div className="hidden lg:block absolute inset-0 max-w-[1248px] mx-auto pointer-events-none">
-      <div className="glass-border-card flex absolute right-[260px] top-[79.81px] w-[226px] bg-[rgba(17,17,17,0.85)] rounded-[12px] px-6 py-5 flex-col gap-3 backdrop-blur-md z-20 pointer-events-auto">
+      <div className="glass-border-card flex absolute right-[360px] top-[79.81px] w-[226px] bg-[rgba(17,17,17,0.85)] rounded-[12px] px-6 py-5 flex-col gap-3 backdrop-blur-md z-20 pointer-events-auto">
         {/* Avatar stack */}
         <div className="flex items-center w-[90px] h-[38.077px]">
           <Image
