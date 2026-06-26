@@ -31,7 +31,7 @@ export default function ContentManagementSection() {
               </span>
             </div>
             <h2 className="text-white text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] font-bold leading-[1.2] tracking-[-1.5px] md:tracking-[-2px]">
-              Content Management Made Seamless
+              Content management and distribution made seamless
             </h2>
           </div>
 
