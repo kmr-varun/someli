@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const stats = [
   { value: "2.5x", description: "More engagement than brand posts" },
   { value: "10x", description: "Greater organic reach per share" },
@@ -19,8 +21,11 @@ export default function StatsTestimonialSection() {
                 <p className="font-montserrat font-bold text-[28px] sm:text-[36px] md:text-[42px] lg:text-[47.281px] text-black text-center tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-1.97px] leading-[1.1] whitespace-pre-line">
                   {stat.value}
                 </p>
-                <div className="w-full h-[140px] sm:h-[160px] md:h-[180px] lg:h-[200.944px] bg-gradient-to-b from-[#f76739] to-[#111] flex flex-col items-center py-3 sm:py-4 lg:py-[19.7px]">
-                  <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15.76px] text-white text-center leading-[1.5] px-2 sm:px-3">
+                <div className="group/bar w-full h-[140px] sm:h-[160px] md:h-[180px] lg:h-[200.944px] hover:h-[200px] sm:hover:h-[230px] md:hover:h-[260px] lg:hover:h-[300px] flex flex-col items-center py-3 sm:py-4 lg:py-[19.7px] relative overflow-hidden transition-all duration-300 bg-gradient-to-b from-[#f76739] to-[#111] hover:from-[#111] hover:to-[#f76739]">
+                  <div className="absolute top-8 left-1/2 -translate-x-1/2 pointer-events-none opacity-0 group-hover/bar:opacity-100 transition-opacity duration-300">
+                    <Image src="/assets/pricing-page/stat-bg.png" alt="" width={114} height={135} />
+                  </div>
+                  <p className="font-montserrat font-normal text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15.76px] text-white text-center leading-[1.5] px-2 sm:px-3 relative z-10 group-hover/bar:mt-auto">
                     {stat.description}
                   </p>
                 </div>
