@@ -101,7 +101,7 @@ export default function ProvenImpactSection() {
         </div>
 
         {/* Right: Heading + CTA */}
-        <div className="w-full lg:w-[648px] shrink-0 flex flex-col gap-6 sm:gap-7 md:gap-8 items-center lg:items-end">
+        <div className="w-full lg:w-[648px] shrink-0 flex flex-col gap-6 sm:gap-7 md:gap-8 items-start lg:items-end">
           {/* Pill label */}
           <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px]">
             <p className="text-[9px] sm:text-[10px] font-normal text-[#ed6b52] tracking-[0.8px] sm:tracking-[1px] uppercase leading-[15px] font-['Inter']">
@@ -110,7 +110,7 @@ export default function ProvenImpactSection() {
           </div>
 
           {/* Heading */}
-          <div className="w-full text-center lg:text-right flex flex-col gap-6 sm:gap-8 md:gap-10">
+          <div className="w-full text-left lg:text-right flex flex-col gap-6 sm:gap-8 md:gap-10">
             <h2 className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] font-bold text-black leading-[1.2] tracking-[-1.5px] md:tracking-[-2px]">
               Teams using Someli show up every day and the numbers prove it.
             </h2>
