@@ -210,7 +210,7 @@ export default function HowItWorksSection() {
     <section ref={sectionRef} className="relative bg-white">
       {/* Header */}
       <div className="px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 pt-12 sm:pt-16 md:pt-20 lg:pt-24 xl:pt-[100px] pb-8 sm:pb-10 md:pb-12 max-w-[1440px] mx-auto">
-        <div className="mx-auto flex max-w-[892px] flex-col items-center gap-3 sm:gap-4 text-center">
+        <div className="mx-auto flex max-w-[892px] flex-col items-start lg:items-center gap-3 sm:gap-4 text-left lg:text-center">
           {/* Pill Label */}
           <div className="inline-flex items-center rounded-full border border-[rgba(247,103,57,0.15)] bg-[rgba(247,103,57,0.16)] px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px]">
             <span className="font-montserrat text-[9px] sm:text-[10px] font-normal uppercase leading-[15px] tracking-[0.8px] sm:tracking-[1px] text-[#f76739]">
