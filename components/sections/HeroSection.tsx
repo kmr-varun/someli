@@ -87,8 +87,24 @@ const STAT_ITEMS = [
   },
 ];
 
+const DESKTOP_RADIUS = 476; // px — design canvas container size
+
 export default function HeroSection() {
   const [videoOpen, setVideoOpen] = useState(false);
+  const circleContainerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const update = () => {
+      if (circleContainerRef.current) {
+        const size = circleContainerRef.current.offsetHeight;
+        setScale(size / DESKTOP_RADIUS);
+      }
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   return (
     <>
@@ -209,7 +225,7 @@ export default function HeroSection() {
           {/* RIGHT: Circle + Twitter card */}
           <div className="flex-1 min-w-0 flex flex-col gap-4 sm:gap-5 md:gap-6 w-full">
             {/* Circle with card centred on top - hide network visualization on mobile */}
-            <div className="relative flex items-center justify-center w-full aspect-square max-h-[350px] sm:max-h-[400px] md:max-h-[450px] lg:max-h-[476px]">
+            <div ref={circleContainerRef} className="relative flex items-center justify-center w-full aspect-square max-h-[350px] sm:max-h-[400px] md:max-h-[450px] lg:max-h-[476px]">
               {/* Background circle — rotates infinitely */}
               <RotatingCircle />
               {/* Social card — centred over the circle */}
@@ -226,24 +242,23 @@ export default function HeroSection() {
               </div>
 
               {/* Profile cards positioned using polar coordinates - hidden on mobile/tablet, visible on lg+ */}
-              <div className="hidden lg:block">
+              <div>
                 {[
-                  { name: "David Carter", connections: "20K Connections", avatar: "https://www.figma.com/api/mcp/asset/723ab5b9-1eeb-416e-a349-4df9216eb5c4", angle: -90, distance: 210, arrowDistance: 168, arrowOffsetX: 0, arrowOffsetY: 0, alignment: "right" },
-                  { name: "Alex Johnson", connections: "12.5K Connections", avatar: "https://www.figma.com/api/mcp/asset/dc1508bf-0822-4160-bb81-e365d6d1fe8c", angle: 90, distance: 210, arrowDistance: 168, arrowOffsetX: 0, arrowOffsetY: 0, alignment: "right" },
-                  { name: "Taylor Morgan", connections: "11.1K Connections", avatar: "https://www.figma.com/api/mcp/asset/68043845-e974-4eca-808e-8e8910de6ba9", angle: 180, distance: 250, arrowDistance: 152, arrowOffsetX: 0, arrowOffsetY: 0, alignment: "left" },
-                  { name: "Casey Brown", connections: "13.2K Connections", avatar: "https://www.figma.com/api/mcp/asset/15a0cc47-012a-4741-90ee-b22b5a1b1c04", angle: 0, distance: 250, arrowDistance: 152, arrowOffsetX: 0, arrowOffsetY: 0, alignment: "right" },
-                  { name: "Jordan Lee", connections: "10.8K Connections", avatar: "https://www.figma.com/api/mcp/asset/9218f8bb-4ce9-42a5-8446-9ab563d5006d", angle: -157, distance: 250, arrowDistance: 147, arrowOffsetX: 0, arrowOffsetY: -20, alignment: "left" },
-                  { name: "Chris Taylor", connections: "9.8K Connections", avatar: "https://www.figma.com/api/mcp/asset/69f95f53-3e06-4dbe-9ee8-cb1f8ba41866", angle: -23, distance: 250, arrowDistance: 147, arrowOffsetX: 0, arrowOffsetY: -20, alignment: "right" },
-                  { name: "Jamie Parker", connections: "8.7K Connections", avatar: "https://www.figma.com/api/mcp/asset/a8fe1acb-a6a8-42b2-a8af-ee9195a3b620", angle: 157, distance: 250, arrowDistance: 149, arrowOffsetX: 0, arrowOffsetY: 20, alignment: "left" },
-                  { name: "Riley White", connections: "10.9K Connections", avatar: "https://www.figma.com/api/mcp/asset/171dbaeb-fd0a-4e08-88a3-77661dcea161", angle: 23, distance: 250, arrowDistance: 149, arrowOffsetX: 0, arrowOffsetY: 20, alignment: "right" },
+                  { name: "David Carter", connections: "20K Connections", avatar: "/assets/hero/profile-cards/david-carter.png", angle: -90, distance: 210, arrowDistance: 168, arrowOffsetX: 0, arrowOffsetY: 0, alignment: "right" },
+                  { name: "Alex Johnson", connections: "12.5K Connections", avatar: "/assets/hero/profile-cards/alex-johnson.png", angle: 90, distance: 210, arrowDistance: 168, arrowOffsetX: 0, arrowOffsetY: 0, alignment: "right" },
+                  { name: "Taylor Morgan", connections: "11.1K Connections", avatar: "/assets/hero/profile-cards/taylor-morgan.png", angle: 180, distance: 210, arrowDistance: 165, arrowOffsetX: 0, arrowOffsetY: 0, alignment: "left" },
+                  { name: "Casey Brown", connections: "13.2K Connections", avatar: "/assets/hero/profile-cards/casey-brown.png", angle: 0, distance: 210, arrowDistance: 165, arrowOffsetX: 0, arrowOffsetY: 0, alignment: "right" },
+                  { name: "Jordan Lee", connections: "10.8K Connections", avatar: "/assets/hero/profile-cards/jordan-lee.png", angle: -157, distance: 210, arrowDistance: 163, arrowOffsetX: 0, arrowOffsetY: 0, alignment: "left" },
+                  { name: "Chris Taylor", connections: "9.8K Connections", avatar: "/assets/hero/profile-cards/chris-taylor.png", angle: -23, distance: 210, arrowDistance: 163, arrowOffsetX: 0, arrowOffsetY: 0, alignment: "right" },
+                  { name: "Jamie Parker", connections: "8.7K Connections", avatar: "/assets/hero/profile-cards/jamie-parker.png", angle: 157, distance: 210, arrowDistance: 163, arrowOffsetX: 0, arrowOffsetY: 0, alignment: "left" },
+                  { name: "Riley White", connections: "10.9K Connections", avatar: "/assets/hero/profile-cards/riley-white.png", angle: 23, distance: 210, arrowDistance: 163, arrowOffsetX: 0, arrowOffsetY: 0, alignment: "right" },
                 ].map((card, index) => {
                   const radians = (card.angle * Math.PI) / 180;
-                  const cardX = card.distance * Math.cos(radians);
-                  const cardY = card.distance * Math.sin(radians);
+                  const cardX = card.distance * scale * Math.cos(radians);
+                  const cardY = card.distance * scale * Math.sin(radians);
 
-                  // Arrow position from card's arrowDistance property with optional offsets
-                  const arrowX = card.arrowDistance * Math.cos(radians) + (card.arrowOffsetX || 0);
-                  const arrowY = card.arrowDistance * Math.sin(radians) + (card.arrowOffsetY || 0);
+                  const arrowX = card.arrowDistance * scale * Math.cos(radians) + (card.arrowOffsetX || 0) * scale;
+                  const arrowY = card.arrowDistance * scale * Math.sin(radians) + (card.arrowOffsetY || 0) * scale;
                   const arrowRotation = card.angle + 90; // SVG points up (-90°), so add 90 to point at card angle
 
                   return (
@@ -267,7 +282,7 @@ export default function HeroSection() {
                           ease: [0.23, 1, 0.32, 1],
                         }}
                       >
-                        <svg width="7" height="35" viewBox="0 0 7 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width={Math.max(4, 7 * scale)} height={Math.max(20, 35 * scale)} viewBox="0 0 7 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M3.70522 0.13448C3.52595 -0.044796 3.23529 -0.044796 3.05601 0.13448L0.13455 3.05594C-0.0447251 3.23521 -0.0447251 3.52588 0.13455 3.70515C0.313825 3.88443 0.604488 3.88443 0.783764 3.70515L3.38062 1.1083L5.97747 3.70515C6.15674 3.88443 6.44741 3.88443 6.62668 3.70515C6.80596 3.52588 6.80596 3.23521 6.62668 3.05594L3.70522 0.13448ZM3.38062 35L3.83968 35L3.83968 0.459087L3.38062 0.459087L2.92155 0.459087L2.92155 35L3.38062 35Z" fill="#F76739"/>
                         </svg>
                       </motion.div>
