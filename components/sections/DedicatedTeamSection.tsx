@@ -46,8 +46,8 @@ export default function DedicatedTeamSection() {
           {CARDS.map((card) => (
             <div
               key={card.title}
-              className={`flex flex-1 flex-col items-start px-6 sm:px-8 py-8 sm:py-10 rounded-[16px] ${
-                card.highlighted ? 'bg-[rgba(255,255,255,0.04)]' : ''
+              className={`glass-border-card-hover flex flex-1 flex-col items-start px-6 sm:px-8 py-8 sm:py-10 rounded-[16px] transition-colors duration-300 ${
+                card.highlighted ? 'bg-[rgba(255,255,255,0.04)]' : 'hover:bg-[rgba(255,255,255,0.04)]'
               }`}
             >
               <div className="flex flex-col gap-[18px] items-start w-full">
