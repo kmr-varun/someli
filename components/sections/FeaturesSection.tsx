@@ -54,60 +54,60 @@ export default function FeaturesSection() {
             </div>
 
             {/* Card 01 - Content Discovery */}
-            <div className="absolute top-0 right-0 lg:left-[47.7%] w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center transition-colors duration-300">
-              <div className="flex flex-col gap-1 sm:gap-[5.779px] py-1 sm:py-[5.779px]">
-                <p className="font-montserrat text-[11px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none whitespace-nowrap">
+            <div className="absolute top-0 right-0 lg:left-[47.7%] w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-2 sm:px-[14.446px] py-1.5 sm:py-[7.223px] flex items-center transition-colors duration-300">
+              <div className="flex flex-col gap-0.5 sm:gap-[5.779px] py-0.5 sm:py-[5.779px]">
+                <p className="font-montserrat text-[9px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none">
                   01/ Content Discovery
                 </p>
-                <p className="font-montserrat text-[10px] sm:text-[11px] md:text-[12.279px] font-normal text-[#444] leading-[1.5]">
+                <p className="font-montserrat text-[8px] sm:text-[11px] md:text-[12.279px] font-normal text-[#444] leading-[1.5]">
                   Al finds and curates the most relevant content for your team.
                 </p>
               </div>
             </div>
 
             {/* Card 02 - Smart Scheduling */}
-            <div className="absolute top-[18.7%] left-0 w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center transition-colors duration-300">
-              <div className="flex flex-col gap-1 sm:gap-[5.779px] py-1 sm:py-[5.779px]">
-                <p className="font-montserrat text-[11px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none whitespace-nowrap">
+            <div className="absolute top-[18.7%] left-0 w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-2 sm:px-[14.446px] py-1.5 sm:py-[7.223px] flex items-center transition-colors duration-300">
+              <div className="flex flex-col gap-0.5 sm:gap-[5.779px] py-0.5 sm:py-[5.779px]">
+                <p className="font-montserrat text-[9px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none">
                   02/ Smart Scheduling
                 </p>
-                <p className="font-montserrat text-[10px] sm:text-[11px] md:text-[12.279px] font-normal text-[#444] leading-[1.5]">
+                <p className="font-montserrat text-[8px] sm:text-[11px] md:text-[12.279px] font-normal text-[#444] leading-[1.5]">
                   Content is scheduled at the best times for maximum reach.
                 </p>
               </div>
             </div>
 
             {/* Card 03 - Auto-Distribution */}
-            <div className="absolute top-[42%] left-0 w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center transition-colors duration-300">
-              <div className="flex flex-col gap-1 sm:gap-[5.779px] py-1 sm:py-[5.779px]">
-                <p className="font-montserrat text-[11px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none whitespace-nowrap">
+            <div className="absolute top-[42%] left-0 w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-2 sm:px-[14.446px] py-1.5 sm:py-[7.223px] flex items-center transition-colors duration-300">
+              <div className="flex flex-col gap-0.5 sm:gap-[5.779px] py-0.5 sm:py-[5.779px]">
+                <p className="font-montserrat text-[9px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none">
                   03/ Auto-Distribution
                 </p>
-                <p className="font-montserrat text-[10px] sm:text-[11px] md:text-[12.279px] font-normal text-[#444] leading-[1.5]">
+                <p className="font-montserrat text-[8px] sm:text-[11px] md:text-[12.279px] font-normal text-[#444] leading-[1.5]">
                   Posts are automatically distributed to your team.
                 </p>
               </div>
             </div>
 
             {/* Card 04 - Employee Engagement */}
-            <div className="absolute top-[66.5%] left-0 w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center transition-colors duration-300">
-              <div className="flex flex-col gap-1 sm:gap-[5.779px] py-1 sm:py-[5.779px]">
-                <p className="font-montserrat text-[11px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none whitespace-nowrap">
+            <div className="absolute top-[66.5%] left-0 w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-2 sm:px-[14.446px] py-1.5 sm:py-[7.223px] flex items-center transition-colors duration-300">
+              <div className="flex flex-col gap-0.5 sm:gap-[5.779px] py-0.5 sm:py-[5.779px]">
+                <p className="font-montserrat text-[9px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none">
                   04/ Employee Engagement
                 </p>
-                <p className="font-montserrat text-[10px] sm:text-[11px] md:text-[12.279px] font-normal text-[#444] leading-[1.5]">
+                <p className="font-montserrat text-[8px] sm:text-[11px] md:text-[12.279px] font-normal text-[#444] leading-[1.5]">
                   Your team shares, likes, and comments - effortlessly.
                 </p>
               </div>
             </div>
 
             {/* Card 05 - Analytics & Optimization */}
-            <div className="absolute top-[85.2%] right-0 lg:left-[47.7%] w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-3 sm:px-[14.446px] py-2 sm:py-[7.223px] flex items-center transition-colors duration-300">
-              <div className="flex flex-col gap-1 sm:gap-[5.779px] py-1 sm:py-[5.779px]">
-                <p className="font-montserrat text-[11px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none whitespace-nowrap">
+            <div className="absolute top-[85.2%] right-0 lg:left-[47.7%] w-[52%] lg:w-[269.424px] bg-white border border-[#e4e4e4] hover:border-[#ED6B52] rounded-[8.668px] px-2 sm:px-[14.446px] py-1.5 sm:py-[7.223px] flex items-center transition-colors duration-300">
+              <div className="flex flex-col gap-0.5 sm:gap-[5.779px] py-0.5 sm:py-[5.779px]">
+                <p className="font-montserrat text-[9px] sm:text-[13px] md:text-[14.446px] font-bold text-[#ed6b52] leading-none">
                   05/ Analytics &amp; Optimization
                 </p>
-                <p className="font-montserrat text-[10px] sm:text-[11px] md:text-[12.279px] font-normal text-[#444] leading-[1.5]">
+                <p className="font-montserrat text-[8px] sm:text-[11px] md:text-[12.279px] font-normal text-[#444] leading-[1.5]">
                   Track performance and optimize for even better results.
                 </p>
               </div>
