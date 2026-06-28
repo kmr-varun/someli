@@ -32,7 +32,7 @@ function useCountUp(target: number, duration: number, active: boolean) {
 }
 
 // ─── Inline SVG arrows ────────────────────────────────────────────────────────
-function ArrowSmall({ animate }: { animate: boolean }) {
+function ArrowSmall() {
   return (
     <svg viewBox="0 0 62.0875 55.8585" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
       <defs>
@@ -40,16 +40,12 @@ function ArrowSmall({ animate }: { animate: boolean }) {
           <stop stopColor="#FF821B" /><stop offset="1" stopColor="#D54050" />
         </linearGradient>
       </defs>
-      <path
-        className={animate ? "hero-arrow-animate" : ""}
-        d="M38.8918 2.91899L45.9157 9.94284L0 55.8585H11.9888L51.91 15.9372L59.1684 23.1891L62.0875 0L38.8918 2.91899Z"
-        fill="url(#arrow-sm-g)"
-      />
+      <path d="M38.8918 2.91899L45.9157 9.94284L0 55.8585H11.9888L51.91 15.9372L59.1684 23.1891L62.0875 0L38.8918 2.91899Z" fill="url(#arrow-sm-g)" />
     </svg>
   );
 }
 
-function ArrowLarge({ animate }: { animate: boolean }) {
+function ArrowLarge() {
   return (
     <svg viewBox="0 0 82.6899 76.4609" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
       <defs>
@@ -57,11 +53,7 @@ function ArrowLarge({ animate }: { animate: boolean }) {
           <stop stopColor="#FF821B" /><stop offset="1" stopColor="#D54050" />
         </linearGradient>
       </defs>
-      <path
-        className={animate ? "hero-arrow-animate-delayed" : ""}
-        d="M59.4942 2.91901L66.5181 9.94938L0 76.4609H11.9822L72.5125 15.9438L79.7709 23.1957L82.6899 0L59.4942 2.91901Z"
-        fill="url(#arrow-lg-g)"
-      />
+      <path d="M59.4942 2.91901L66.5181 9.94938L0 76.4609H11.9822L72.5125 15.9438L79.7709 23.1957L82.6899 0L59.4942 2.91901Z" fill="url(#arrow-lg-g)" />
     </svg>
   );
 }
@@ -218,7 +210,7 @@ export default function PricingHeroSection() {
   const scaledH = CANVAS_H * scale;
 
   return (
-    <section ref={sectionRef} className="relative w-full overflow-hidden">
+    <section ref={sectionRef} className="relative w-full">
       <Image
         src="/assets/pricing-page/union-background.png"
         alt="" fill
@@ -266,13 +258,13 @@ export default function PricingHeroSection() {
             <AnalyticsCard animate={animate} />
 
             {/* arrow small — animated */}
-            <div className="absolute" style={{ left: "105.32px", top: "294.68px", width: "62.087px", height: "55.858px" }}>
-              <ArrowSmall animate={animate} />
+            <div className={`absolute ${animate ? "hero-arrow-animate" : ""}`} style={{ left: "105.32px", top: "294.68px", width: "62.087px", height: "55.858px" }}>
+              <ArrowSmall />
             </div>
 
             {/* arrow large — animated */}
-            <div className="absolute" style={{ left: "58.41px", top: "273.51px", width: "82.69px", height: "76.461px" }}>
-              <ArrowLarge animate={animate} />
+            <div className={`absolute ${animate ? "hero-arrow-animate-delayed" : ""}`} style={{ left: "58.41px", top: "273.51px", width: "82.69px", height: "76.461px" }}>
+              <ArrowLarge />
             </div>
 
             {/* reach gauge — animated */}
