@@ -207,7 +207,7 @@ export default function HowItWorksSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-white">
+    <section ref={sectionRef} className="relative w-full overflow-hidden bg-white">
       {/* Header */}
       <div className="px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 pt-12 sm:pt-16 md:pt-20 lg:pt-24 xl:pt-[100px] pb-8 sm:pb-10 md:pb-12 max-w-[1440px] mx-auto">
         <div className="mx-auto flex max-w-[892px] flex-col items-start lg:items-center gap-3 sm:gap-4 text-left lg:text-center">

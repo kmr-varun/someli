@@ -39,7 +39,7 @@ const TESTIMONIAL_CARDS = [
 
 export default function GrowthEngineSection() {
   return (
-    <section className="relative w-full bg-[#111]" style={{ minHeight: 'auto' }}>
+    <section className="relative w-full bg-[#111] overflow-hidden" style={{ minHeight: 'auto' }}>
       {/* Orange swoosh background */}
       <div className="absolute inset-0 opacity-50 pointer-events-none overflow-hidden">
         <Image

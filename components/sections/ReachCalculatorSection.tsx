@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function ReachCalculatorSection() {
 
   return (
-    <section className="relative w-full bg-[#0D0D0D] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px]">
+    <section className="relative w-full bg-[#0D0D0D] overflow-hidden px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px]">
       {/* Background pattern */}
       <div className="absolute inset-0 pointer-events-none opacity-50 overflow-hidden">
         <div className="absolute inset-0" style={{ height: '147.16%', top: '-1.93%', left: '-0.01%' }}>

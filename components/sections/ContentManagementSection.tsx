@@ -19,7 +19,7 @@ export default function ContentManagementSection() {
   ];
 
   return (
-    <section className="bg-[#0D0D0D] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px]">
+    <section className="w-full overflow-hidden bg-[#0D0D0D] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px]">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-10 sm:gap-12 md:gap-14 lg:gap-16">
         {/* Header */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-8">
