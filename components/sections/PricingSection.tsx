@@ -174,7 +174,10 @@ export default function PricingSection() {
           </div>
 
           {/* Center Card - Main Pricing */}
-          <div className="w-full lg:w-[417.333px] flex-shrink-0 bg-gradient-to-b from-[#DF8251] to-[#D54050] rounded-[16px] sm:rounded-[18px] md:rounded-[21.149px] px-5 sm:px-6 md:px-[33.838px] py-8 sm:py-10 md:py-[42.297px] flex flex-col gap-10 sm:gap-12 md:gap-14 drop-shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+          <div className="group relative w-full lg:w-[417.333px] flex-shrink-0 bg-gradient-to-b from-[#ff821b] to-[#d54050] rounded-[16px] sm:rounded-[18px] md:rounded-[21.149px] transition-all duration-300 hover:drop-shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+            {/* Hover gradient overlay — fades in on hover */}
+            <div className="absolute inset-0 rounded-[16px] sm:rounded-[18px] md:rounded-[21.149px] bg-gradient-to-b from-[#d54050] to-[#df8251] opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
+            <div className="relative z-10 px-5 sm:px-6 md:px-[33.838px] py-8 sm:py-10 md:py-[42.297px] flex flex-col gap-10 sm:gap-12 md:gap-14">
             <div className="flex flex-col gap-[34px]">
               <div className="flex flex-col gap-6">
                 {/* Badge */}
@@ -252,8 +255,8 @@ export default function PricingSection() {
 
             {/* CTA */}
             <div className="flex flex-col gap-2">
-              <button className="w-full border border-white rounded-full px-[28px] py-4 flex items-center justify-center hover:bg-white group transition-colors">
-                <span className="font-montserrat font-bold text-[16px] text-white group-hover:text-[#ED6B52] leading-none transition-colors">
+              <button className="w-full border border-white rounded-full px-[28px] py-4 flex items-center justify-center hover:bg-white transition-colors">
+                <span className="font-montserrat font-bold text-[16px] text-white hover:text-[#ED6B52] leading-none transition-colors">
                   • Start Your Free Trial →
                 </span>
               </button>
@@ -261,6 +264,7 @@ export default function PricingSection() {
                 30day money back guarantee
               </p>
             </div>
+            </div>{/* end z-10 */}
           </div>
 
           {/* Right Card - Benefits */}
