@@ -159,21 +159,17 @@ export default function Header() {
           <nav className="flex flex-col px-4 py-4">
             {NAV_ITEMS.map((item, idx) => (
               <div key={item.label} className={`${idx < NAV_ITEMS.length - 1 ? "border-b border-[rgba(0,0,0,0.06)]" : ""}`}>
-                <button
-                  className={`flex items-center justify-between w-full py-4 text-[15px] leading-none text-[#222] ${
-                    isNavActive(item, pathname) ? "font-bold" : "font-normal"
-                  }`}
-                  onClick={() => {
-                    if (item.dropdown) {
-                      setOpenDropdown(openDropdown === item.label ? null : item.label);
-                    }
-                  }}
-                >
-                  <span className="flex items-center gap-2">
-                    <span className="text-[#222]">•</span>
-                    <span>{item.label}</span>
-                  </span>
-                  {item.hasChevron && (
+                {item.dropdown ? (
+                  <button
+                    className={`flex items-center justify-between w-full py-4 text-[15px] leading-none text-[#222] ${
+                      isNavActive(item, pathname) ? "font-bold" : "font-normal"
+                    }`}
+                    onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
+                  >
+                    <span className="flex items-center gap-2">
+                      <span className="text-[#222]">•</span>
+                      <span>{item.label}</span>
+                    </span>
                     <Image
                       src="/assets/icons/chevron-down.svg"
                       alt=""
@@ -181,8 +177,19 @@ export default function Header() {
                       height={4}
                       className={`transition-transform duration-200 ${openDropdown === item.label ? "rotate-180" : ""}`}
                     />
-                  )}
-                </button>
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`flex items-center gap-2 w-full py-4 text-[15px] leading-none text-[#222] ${
+                      isNavActive(item, pathname) ? "font-bold" : "font-normal"
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <span className="text-[#222]">•</span>
+                    <span>{item.label}</span>
+                  </Link>
+                )}
 
                 {/* Mobile dropdown */}
                 {item.dropdown && openDropdown === item.label && (
