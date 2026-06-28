@@ -43,15 +43,7 @@ export default function PilotSection() {
           {STATS.map((stat, i) => (
             <>
               <div key={stat.heading} className="flex flex-1 flex-col gap-4 items-start sm:pr-6 md:pr-8">
-                <p
-                  className="font-['Montserrat'] font-bold text-[22px] sm:text-[24px] md:text-[28px] leading-[1.2] tracking-[3px] uppercase"
-                  style={{
-                    background: 'linear-gradient(to bottom, #ff821b, #d54050)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                  }}
-                >
+                <p className="outlined-text-orange-transparent font-['Montserrat'] text-[22px] sm:text-[24px] md:text-[28px] leading-[1.2] tracking-[3px] uppercase">
                   {stat.heading}
                 </p>
                 <p className="font-['Montserrat'] font-normal text-[15px] sm:text-[16px] md:text-[17px] leading-[1.6] text-[#444]">
