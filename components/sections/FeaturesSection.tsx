@@ -5,7 +5,7 @@ export default function FeaturesSection() {
     <section className="w-full bg-white px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px]">
       <div className="mx-auto max-w-[1440px] flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-10 lg:gap-12">
         {/* Left: Text Content */}
-        <div className="flex w-full lg:flex-1 lg:min-w-0 lg:max-w-[602px] flex-col gap-6 sm:gap-8 md:gap-10">
+        <div className="flex w-full lg:w-[52%] flex-col gap-6 sm:gap-8 md:gap-10">
           {/* Pill Label + Heading */}
           <div className="flex flex-col items-start">
             <div className="flex flex-col gap-3 sm:gap-4 items-start">
@@ -39,11 +39,11 @@ export default function FeaturesSection() {
         </div>
 
         {/* Right: Feature Cards + Dashboard Mockup */}
-        <div className="relative shrink-0 w-full lg:w-auto flex justify-center lg:justify-start">
-          {/* Feature Cards positioned absolutely - scale down on smaller screens */}
-          <div className="relative w-full max-w-[515px] lg:max-w-[515px] lg:flex-1" style={{ aspectRatio: '515.474/569.034' }}>
+        <div className="relative w-full lg:w-[45%] flex justify-center lg:justify-start">
+          {/* Feature Cards positioned absolutely - scales with container */}
+          <div className="relative w-full max-w-[515px]" style={{ aspectRatio: '515.474/569.034' }}>
             {/* Dashboard Mockup - rendered first so cards stack above it */}
-            <div className="absolute top-1/2 -translate-y-1/2 right-0 lg:translate-y-0 lg:top-[21.5%] lg:right-auto lg:left-[43.1%] w-[50%] sm:w-[60%] lg:w-[367.896px]" style={{ aspectRatio: '367.896/317.37' }}>
+            <div className="absolute top-1/2 -translate-y-1/2 right-0 lg:translate-y-0 lg:top-[21.5%] lg:right-auto lg:left-[43.1%] w-[50%] sm:w-[60%] lg:w-[71.4%]" style={{ aspectRatio: '367.896/317.37' }}>
               <Image
                 src="/assets/features/dashboard-mockup.png"
                 alt="Dashboard mockup showing analytics"
