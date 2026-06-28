@@ -177,3 +177,15 @@ body {
      0   -2px 0 #ED6B52,
      0    2px 0 #ED6B52;
 }
+
+/* Pricing hero illustration animations */
+@keyframes hero-arrow-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+.hero-arrow-animate {
+  animation: hero-arrow-float 2s ease-in-out infinite;
+}
+.hero-arrow-animate-delayed {
+  animation: hero-arrow-float 2s ease-in-out 0.3s infinite;
+}
