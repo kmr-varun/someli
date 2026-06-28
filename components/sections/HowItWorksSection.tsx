@@ -283,7 +283,7 @@ export default function HowItWorksSection() {
                   {/* Left Side - Number & Title */}
                   <div
                     data-left-panel
-                    className="flex w-full md:w-[220px] lg:w-[243px] flex-col items-start justify-center border-b lg:border-b-0 lg:border-r border-[rgba(0,0,0,0.08)] bg-[rgba(247,103,57,0.06)] px-5 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10"
+                    className="flex w-full lg:w-[22%] lg:shrink-0 flex-col items-start justify-center border-b lg:border-b-0 lg:border-r border-[rgba(0,0,0,0.08)] bg-[rgba(247,103,57,0.06)] px-5 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10"
                   >
                     <div className="flex w-full flex-col gap-6 sm:gap-8 md:gap-10">
                       {/* Number */}
