@@ -11,6 +11,7 @@ import ReachCalculatorSection from "@/components/sections/ReachCalculatorSection
 import PricingSection from "@/components/sections/PricingSection";
 import AdvocacyEngineSection from "@/components/sections/AdvocacyEngineSection";
 import DedicatedTeamSection from "@/components/sections/DedicatedTeamSection";
+import PilotSection from "@/components/sections/PilotSection";
 import BlogSection from "@/components/sections/BlogSection";
 import CertificationsSection from "@/components/sections/CertificationsSection";
 import Footer from "@/components/Footer";
@@ -32,6 +33,7 @@ export default function Home() {
       <PricingSection />
       <AdvocacyEngineSection />
       <DedicatedTeamSection />
+      <PilotSection />
       <BlogSection />
       <CertificationsSection />
       <Footer />
