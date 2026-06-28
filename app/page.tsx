@@ -9,6 +9,8 @@ import BeforeAfterSection from "@/components/sections/BeforeAfterSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import ReachCalculatorSection from "@/components/sections/ReachCalculatorSection";
 import PricingSection from "@/components/sections/PricingSection";
+import AdvocacyEngineSection from "@/components/sections/AdvocacyEngineSection";
+import DedicatedTeamSection from "@/components/sections/DedicatedTeamSection";
 import BlogSection from "@/components/sections/BlogSection";
 import CertificationsSection from "@/components/sections/CertificationsSection";
 import Footer from "@/components/Footer";
@@ -28,6 +30,8 @@ export default function Home() {
       <HowItWorksSection />
       <ReachCalculatorSection />
       <PricingSection />
+      <AdvocacyEngineSection />
+      <DedicatedTeamSection />
       <BlogSection />
       <CertificationsSection />
       <Footer />
