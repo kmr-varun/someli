@@ -24,9 +24,26 @@ export default function Footer() {
             <h2 className="font-['Montserrat'] text-[32px] sm:text-[40px] md:text-[52px] lg:text-[64px] xl:text-[80px] font-bold leading-[1.2] sm:leading-[1.3] tracking-[-1.5px] md:tracking-[-2px]">
               Ready to 10x your reach?
             </h2>
-            <p className="font-['Montserrat'] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[1.5]">
-              Join thousands of professionals and companies building influence that drives real results.
-            </p>
+            {/* Paragraph row — badge sits beside it on desktop */}
+            <div className="relative w-full flex justify-center">
+              <p className="font-['Montserrat'] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[1.5] text-center">
+                Join thousands of professionals and companies building influence that drives real results.
+              </p>
+              {/* 30 day guarantee badge — beside paragraph, desktop only */}
+              <div className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 w-[224px] items-center gap-3 rounded-full bg-[rgba(17,17,17,0.4)] px-5 py-3 glass-border-card">
+                <div className="relative h-[22px] w-[22px] shrink-0">
+                  <Image
+                    src="/assets/footer/guarantee-icon.svg"
+                    alt=""
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p className="font-['Montserrat'] text-[13px] font-medium leading-[1.2] tracking-[0.52px] text-white">
+                  30 days money back guarantee
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Book Demo Button */}
@@ -35,21 +52,6 @@ export default function Footer() {
               • Book a Demo →
             </span>
           </Link>
-
-          {/* 30 day guarantee badge - hidden on mobile */}
-          <div className="hidden lg:flex absolute right-[5%] xl:left-[1011px] xl:right-auto top-[83.22px] w-[224px] items-center gap-3 rounded-full bg-[rgba(17,17,17,0.4)] px-5 py-3 glass-border-card">
-            <div className="relative h-[22px] w-[22px] shrink-0">
-              <Image
-                src="/assets/footer/guarantee-icon.svg"
-                alt=""
-                fill
-                className="object-contain"
-              />
-            </div>
-            <p className="font-['Montserrat'] text-[13px] font-medium leading-[1.2] tracking-[0.52px] text-white">
-              30 days money back guarantee
-            </p>
-          </div>
         </div>
 
         {/* Footer Links & Contact */}
