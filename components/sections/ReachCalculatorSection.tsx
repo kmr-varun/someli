@@ -17,9 +17,9 @@ export default function ReachCalculatorSection() {
       </div>
 
       {/* Main content grid */}
-      <div className="relative max-w-[1248px] mx-auto flex flex-col lg:flex-row items-center lg:items-center justify-between gap-8 md:gap-12 lg:gap-16">
+      <div className="relative max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center lg:items-center justify-between gap-8 md:gap-12 lg:gap-16">
         {/* Left side - Heading + Calculator */}
-        <div className="flex flex-col gap-10 sm:gap-12 md:gap-14 lg:gap-16 flex-shrink-0 w-full lg:w-auto">
+        <div className="flex flex-col gap-10 sm:gap-12 md:gap-14 lg:gap-16 w-full lg:flex-1 lg:min-w-0">
           {/* Heading block */}
           <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
             <div className="flex flex-col gap-2 sm:gap-3">
@@ -114,7 +114,7 @@ export default function ReachCalculatorSection() {
         </div>
 
         {/* Right side - Report request card */}
-        <div className="glass-border-card w-full lg:w-[377px] bg-[rgba(255,255,255,0.04)] rounded-[5.735px] p-5 sm:p-6 flex flex-col gap-5 sm:gap-[22.939px] flex-shrink-0 relative z-10">
+        <div className="glass-border-card w-full lg:w-[377px] lg:max-w-[377px] bg-[rgba(255,255,255,0.04)] rounded-[5.735px] p-5 sm:p-6 flex flex-col gap-5 sm:gap-[22.939px] relative z-10">
           {/* Icon */}
           <Image
             src="/assets/reach-calculator/icon-report.svg"
@@ -166,7 +166,7 @@ export default function ReachCalculatorSection() {
       </div>
 
       {/* Floating "Trusted by" card - hidden on mobile/tablet */}
-      <div className="hidden lg:block absolute inset-0 max-w-[1248px] mx-auto pointer-events-none">
+      <div className="hidden lg:block absolute inset-0 max-w-[1440px] mx-auto pointer-events-none">
       <div className="glass-border-card flex absolute right-[360px] top-[79.81px] w-[226px] bg-[rgba(17,17,17,0.85)] rounded-[12px] px-6 py-5 flex-col gap-3 backdrop-blur-md z-20 pointer-events-auto">
         {/* Avatar stack */}
         <div className="flex items-center w-[90px] h-[38.077px]">

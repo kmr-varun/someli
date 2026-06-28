@@ -56,7 +56,7 @@ export default function GrowthEngineSection() {
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px] flex flex-col lg:flex-row items-center lg:items-center justify-between gap-8 md:gap-10 lg:gap-8">
 
         {/* LEFT: text block */}
-        <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-[40px] shrink-0 w-full lg:w-[595px]">
+        <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-[40px] w-full lg:flex-1 lg:min-w-0 lg:max-w-[595px]">
           {/* Pill label */}
           <div className="flex flex-col gap-3 sm:gap-4 md:gap-[16px]">
             <div
@@ -92,7 +92,7 @@ export default function GrowthEngineSection() {
         </div>
 
         {/* RIGHT: testimonial card stack */}
-        <div className="relative shrink-0 overflow-hidden w-full lg:w-[558px] h-[280px] sm:h-[320px] md:h-[358px]">
+        <div className="relative overflow-hidden w-full lg:flex-1 lg:min-w-0 lg:max-w-[558px] h-[280px] sm:h-[320px] md:h-[358px]">
           <motion.div
             className="absolute top-0 left-0 flex gap-3 sm:gap-4 md:gap-[16px] items-center"
             animate={{ x: [0, -380] }}
