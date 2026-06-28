@@ -5,19 +5,16 @@ const CARDS = [
     icon: '/assets/dedicated-team/icon-designer.svg',
     title: 'Graphic Designer',
     description: 'Stunning visuals that make your content stand out and drive engagement',
-    highlighted: true,
   },
   {
     icon: '/assets/dedicated-team/icon-video.svg',
     title: 'Video Editor',
     description: 'High-quality videos that bring your message to life and honest reach across every platform.',
-    highlighted: false,
   },
   {
     icon: '/assets/dedicated-team/icon-support.svg',
     title: 'Customer Support Manager',
     description: 'Your dedicated point of contact ensuring a smooth experience and quick resolutions.',
-    highlighted: false,
   },
 ];
 
@@ -46,9 +43,7 @@ export default function DedicatedTeamSection() {
           {CARDS.map((card) => (
             <div
               key={card.title}
-              className={`glass-border-card-hover flex flex-1 flex-col items-start px-6 sm:px-8 py-8 sm:py-10 rounded-[16px] transition-colors duration-300 ${
-                card.highlighted ? 'bg-[rgba(255,255,255,0.04)]' : 'hover:bg-[rgba(255,255,255,0.04)]'
-              }`}
+              className="glass-border-card-hover flex flex-1 flex-col items-start px-6 sm:px-8 py-8 sm:py-10 rounded-[16px] hover:bg-[rgba(255,255,255,0.04)] transition-colors duration-300"
             >
               <div className="flex flex-col gap-[18px] items-start w-full">
                 {/* Icon */}
