@@ -4,6 +4,12 @@
 
 ---
 
+## CHROME DEVTOOLS MCP — HARD RULE
+
+**NEVER use the Chrome DevTools MCP** (navigate_page, take_screenshot, list_pages, evaluate_script, etc.) unless the user explicitly says "use Chrome DevTools" or "open the browser" in that message. Do not open, navigate, kill, or interact with the browser in any way without direct instruction. Violating this rule destroys the user's active browser session.
+
+---
+
 ## SESSION START — DO THIS FIRST, EVERY TIME
 
 **Before doing anything else at the start of every session:**
