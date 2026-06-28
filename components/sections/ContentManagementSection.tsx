@@ -58,7 +58,7 @@ export default function ContentManagementSection() {
                 key={index}
                 className="flex-1 w-full max-w-[400px] md:max-w-none flex items-center justify-center group"
               >
-                <div className="md:-rotate-[10deg] w-full transition-transform duration-300 md:group-hover:scale-105">
+                <div className="md:-rotate-[10deg] w-full transition-transform duration-500 md:group-hover:rotate-0 md:group-hover:scale-110">
                   <div className="bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.1)] rounded-xl md:rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col gap-5 sm:gap-6 md:gap-8 opacity-60 md:opacity-30 md:group-hover:opacity-100 transition-opacity duration-300">
                     {/* Card Header */}
                     <div className="flex flex-col gap-2 sm:gap-3">
