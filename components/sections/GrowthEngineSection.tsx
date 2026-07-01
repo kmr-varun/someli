@@ -7,34 +7,34 @@ import SectionHeader from "@/components/ui/SectionHeader";
 const BENEFIT_PILLS = [
   { text: "More reach across more people",  top: "36px",    right: "120px" },
   { text: "Higher trust and credibility",   top: "110px",   right: "400px" },
-  { text: "Stronger employee brand",        top: "554px",   right: "376px" },
-  { text: "More inbound opportunities",     top: "634px",   right: "96px" },
+  { text: "Stronger employee brand",        top: "594px",   right: "376px" },
+  { text: "More inbound opportunities",     top: "674px",   right: "96px" },
 ];
 
 const TESTIMONIAL_CARDS = [
   {
-    quote: "Most founders think growth comes from ads. It doesn't. It comes from consistent visibility.",
-    name: "Ananya Sharma",
-    title: "Founder & CEO",
-    time: "1 month",
+    quote: "What sets the Boost 10x program apart is how effortlessly it handles scale without losing the authentic voice of our team. It has completely automated the friction out of employee advocacy. Our leadership team and staff are consistently visible online, driving massive brand equity for the company week after week.",
+    name: "Sharon D'Silva",
+    title: "CMO, RSA GLOBAL",
+    time: "Brilliant platform for corporate advocacy.",
   },
   {
-    quote: "Your team sharing their work is worth 10x any paid campaign. We grew 3x in 6 months.",
-    name: "Rahul Mehta",
-    title: "Head of Growth",
-    time: "2 months",
+    quote: "Before the Boost 10x program, getting our team to share company updates was like pulling teeth. Someli automated the entire process, making it seamless for our employees to become brand ambassadors. Our organic LinkedIn impressions skyrocketed by over 400% in the first 90 days. It's the ultimate leverage for corporate visibility.",
+    name: "Abhilash Nair",
+    title: "MD, ISS RELOCATIONS MIDDLE EAST",
+    time: "Game-changer for our organic reach.",
   },
   {
-    quote: "Employee advocacy changed everything. Our inbound pipeline doubled in one quarter.",
-    name: "Priya Nair",
-    title: "Marketing Director",
-    time: "3 weeks",
+    quote: "As an enterprise with a massive workforce, scaling content distribution is a logistical nightmare. Someli solved that overnight. The Boost 10x system streamlined our employee advocacy program, allowing our corporate communication team to push out updates that staff could share with a single click. The ROI on our talent branding alone has been phenomenal.",
+    name: "Samuel Thomas",
+    title: "MD, CHRYSELS ADVERTISING",
+    time: "Maximum output, minimum effort.",
   },
   {
-    quote: "We stopped running ads and started empowering our team. Best decision we ever made.",
-    name: "Karan Gupta",
-    title: "Co-Founder",
-    time: "5 weeks",
+    quote: "We brought Someli in to help our account executives build authority on LinkedIn. The Boost 10x strategy didn't just increase their posting consistency; it positioned them as industry thought leaders. We've seen a direct correlation between our team's active advocacy on Someli and a 35% increase in inbound enterprise leads.",
+    name: "Jai Patel",
+    title: "CEO, CREO GLOBAL",
+    time: "Our sales pipeline has never looked healthier.",
   },
 ];
 
@@ -68,7 +68,9 @@ export default function GrowthEngineSection() {
 
           {/* CTA */}
           <a
-            href="#"
+            href="https://capi.someli.ai/widget/bookings/someli-book-a-demo-boost"
+            target="_blank"
+            rel="noopener noreferrer"
             className="self-start flex items-center gap-2 pl-5 pr-8 sm:pl-6 sm:pr-9 md:pl-7 md:pr-10 py-3 sm:py-3.5 md:py-4 rounded-full border border-[#ED6B52] text-[14px] sm:text-[15px] md:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap hover:bg-[#ED6B52] hover:text-white transition-colors"
           >
             <span>Book a Demo →</span>
@@ -76,7 +78,7 @@ export default function GrowthEngineSection() {
         </div>
 
         {/* RIGHT: testimonial card stack */}
-        <div className="relative overflow-hidden w-full lg:flex-1 lg:min-w-0 lg:max-w-[558px] h-[280px] sm:h-[320px] md:h-[358px]">
+        <div className="relative overflow-hidden w-full lg:flex-1 lg:min-w-0 lg:max-w-[558px] h-[480px] sm:h-[520px] md:h-[560px] mt-10 lg:mt-16">
           <motion.div
             className="absolute top-0 left-0 flex gap-3 sm:gap-4 md:gap-[16px] items-center"
             animate={{ x: [0, -380] }}
@@ -99,7 +101,7 @@ export default function GrowthEngineSection() {
                     <Image src="/assets/growth/quote-mark.svg" alt="" width={28} height={20} className="w-full h-full" />
                   </div>
                   <p
-                    className="text-white font-normal text-[15px] sm:text-[16px] md:text-[17.8px] leading-[1.5]"
+                    className="text-white font-normal text-[12px] sm:text-[13px] md:text-[14px] leading-[1.5]"
                     style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
                   >
                     {card.quote}

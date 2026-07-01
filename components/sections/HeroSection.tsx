@@ -127,7 +127,7 @@ export default function HeroSection() {
           <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full lg:w-[49%] shrink-0">
             {/* Pill label */}
             <div className="flex flex-col gap-3 sm:gap-4">
-              <SectionPill className="whitespace-nowrap">Employee Advocacy and AI Powered Personal Branding Platform</SectionPill>
+              <SectionPill>Employee Advocacy and AI Powered Personal Branding Platform</SectionPill>
 
               {/* H1 */}
               <h1
@@ -279,7 +279,7 @@ export default function HeroSection() {
                         }}
                       >
                         <svg width={Math.max(4, 7 * scale)} height={Math.max(20, 35 * scale)} viewBox="0 0 7 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.70522 0.13448C3.52595 -0.044796 3.23529 -0.044796 3.05601 0.13448L0.13455 3.05594C-0.0447251 3.23521 -0.0447251 3.52588 0.13455 3.70515C0.313825 3.88443 0.604488 3.88443 0.783764 3.70515L3.38062 1.1083L5.97747 3.70515C6.15674 3.88443 6.44741 3.88443 6.62668 3.70515C6.80596 3.52588 6.80596 3.23521 6.62668 3.05594L3.70522 0.13448ZM3.38062 35L3.83968 35L3.83968 0.459087L3.38062 0.459087L2.92155 0.459087L2.92155 35L3.38062 35Z" fill="#F76739"/>
+                          <path d="M3.70522 0.13448C3.52595 -0.044796 3.23529 -0.044796 3.05601 0.13448L0.13455 3.05594C-0.0447251 3.23521 -0.0447251 3.52588 0.13455 3.70515C0.313825 3.88443 0.604488 3.88443 0.783764 3.70515L3.38062 1.1083L5.97747 3.70515C6.15674 3.88443 6.44741 3.88443 6.62668 3.70515C6.80596 3.52588 6.80596 3.23521 6.62668 3.05594L3.70522 0.13448ZM3.38062 35L3.83968 35L3.83968 0.459087L3.38062 0.459087L2.92155 0.459087L2.92155 35L3.38062 35Z" fill="white"/>
                         </svg>
                       </motion.div>
 

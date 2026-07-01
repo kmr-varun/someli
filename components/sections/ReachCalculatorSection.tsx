@@ -1,7 +1,12 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import SectionHeader from '@/components/ui/SectionHeader';
+import ReachReportModal from '@/components/ReachReportModal';
 
 export default function ReachCalculatorSection() {
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <section className="relative w-full bg-[#0D0D0D] overflow-hidden px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px]">
@@ -152,13 +157,18 @@ export default function ReachCalculatorSection() {
           </div>
 
           {/* CTA button */}
-          <button className="group self-start border border-[#ED6B52] rounded-full px-5 sm:px-6 py-3 sm:py-4 text-[#ED6B52] text-[15px] sm:text-[16px] md:text-[17px] font-medium hover:bg-[#ED6B52] transition-colors">
+          <button
+            onClick={() => setModalOpen(true)}
+            className="group self-start border border-[#ED6B52] rounded-full px-5 sm:px-6 py-3 sm:py-4 text-[#ED6B52] text-[15px] sm:text-[16px] md:text-[17px] font-medium hover:bg-[#ED6B52] transition-colors"
+          >
             <span className="flex items-center group-hover:text-white transition-colors">
               Generate my report
             </span>
           </button>
         </div>
       </div>
+
+      <ReachReportModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }
