@@ -26,7 +26,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full bg-[#111] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-[96px] py-12 sm:py-16 md:py-20 lg:py-[120px]">
+    <section className="w-full bg-[#0D0D0D] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-[96px] py-12 sm:py-16 md:py-20 lg:py-[120px]">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-8 sm:gap-12 md:gap-[64px] items-center">
         {/* Heading */}
         <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-white text-center tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] leading-[1.19]">

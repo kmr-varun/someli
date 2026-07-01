@@ -5,7 +5,7 @@ export default function BenefitsSection() {
     <section className="relative w-full">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bg-[#111] inset-0" />
+        <div className="absolute bg-[#0D0D0D] inset-0" />
         <div className="absolute inset-0 opacity-50 overflow-hidden">
           <Image src="/assets/ai-branding/benefits/bg-pattern.png" alt="" fill className="object-cover" />
         </div>

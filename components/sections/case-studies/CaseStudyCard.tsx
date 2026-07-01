@@ -52,11 +52,11 @@ export default function CaseStudyCard({
 
         {/* Industry + Category */}
         <div className="flex flex-col gap-2 md:gap-3 flex-1 md:flex-initial justify-center md:justify-start">
-          <h3 className="font-['Montserrat'] text-[18px] md:text-[24px] font-bold leading-[1.4] tracking-[-1px] text-[#222] group-hover:text-white">
+          <h3 className="font-montserrat text-[18px] md:text-[24px] font-bold leading-[1.4] tracking-[-1px] text-[#222] group-hover:text-white">
             {industry}
           </h3>
           <div className="inline-block self-start">
-            <span className="font-['Montserrat'] text-[10px] md:text-[12px] font-normal leading-[15px] tracking-[0.96px] uppercase text-[#222] group-hover:text-white">
+            <span className="font-montserrat text-[10px] md:text-[12px] font-normal leading-[15px] tracking-[0.96px] uppercase text-[#222] group-hover:text-white">
               {category}
             </span>
           </div>
@@ -71,17 +71,17 @@ export default function CaseStudyCard({
           <div className="w-full lg:w-[399px] flex flex-col gap-6 md:gap-8">
             {/* Goal */}
             <div className="flex flex-col gap-2">
-              <h4 className="font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-[1.5] tracking-[-0.32px] text-[#222]">
+              <h4 className="font-montserrat text-[14px] md:text-[16px] font-bold leading-[1.5] tracking-[-0.32px] text-[#222]">
                 Goal:
               </h4>
-              <p className="font-['Montserrat'] text-[14px] md:text-[16px] font-normal leading-[1.5] text-[#222]">
+              <p className="font-montserrat text-[14px] md:text-[16px] font-normal leading-[1.5] text-[#222]">
                 {goal}
               </p>
             </div>
 
             {/* Outcome */}
             <div className="flex flex-col gap-2">
-              <h4 className="font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-[1.5] tracking-[-0.32px] text-[#222]">
+              <h4 className="font-montserrat text-[14px] md:text-[16px] font-bold leading-[1.5] tracking-[-0.32px] text-[#222]">
                 Outcome:
               </h4>
               <div className="flex flex-col gap-2">
@@ -96,7 +96,7 @@ export default function CaseStudyCard({
                         className="w-full h-full"
                       />
                     </div>
-                    <p className="flex-1 font-['Montserrat'] text-[14px] md:text-[16px] font-normal leading-[1.5] text-[#222]">
+                    <p className="flex-1 font-montserrat text-[14px] md:text-[16px] font-normal leading-[1.5] text-[#222]">
                       {outcome}
                     </p>
                   </div>
@@ -202,8 +202,8 @@ export default function CaseStudyCard({
         </div>
 
         {/* CTA Button */}
-        <button className="self-start py-3 md:py-4 text-[#ed6b52] font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-none flex items-center">
-          <span className="mr-2 md:mr-3">•</span> View Case Study
+        <button className="self-start py-3 md:py-4 text-[#ed6b52] font-montserrat text-[14px] md:text-[16px] font-bold leading-none flex items-center">
+          View Case Study
         </button>
       </div>
     </div>

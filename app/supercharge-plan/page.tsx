@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FoundersHeroSection from "@/components/supercharge/FoundersHeroSection";
-import LogosSection from "@/components/sections/LogosSection";
+import LogosSection, { PARTNERSHIP_LOGOS } from "@/components/sections/LogosSection";
 import WhatsIncludedSection from "@/components/supercharge/WhatsIncludedSection";
 import SuperchargePricingSection from "@/components/supercharge/SuperchargePricingSection";
 import TestimonialsSection from "@/components/sections/why-someli/TestimonialsSection";
@@ -34,7 +34,7 @@ export default function SuperchargePlanPage() {
       <FAQSection />
 
       {/* Section 8: Logos Marquee #2 - REUSED */}
-      <LogosSection label="Our Partnerships" />
+      <LogosSection label="Our Partnerships" logos={PARTNERSHIP_LOGOS} />
 
       {/* Footer - Reused from home page */}
       <Footer />

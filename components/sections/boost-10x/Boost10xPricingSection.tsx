@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const features = [
   "Connect 25 social media accounts",
@@ -31,21 +32,12 @@ export default function Boost10xPricingSection() {
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col gap-10 sm:gap-12 lg:gap-[56px]">
           {/* Header */}
-          <div className="flex flex-col gap-4 lg:gap-[16px] items-center">
-            {/* Pill Label */}
-            <div className="inline-flex items-center px-[15px] py-[7px] rounded-full bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)]">
-              <p className="font-montserrat font-normal text-[12px] text-[#ed6b52] tracking-[0.96px] uppercase leading-[15px]">
-                Transparent pricing
-              </p>
-            </div>
-
-            {/* Heading */}
-            <div className="pb-[0.67px]">
-              <h2 className="font-montserrat font-bold text-[40px] sm:text-[48px] lg:text-[60px] text-black text-center tracking-[-2px] leading-[71.4px]">
-                The Boost 10x Plan
-              </h2>
-            </div>
-          </div>
+          <SectionHeader
+            pill="Transparent pricing"
+            heading="The Boost 10x Plan"
+            align="center"
+            headingClassName="text-[40px] sm:text-[48px] lg:text-[60px] tracking-[-2px] leading-[1.19]"
+          />
 
           {/* Pricing Cards Container */}
           <div className="w-full flex flex-col lg:flex-row items-stretch justify-center gap-6 lg:gap-[24px]">
@@ -116,7 +108,7 @@ export default function Boost10xPricingSection() {
               {/* Bottom CTAs */}
               <div className="flex flex-col gap-2 lg:gap-[8px]">
                 <button className="w-full border border-white rounded-full px-6 sm:px-7 py-3 sm:py-4 font-montserrat font-bold text-[14px] sm:text-[15px] lg:text-[16px] text-white hover:bg-white hover:text-[#df8251] transition-colors duration-300 flex items-center justify-center">
-                  <span>• Start Your Free Trial →</span>
+                  <span>Start Your Free Trial →</span>
                 </button>
                 <button className="w-full font-montserrat font-bold text-[13px] sm:text-[14px] lg:text-[14.8px] text-white text-center leading-[1.5] tracking-[-0.3px] hover:underline">
                   Book a Free Demo  →

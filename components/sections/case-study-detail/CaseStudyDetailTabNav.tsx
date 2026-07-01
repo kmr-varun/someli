@@ -22,7 +22,7 @@ export default function CaseStudyDetailTabNav() {
     <section className="relative w-full overflow-clip px-4 sm:px-8 md:px-16 lg:px-24 py-6 md:py-10">
       {/* Dark background with pattern overlay */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute inset-0 bg-[#111]" />
+        <div className="absolute inset-0 bg-[#0D0D0D]" />
         <div className="absolute inset-0 opacity-50 overflow-hidden">
           <Image
             src="/assets/case-study-detail/tab-nav-bg.png"
@@ -55,7 +55,6 @@ export default function CaseStudyDetailTabNav() {
             `}
           >
             <span className="inline-flex items-center">
-              <span className="mr-2">•</span>
               {tab.label}
             </span>
           </button>

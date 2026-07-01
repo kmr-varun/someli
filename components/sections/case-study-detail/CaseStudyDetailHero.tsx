@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import SectionPill from "@/components/ui/SectionPill";
 
 export default function CaseStudyDetailHero() {
   return (
@@ -27,11 +28,7 @@ export default function CaseStudyDetailHero() {
       <div className="relative z-10 flex flex-col gap-6 lg:gap-10 items-start w-full lg:w-[503px]">
         <div className="flex flex-col gap-4 items-start w-full">
           {/* Case Study Label */}
-          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.15)] px-[15px] py-[7px] rounded-full">
-            <p className="font-montserrat font-normal text-[12px] text-[#ed6b52] tracking-[0.96px] uppercase leading-[15px]">
-              CASE STUDY
-            </p>
-          </div>
+          <SectionPill>CASE STUDY</SectionPill>
 
           {/* Company Name */}
           <div className="w-full pb-[0.67px]">

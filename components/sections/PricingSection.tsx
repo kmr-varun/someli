@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import SectionPill from '@/components/ui/SectionPill';
 
 export default function PricingSection() {
   return (
@@ -6,11 +7,7 @@ export default function PricingSection() {
       <div className="max-w-[1440px] mx-auto flex flex-col gap-10 sm:gap-12 md:gap-14 items-center">
         {/* Header */}
         <div className="flex flex-col gap-3 sm:gap-4 items-center w-full">
-          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px] rounded-full">
-            <p className="font-montserrat font-normal text-[10px] sm:text-[11px] md:text-[12px] text-[#ED6B52] tracking-[0.8px] sm:tracking-[0.96px] uppercase leading-[15px]">
-              Transparent pricing
-            </p>
-          </div>
+          <SectionPill>Transparent pricing</SectionPill>
           <div className="flex flex-col gap-4 sm:gap-5 md:gap-6 items-center text-center w-full">
             <h2 className="font-montserrat font-bold text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] text-[#222222] tracking-[-1.5px] md:tracking-[-2px] leading-[1.2]">
               One plan. Everything you need to scale employee advocacy.
@@ -174,9 +171,9 @@ export default function PricingSection() {
           </div>
 
           {/* Center Card - Main Pricing */}
-          <div className="group relative w-full lg:w-[417.333px] flex-shrink-0 bg-gradient-to-b from-[#ff821b] to-[#d54050] rounded-[16px] sm:rounded-[18px] md:rounded-[21.149px] transition-all duration-300 hover:drop-shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+          <div className="group relative w-full lg:w-[417.333px] flex-shrink-0 bg-gradient-to-b from-[#ee6f58] to-[#d33546] rounded-[16px] sm:rounded-[18px] md:rounded-[21.149px] transition-all duration-300 hover:drop-shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
             {/* Hover gradient overlay — fades in on hover */}
-            <div className="absolute inset-0 rounded-[16px] sm:rounded-[18px] md:rounded-[21.149px] bg-gradient-to-b from-[#d54050] to-[#df8251] opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
+            <div className="absolute inset-0 rounded-[16px] sm:rounded-[18px] md:rounded-[21.149px] bg-gradient-to-b from-[#d33546] to-[#ee6f58] opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
             <div className="relative z-10 px-5 sm:px-6 md:px-[33.838px] py-8 sm:py-10 md:py-[42.297px] flex flex-col gap-10 sm:gap-12 md:gap-14">
             <div className="flex flex-col gap-[34px]">
               <div className="flex flex-col gap-6">
@@ -257,7 +254,7 @@ export default function PricingSection() {
             <div className="flex flex-col gap-2">
               <button className="w-full border border-white rounded-full px-[28px] py-4 flex items-center justify-center hover:bg-white transition-colors">
                 <span className="font-montserrat font-bold text-[16px] text-white hover:text-[#ED6B52] leading-none transition-colors">
-                  • Start Your Free Trial →
+                  Start Your Free Trial →
                 </span>
               </button>
               <p className="font-montserrat font-normal text-[14.804px] text-white tracking-[-0.2961px] leading-[1.5]">
@@ -356,7 +353,7 @@ export default function PricingSection() {
             </div>
 
             {/* Guarantee Badge */}
-            <div className="flex-1 bg-gradient-to-b from-[#DF8251] to-[#D54050] rounded-[21.149px] p-6 flex flex-col gap-8">
+            <div className="flex-1 bg-gradient-to-b from-[#ee6f58] to-[#d33546] rounded-[21.149px] p-6 flex flex-col gap-8">
               <div className="w-[55.333px] h-[55.333px] bg-[rgba(255,255,255,0.1)] rounded-[69.167px] flex items-center justify-center">
                 <Image
                   src="/assets/pricing/guarantee-badge.svg"

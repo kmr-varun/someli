@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import LogosSection from "@/components/sections/LogosSection";
+import LogosSection, { PARTNERSHIP_LOGOS } from "@/components/sections/LogosSection";
 import FAQSection from "@/components/sections/pricing/FAQSection";
 import CalculatorHeroSection from "@/components/sections/boost-10x/CalculatorHeroSection";
 import ReachCalculatorFormSection from "@/components/sections/boost-10x/ReachCalculatorFormSection";
@@ -33,7 +33,7 @@ export default function Boost10xCorporatesPage() {
       <FAQSection />
 
       {/* Logos Marquee Section */}
-      <LogosSection label="OUR PARTNERSHIPS" />
+      <LogosSection label="OUR PARTNERSHIPS" logos={PARTNERSHIP_LOGOS} />
 
       {/* Footer */}
       <Footer />

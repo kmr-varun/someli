@@ -131,18 +131,18 @@ export default function CaseStudiesListSection() {
       <div className="flex flex-col items-center gap-3 md:gap-4 max-w-4xl mx-auto px-4">
         {/* Pill Label */}
         <div className="inline-flex items-center px-[15px] py-[7px] rounded-full bg-[rgba(247,103,57,0.16)] border border-[rgba(247,103,57,0.15)]">
-          <span className="font-['Montserrat'] text-[10px] font-normal tracking-[1px] uppercase text-[#f76739] leading-[15px]">
+          <span className="font-montserrat text-[10px] font-normal tracking-[1px] uppercase text-[#f76739] leading-[15px]">
             CASE STUDIES
           </span>
         </div>
 
         {/* Heading */}
-        <h2 className="font-['Montserrat'] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[60px] font-bold leading-[1.19] tracking-[-0.033em] text-[#222] text-center">
+        <h2 className="font-montserrat text-[32px] sm:text-[40px] md:text-[48px] lg:text-[60px] font-bold leading-[1.19] tracking-[-0.033em] text-[#222] text-center">
           Proven Results Across Industries
         </h2>
 
         {/* Subheading */}
-        <p className="font-['Montserrat'] text-[16px] md:text-[18px] font-normal leading-[1.5] text-[#444] text-center max-w-3xl">
+        <p className="font-montserrat text-[16px] md:text-[18px] font-normal leading-[1.5] text-[#444] text-center max-w-3xl">
           AI + Strategy + Consistency + Influence that grows your businesss
         </p>
       </div>

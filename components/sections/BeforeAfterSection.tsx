@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import SectionHeader from '@/components/ui/SectionHeader';
 
 export default function BeforeAfterSection() {
   return (
@@ -14,34 +15,15 @@ export default function BeforeAfterSection() {
       <div className="relative max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 sm:gap-12 md:gap-14 lg:gap-16">
         {/* Left content */}
         <div className="flex flex-col gap-5 sm:gap-6 w-full lg:w-[470px]">
-          <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
-            <div className="flex flex-col">
-              <div className="flex flex-col gap-3 sm:gap-4">
-                {/* Pill label */}
-                <div className="inline-flex items-center self-start px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px] rounded-full bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)]">
-                  <span className="font-['Space_Grotesk'] text-[10px] sm:text-[11px] md:text-[12px] font-normal tracking-[0.8px] sm:tracking-[0.96px] uppercase text-[#ED6B52] leading-[15px]">
-                    Visible Growth
-                  </span>
-                </div>
-
-                {/* Heading */}
-                <h2 className="font-bold text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] leading-[1.2] tracking-[-1.5px] md:tracking-[-2px] text-black">
-                  From invisible to in-demand
-                </h2>
-              </div>
-            </div>
-
-            {/* Description */}
-            <p className="text-[14px] sm:text-[16px] md:text-[18px] leading-[1.5] text-[#444444]">
-              See how professionals and teams are{' '}
-              <span className="font-bold">transforming</span> their LinkdIn presence with{' '}
-              <span className="font-bold">Someli AI</span>
-            </p>
-          </div>
+          <SectionHeader
+            pill="Visible Growth"
+            heading="From invisible to in-demand"
+            description={<>See how professionals and teams are{' '}<span className="font-bold">transforming</span> their LinkedIn presence with{' '}<span className="font-bold">Someli AI</span></>}
+          />
 
           {/* CTA button */}
           <button className="inline-flex items-center self-start px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 rounded-full border-2 border-[#ED6B52] text-[#ED6B52] font-bold text-[14px] sm:text-[15px] md:text-[16px] hover:bg-[#ED6B52] hover:text-white transition-colors duration-300">
-            • See How it Works →
+            See How it Works →
           </button>
         </div>
 

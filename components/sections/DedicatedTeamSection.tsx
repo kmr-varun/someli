@@ -20,7 +20,7 @@ const CARDS = [
 
 export default function DedicatedTeamSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#111]">
+    <section className="relative w-full overflow-hidden bg-[#0D0D0D]">
       {/* Background orange wave */}
       <div className="pointer-events-none absolute inset-0 opacity-50">
         <Image
@@ -34,8 +34,8 @@ export default function DedicatedTeamSection() {
 
       <div className="relative mx-auto flex max-w-[1440px] flex-col gap-[56px] items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-16 sm:py-20 md:py-[100px] lg:py-[120px]">
         {/* Heading */}
-        <h2 className="font-['Montserrat'] font-bold text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] leading-[1.19] tracking-[-1.5px] md:tracking-[-2px] text-center text-white w-full">
-          Someli AI works as Your Dedicated Creative Team
+        <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] leading-[1.19] tracking-[-1.5px] md:tracking-[-2px] text-center text-white w-full">
+          Someli AI has your Dedicated Creative Team
         </h2>
 
         {/* Cards */}
@@ -61,10 +61,10 @@ export default function DedicatedTeamSection() {
 
                 {/* Text */}
                 <div className="flex flex-col gap-[3px] items-start w-full">
-                  <p className="font-['Montserrat'] font-bold text-[14px] leading-[1.5] tracking-[-0.28px] text-white">
+                  <p className="font-montserrat font-bold text-[14px] leading-[1.5] tracking-[-0.28px] text-white">
                     {card.title}
                   </p>
-                  <p className="font-['Montserrat'] font-normal text-[14px] leading-[1.5] tracking-[-0.28px] text-white">
+                  <p className="font-montserrat font-normal text-[14px] leading-[1.5] tracking-[-0.28px] text-white">
                     {card.description}
                   </p>
                 </div>

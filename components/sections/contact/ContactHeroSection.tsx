@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import SectionPill from "@/components/ui/SectionPill";
 
 export default function ContactHeroSection() {
   return (
@@ -20,11 +21,7 @@ export default function ContactHeroSection() {
         <div className="flex flex-col gap-10 items-start w-full lg:w-[583px] lg:shrink-0">
           <div className="flex flex-col gap-4 items-start w-full">
             {/* Pill */}
-            <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.15)] rounded-full px-[15px] py-[7px]">
-              <span className="font-montserrat text-[12px] font-normal tracking-[0.96px] uppercase text-[#ED6B52] leading-[15px]">
-                CONTACT US
-              </span>
-            </div>
+            <SectionPill>CONTACT US</SectionPill>
 
             {/* Heading */}
             <h1 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.19] tracking-[-2.04px] text-[#222]">
@@ -138,7 +135,7 @@ export default function ContactHeroSection() {
 
           {/* Submit button */}
           <button className="border border-white rounded-full pl-7 pr-10 py-4 font-montserrat font-bold text-[16px] text-white leading-none cursor-pointer">
-            • Book a Demo
+            Book a Demo
           </button>
         </div>
       </div>

@@ -1,4 +1,6 @@
 import Image from "next/image";
+import SectionPill from "@/components/ui/SectionPill";
+import Button from "@/components/ui/Button";
 
 const reasons = [
   { number: "1", title: "Global Impact", description: "Submit agency profile" },
@@ -9,7 +11,7 @@ const reasons = [
 
 export default function WhyJoinSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#111]">
+    <section className="relative w-full overflow-hidden bg-[#0D0D0D]">
       {/* Background */}
       <div className="absolute inset-0 opacity-50 overflow-hidden">
         <Image
@@ -23,11 +25,7 @@ export default function WhyJoinSection() {
       <div className="relative max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-16 sm:py-20 lg:py-[100px] flex flex-col gap-10 sm:gap-[56px] items-center">
         {/* Header */}
         <div className="flex flex-col gap-4 items-center">
-          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full px-[15px] py-[7px]">
-            <span className="font-montserrat text-[10px] font-normal tracking-[1px] uppercase text-[#ED6B52] leading-[15px] text-center">
-              OUR TEAM
-            </span>
-          </div>
+          <SectionPill>OUR TEAM</SectionPill>
           <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.19] tracking-[-2px] text-white text-center">
             Why Join Someli
           </h2>
@@ -61,9 +59,7 @@ export default function WhyJoinSection() {
           </div>
 
           {/* CTA */}
-          <button className="border border-[#ED6B52] rounded-full pl-7 pr-10 py-4 font-montserrat font-bold text-[14px] sm:text-[16px] text-[#ED6B52] leading-none text-center cursor-pointer hover:bg-[#ED6B52] hover:text-white transition-colors">
-            • Become a Partner →
-          </button>
+          <Button variant="outlined">Become a Partner →</Button>
         </div>
       </div>
     </section>

@@ -23,7 +23,7 @@ export default function ResultsDisplaySection({
     <section className="w-full relative overflow-hidden px-4 sm:px-8 md:px-12 lg:px-16 xl:px-[96px] py-16 sm:py-20 md:py-24 lg:py-[100px]">
       {/* Background Layer */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute inset-0 bg-[#111]" />
+        <div className="absolute inset-0 bg-[#0D0D0D]" />
         <div className="absolute inset-0 opacity-50 overflow-hidden">
           <div className="absolute w-full h-[152.33%] left-[-0.03%] top-[-2.88%]">
             <Image
@@ -188,7 +188,6 @@ export default function ResultsDisplaySection({
 
           {/* CTA Button */}
           <button className="bg-black border border-[#ed6b52] rounded-full px-7 sm:px-10 lg:pl-[28px] lg:pr-[40px] py-4 font-montserrat font-semibold text-[14px] sm:text-[16px] text-[#ed6b52] hover:bg-[#ed6b52] hover:text-white transition-colors duration-300 flex items-center gap-2">
-            <span className="text-[#ed6b52] hover:text-white">•</span>
             <span>Start your 14-Day FREE Trial Now! →</span>
           </button>
         </div>

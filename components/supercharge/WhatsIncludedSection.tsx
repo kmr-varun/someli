@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const services = [
   {
@@ -32,24 +33,15 @@ export default function WhatsIncludedSection() {
     <section className="relative w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px] flex flex-col gap-10 sm:gap-12 md:gap-14 items-center">
         {/* Header */}
-        <div className="flex flex-col gap-3 sm:gap-4 items-center w-full max-w-4xl">
-          {/* Pill Label */}
-          <div className="inline-flex items-center px-3 sm:px-4 md:px-[15px] py-[6px] md:py-[7px] bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full">
-            <span className="text-[#ED6B52] text-[10px] sm:text-[11px] md:text-[12px] font-normal uppercase tracking-[0.8px] md:tracking-[0.96px] leading-[15px]">
-              Transparent pricing
-            </span>
-          </div>
-
-          {/* Heading + Description */}
-          <div className="flex flex-col gap-4 sm:gap-5 md:gap-6 items-center text-center w-full">
-            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-bold leading-[1.2] tracking-[-1.5px] lg:tracking-[-2px] text-black">
-              What's Included
-            </h2>
-            <p className="text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[1.4] text-black max-w-[808px]">
-              A dedicated marketing team consisting of a video editor, a graphic designer, and a customer support manager — all done for you.
-            </p>
-          </div>
-        </div>
+        <SectionHeader
+          pill="Transparent pricing"
+          heading="What's Included"
+          description="A dedicated marketing team consisting of a video editor, a graphic designer, and a customer support manager — all done for you."
+          align="center"
+          headingClassName="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] leading-[1.2] tracking-[-1.5px] lg:tracking-[-2px]"
+          descriptionClassName="max-w-[808px]"
+          className="w-full max-w-4xl"
+        />
 
         {/* Services Grid - Responsive */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8">

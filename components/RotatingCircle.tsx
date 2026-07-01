@@ -1,24 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function RotatingCircle() {
   return (
-    <motion.div
-      className="absolute inset-0"
-      animate={{ rotate: 360 }}
-      transition={{ duration: 35, ease: "linear", repeat: Infinity }}
-    >
-      <Image
-        src="/assets/hero/network-circle.png"
-        alt=""
-        fill
-        className="object-contain"
-        sizes="50vw"
-        priority
-        unoptimized
+    <div className="absolute inset-0">
+      <DotLottieReact
+        src="/assets/hero/hero-circle.lottie"
+        loop
+        autoplay
+        speed={0.5}
+        style={{ width: "100%", height: "100%" }}
       />
-    </motion.div>
+    </div>
   );
 }

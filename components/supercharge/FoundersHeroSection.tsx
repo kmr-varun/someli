@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionPill from "@/components/ui/SectionPill";
 
 export default function FoundersHeroSection() {
   return (
@@ -21,11 +22,7 @@ export default function FoundersHeroSection() {
           {/* Pill Label + Heading */}
           <div className="flex flex-col gap-3 sm:gap-4">
             {/* Pill Label */}
-            <div className="inline-flex items-center px-3 sm:px-4 md:px-[15px] py-[6px] md:py-[7px] bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.15)] rounded-full w-fit">
-              <span className="text-[#ED6B52] text-[10px] sm:text-[11px] md:text-[12px] font-normal uppercase tracking-[0.8px] md:tracking-[0.96px] leading-[15px]">
-                Unlock Your Marketing Team
-              </span>
-            </div>
+            <SectionPill>Unlock Your Marketing Team</SectionPill>
 
             {/* Heading */}
             <h1 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-bold leading-[1.2] tracking-[-1.5px] lg:tracking-[-2.04px]">

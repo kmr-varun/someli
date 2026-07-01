@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import SectionPill from "@/components/ui/SectionPill";
 
 export default function HeroSection() {
   return (
@@ -8,11 +9,7 @@ export default function HeroSection() {
         <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full lg:w-[611px] text-center lg:text-left items-center lg:items-start">
           {/* Pill Label + Heading */}
           <div className="flex flex-col gap-3 sm:gap-4 w-full items-center lg:items-start">
-            <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.15)] inline-flex items-center px-3 sm:px-[15px] py-1.5 sm:py-[7px] rounded-full w-fit">
-              <p className="text-[#ed6b52] text-[10px] sm:text-[12px] font-normal tracking-[0.8px] sm:tracking-[0.96px] uppercase leading-[15px]">
-                HOW SOMELI WORKS
-              </p>
-            </div>
+            <SectionPill>HOW SOMELI WORKS</SectionPill>
 
             <div className="flex flex-col pb-[0.67px] w-full">
               <h1 className="text-[#222] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px] xl:text-[60px] font-bold tracking-[-1.5px] sm:tracking-[-2.04px]">
@@ -33,10 +30,10 @@ export default function HeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-2 items-center w-full sm:w-auto">
               <button className="border border-[#ed6b52] text-[#ed6b52] font-bold text-[14px] sm:text-[16px] px-5 sm:pl-7 sm:pr-10 py-3 sm:py-4 rounded-full leading-none w-full sm:w-auto whitespace-nowrap">
-                • Take a Product Tour
+                Take a Product Tour
               </button>
               <button className="text-[#ed6b52] font-bold text-[14px] sm:text-[16px] px-5 sm:pl-7 sm:pr-10 py-3 sm:py-4 rounded-full leading-none w-full sm:w-auto whitespace-nowrap">
-                • Book a Demo
+                Book a Demo
               </button>
             </div>
           </div>

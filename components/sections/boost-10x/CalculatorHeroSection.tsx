@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionPill from "@/components/ui/SectionPill";
 
 export default function CalculatorHeroSection() {
   return (
@@ -24,11 +25,7 @@ export default function CalculatorHeroSection() {
           <div className="flex flex-col gap-6 sm:gap-7 md:gap-8 lg:gap-[40px] w-full lg:w-[541px] text-center lg:text-left items-center lg:items-start">
             <div className="flex flex-col gap-3 sm:gap-4 lg:gap-[16px]">
               {/* Pill Label */}
-              <div className="inline-flex items-center px-3 sm:px-4 md:px-[15px] py-[6px] md:py-[7px] rounded-full bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.15)] w-fit">
-                <p className="font-montserrat font-normal text-[10px] sm:text-[11px] md:text-[12px] text-[#ed6b52] tracking-[0.8px] sm:tracking-[0.96px] uppercase leading-[15px]">
-                  REACH CALCULATOR
-                </p>
-              </div>
+              <SectionPill>REACH CALCULATOR</SectionPill>
 
               {/* Heading */}
               <div className="pb-[0.67px]">

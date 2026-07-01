@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
+import SectionPill from "@/components/ui/SectionPill";
 
 // ─── canvas dimensions ────────────────────────────────────────────────────────
 const CANVAS_W = 524;
@@ -222,12 +223,8 @@ export default function PricingHeroSection() {
         {/* Left */}
         <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[40px] w-full lg:w-[759px] lg:shrink-0">
           <div className="flex flex-col gap-[16px] items-start">
-            <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.15)] px-[15px] py-[7px] rounded-full">
-              <p className="font-['Montserrat'] font-normal text-[12px] text-[#ED6B52] tracking-[0.96px] uppercase leading-[15px]">
-                Pricing
-              </p>
-            </div>
-            <h1 className="font-['Montserrat'] font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-[#222222] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2.04px] leading-[1.19]">
+            <SectionPill>Pricing</SectionPill>
+            <h1 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-[#222222] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2.04px] leading-[1.19]">
               Simple Pricing.
               <br />
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(to bottom, #df8251, #d54050)" }}>
@@ -235,7 +232,7 @@ export default function PricingHeroSection() {
               </span>
             </h1>
           </div>
-          <p className="font-['Montserrat'] font-normal text-[15px] sm:text-[16px] md:text-[18px] text-[#444444] leading-[1.5]">
+          <p className="font-montserrat font-normal text-[15px] sm:text-[16px] md:text-[18px] text-[#444444] leading-[1.5]">
             No hidden fees. No long-term lock-ins. Just the tools, strategy, and support your business needs to grow on social media — from day one.
           </p>
         </div>

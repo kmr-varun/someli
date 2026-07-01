@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden bg-[#111] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px]">
+    <footer className="relative w-full overflow-hidden bg-[#0D0D0D] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px]">
       {/* Background Pattern */}
       <div className="pointer-events-none absolute inset-0 opacity-50 overflow-hidden">
         <div className="absolute h-[140.64%] w-[157.96%]" style={{ left: '-6.16%', top: '-20.32%' }}>
@@ -21,16 +21,16 @@ export default function Footer() {
         {/* CTA Section */}
         <div className="flex w-full flex-col items-center gap-8 sm:gap-10 md:gap-12 lg:gap-14 border-b border-[rgba(255,255,255,0.5)] pb-10 sm:pb-12 md:pb-14">
           <div className="flex w-full flex-col items-center gap-5 sm:gap-6 md:gap-8 text-center text-white">
-            <h2 className="font-['Montserrat'] text-[32px] sm:text-[40px] md:text-[52px] lg:text-[64px] xl:text-[80px] font-bold leading-[1.2] sm:leading-[1.3] tracking-[-1.5px] md:tracking-[-2px]">
+            <h2 className="font-montserrat text-[32px] sm:text-[40px] md:text-[52px] lg:text-[64px] xl:text-[80px] font-bold leading-[1.2] sm:leading-[1.3] tracking-[-1.5px] md:tracking-[-2px]">
               Ready to 10x your reach?
             </h2>
-            {/* Paragraph row — badge sits beside it on desktop */}
+            {/* Paragraph row — badge sits beside it on large screens */}
             <div className="relative w-full flex justify-center">
-              <p className="font-['Montserrat'] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[1.5] text-center">
+              <p className="font-montserrat text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[1.5] text-center">
                 Join thousands of professionals and companies building influence that drives real results.
               </p>
-              {/* 30 day guarantee badge — beside paragraph, desktop only */}
-              <div className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 w-[224px] items-center gap-3 rounded-full bg-[rgba(17,17,17,0.4)] px-5 py-3 glass-border-card">
+              {/* 30 day guarantee badge — floats right; pushed below text on lg–2xl to avoid overlap */}
+              <div className="hidden lg:flex absolute right-0 top-full lg:mt-4 2xl:top-1/2 2xl:-translate-y-1/2 2xl:mt-0 w-[224px] items-center gap-3 rounded-full bg-[rgba(17,17,17,0.4)] px-5 py-3 glass-border-card">
                 <div className="relative h-[22px] w-[22px] shrink-0">
                   <Image
                     src="/assets/footer/guarantee-icon.svg"
@@ -39,7 +39,7 @@ export default function Footer() {
                     className="object-contain"
                   />
                 </div>
-                <p className="font-['Montserrat'] text-[13px] font-medium leading-[1.2] tracking-[0.52px] text-white">
+                <p className="font-montserrat text-[13px] font-medium leading-[1.2] tracking-[0.52px] text-white">
                   30 days money back guarantee
                 </p>
               </div>
@@ -48,8 +48,8 @@ export default function Footer() {
 
           {/* Book Demo Button */}
           <Link href="/contact" className="group inline-flex items-center rounded-full border border-[#ED6B52] py-3 sm:py-3.5 md:py-4 pl-5 pr-8 sm:pl-6 sm:pr-9 md:pl-7 md:pr-10 hover:bg-[#ED6B52] transition-colors">
-            <span className="font-['Montserrat'] text-[14px] sm:text-[15px] md:text-[16px] font-bold text-[#ED6B52] group-hover:text-white transition-colors">
-              • Book a Demo →
+            <span className="font-montserrat text-[14px] sm:text-[15px] md:text-[16px] font-bold text-[#ED6B52] group-hover:text-white transition-colors">
+              Book a Demo →
             </span>
           </Link>
         </div>
@@ -70,7 +70,7 @@ export default function Footer() {
             {/* Navigation Columns */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-6 lg:gap-4 w-full">
               {/* Product Column */}
-              <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-['Montserrat'] font-medium">
+              <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-montserrat font-medium">
                 <h3 className="text-[16px] sm:text-[18px] md:text-[20px] leading-normal text-white">Product</h3>
                 <ul className="flex flex-col gap-[10px] sm:gap-[12px] md:gap-[14px] text-[13px] sm:text-[14px] leading-normal text-[rgba(255,255,255,0.9)]">
                   <li className="list-disc ms-[21px]"><Link href="/" className="hover:text-white transition-colors">Platform</Link></li>
@@ -83,7 +83,7 @@ export default function Footer() {
               </div>
 
               {/* Resources Column */}
-              <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-['Montserrat'] font-medium">
+              <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-montserrat font-medium">
                 <h3 className="text-[16px] sm:text-[18px] md:text-[20px] leading-normal text-white">Resources</h3>
                 <ul className="flex flex-col gap-[10px] sm:gap-[12px] md:gap-[14px] text-[13px] sm:text-[14px] leading-normal text-[rgba(255,255,255,0.9)]">
                   <li className="list-disc ms-[21px]"><Link href="/product" className="hover:text-white transition-colors">Product Tour</Link></li>
@@ -96,7 +96,7 @@ export default function Footer() {
               </div>
 
               {/* Company Column */}
-              <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-['Montserrat'] font-medium">
+              <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-montserrat font-medium">
                 <h3 className="text-[16px] sm:text-[18px] md:text-[20px] leading-normal text-white">Company</h3>
                 <ul className="flex flex-col gap-[10px] sm:gap-[12px] md:gap-[14px] text-[13px] sm:text-[14px] leading-normal text-[rgba(255,255,255,0.9)]">
                   <li className="list-disc ms-[21px]"><Link href="/our-story" className="hover:text-white transition-colors">Our Story</Link></li>
@@ -107,7 +107,7 @@ export default function Footer() {
               </div>
 
               {/* Support Column */}
-              <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-['Montserrat'] font-medium">
+              <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-montserrat font-medium">
                 <h3 className="text-[16px] sm:text-[18px] md:text-[20px] leading-normal text-white">Support</h3>
                 <ul className="flex flex-col gap-[10px] sm:gap-[12px] md:gap-[14px] text-[13px] sm:text-[14px] leading-normal text-[rgba(255,255,255,0.9)]">
                   <li className="list-disc ms-[21px]"><Link href="/contact" className="hover:text-white transition-colors">Book a Demo</Link></li>
@@ -118,7 +118,7 @@ export default function Footer() {
               </div>
 
               {/* Contact Us Column */}
-              <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-['Montserrat'] font-medium col-span-2 sm:col-span-1">
+              <div className="flex flex-col gap-[14px] sm:gap-[16px] md:gap-[18px] font-montserrat font-medium col-span-2 sm:col-span-1">
                 <h3 className="text-[16px] sm:text-[18px] md:text-[20px] leading-normal text-white">Contact Us</h3>
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-[10px]">
@@ -154,7 +154,7 @@ export default function Footer() {
 
           {/* Copyright & Social */}
           <div className="flex w-full flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 border-t border-[rgba(255,255,255,0.5)] pt-5">
-            <p className="font-['Montserrat'] text-[11px] sm:text-[12px] font-normal leading-normal text-center text-[rgba(255,255,255,0.9)]">
+            <p className="font-montserrat text-[11px] sm:text-[12px] font-normal leading-normal text-center text-[rgba(255,255,255,0.9)]">
               © 2026 Someli AI. All rights reserved.
             </p>
             <div className="flex items-center gap-4 sm:gap-5">

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionPill from "@/components/ui/SectionPill";
 
 export default function WhySomeliHeroSection() {
   return (
@@ -17,11 +18,7 @@ export default function WhySomeliHeroSection() {
         <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 w-full lg:w-[651px] shrink-0">
           <div className="flex flex-col gap-3 sm:gap-4">
             {/* Pill label */}
-            <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.15)] px-[15px] py-[7px] rounded-full w-fit">
-              <p className="font-montserrat font-normal text-[10px] sm:text-[12px] text-[#ED6B52] tracking-[0.96px] uppercase leading-[15px]">
-                WHY SOMELI
-              </p>
-            </div>
+            <SectionPill>WHY SOMELI</SectionPill>
 
             {/* Heading */}
             <h1 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-[#222222] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2.04px] leading-[1.2] lg:leading-[71.4px]">

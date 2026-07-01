@@ -24,16 +24,16 @@ export default function PilotSection() {
         {/* Header */}
         <div className="flex flex-col gap-4 items-center text-center">
           <div className="inline-flex items-center rounded-full border border-[rgba(247,103,57,0.16)] bg-[rgba(247,103,57,0.16)] px-[15px] py-[7px]">
-            <span className="font-['Montserrat'] font-normal text-[12px] uppercase tracking-[0.96px] text-[#ED6B52] leading-[15px]">
+            <span className="font-montserrat font-normal text-[12px] uppercase tracking-[0.96px] text-[#ED6B52] leading-[15px]">
               Low Risk High Impact
             </span>
           </div>
 
-          <h2 className="font-['Montserrat'] font-bold text-[32px] sm:text-[42px] md:text-[52px] lg:text-[60px] leading-[1.19] tracking-[-1.5px] md:tracking-[-2px] text-black w-full">
+          <h2 className="font-montserrat font-bold text-[32px] sm:text-[42px] md:text-[52px] lg:text-[60px] leading-[1.19] tracking-[-1.5px] md:tracking-[-2px] text-black w-full">
             Start with a 90-Day Pilot
           </h2>
 
-          <p className="font-['Montserrat'] font-normal text-[15px] sm:text-[16px] md:text-[18px] leading-[1.36] text-black max-w-[720px]">
+          <p className="font-montserrat font-normal text-[15px] sm:text-[16px] md:text-[18px] leading-[1.36] text-black max-w-[720px]">
             We will start with a small group of executives, Set clear KPI&apos;s and prove the ROI before you scale.
           </p>
         </div>
@@ -43,10 +43,10 @@ export default function PilotSection() {
           {STATS.map((stat, i) => (
             <>
               <div key={stat.heading} className="flex flex-1 flex-col gap-4 items-start sm:pr-6 md:pr-8">
-                <p className="outlined-text-orange font-['Montserrat'] text-[22px] sm:text-[24px] md:text-[28px] leading-[1.2] tracking-[3px] uppercase">
+                <p className="outlined-text-orange font-montserrat text-[22px] sm:text-[24px] md:text-[28px] leading-[1.2] tracking-[3px] uppercase">
                   {stat.heading}
                 </p>
-                <p className="font-['Montserrat'] font-normal text-[15px] sm:text-[16px] md:text-[17px] leading-[1.6] text-[#444]">
+                <p className="font-montserrat font-normal text-[15px] sm:text-[16px] md:text-[17px] leading-[1.6] text-[#444]">
                   {stat.body}
                 </p>
               </div>
@@ -58,7 +58,7 @@ export default function PilotSection() {
         </div>
 
         {/* CTA Banner */}
-        <div className="bg-gradient-to-b from-[#ff821b] to-[#d54050] rounded-[16px] sm:rounded-[18px] md:rounded-[21px] p-6 sm:p-8 md:p-[36px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 sm:gap-8">
+        <div className="bg-gradient-to-b from-[#ee6f58] to-[#d33546] rounded-[16px] sm:rounded-[18px] md:rounded-[21px] p-6 sm:p-8 md:p-[36px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 sm:gap-8">
           {/* Icon + text */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10 md:gap-[60px] flex-1">
             <div className="bg-[rgba(255,255,255,0.1)] rounded-[16px] w-[72px] h-[72px] sm:w-[80px] sm:h-[80px] md:w-[85px] md:h-[85px] flex items-center justify-center flex-shrink-0">
@@ -74,10 +74,10 @@ export default function PilotSection() {
             </div>
 
             <div className="flex flex-col gap-2 text-white">
-              <p className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[32px] leading-[1.4]">
+              <p className="font-montserrat font-bold text-[22px] sm:text-[26px] md:text-[32px] leading-[1.4]">
                 An entire team, a powerful platform, unlimited potential
               </p>
-              <p className="font-['Montserrat'] font-normal text-[13px] sm:text-[14px] leading-[1.5] tracking-[-0.3px]">
+              <p className="font-montserrat font-normal text-[13px] sm:text-[14px] leading-[1.5] tracking-[-0.3px]">
                 Someli AI is the employee advocacy and executive branding team-as-a-service your company deserves.
               </p>
             </div>
@@ -86,9 +86,9 @@ export default function PilotSection() {
           {/* Button */}
           <Link
             href="/book-demo"
-            className="flex-shrink-0 inline-flex items-center border border-white rounded-full pl-7 pr-10 py-4 text-white font-['Montserrat'] font-bold text-[16px] leading-none hover:bg-white hover:text-[#ff821b] transition-colors duration-200"
+            className="flex-shrink-0 inline-flex items-center border border-white rounded-full pl-7 pr-10 py-4 text-white font-montserrat font-bold text-[16px] leading-none hover:bg-white hover:text-[#ff821b] transition-colors duration-200"
           >
-            • Book a Demo
+            Book a Demo
           </Link>
         </div>
 

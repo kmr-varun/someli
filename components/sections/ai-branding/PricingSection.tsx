@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionPill from "@/components/ui/SectionPill";
 
 const plans = [
   {
@@ -70,11 +71,7 @@ export default function PricingSection() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px]">
         {/* Header */}
         <div className="flex flex-col gap-4 items-center text-center mb-10 sm:mb-14 lg:mb-16">
-          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] px-[15px] py-[7px] rounded-full">
-            <p className="font-normal text-[12px] text-[#ED6B52] tracking-[0.96px] uppercase leading-[15px]">
-              PRICING
-            </p>
-          </div>
+          <SectionPill>PRICING</SectionPill>
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-bold leading-[1.19] tracking-[-2px] text-black text-center max-w-[900px]">
             Premium platform. Proven results. Measurable impact.
           </h2>
@@ -141,7 +138,6 @@ export default function PricingSection() {
                     ? "border border-white text-white hover:bg-white/10"
                     : "border border-[#ED6B52] text-[#ED6B52] hover:bg-[#ED6B52] hover:text-white"
                 }`}>
-                  <span>•</span>
                   <span>Book a Demo</span>
                 </button>
               </div>

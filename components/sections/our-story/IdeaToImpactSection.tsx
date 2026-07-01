@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const timelineTop = [
   { year: "2018", text: "The idea for Someli was born in Dubai." },
@@ -15,7 +16,7 @@ const timelineBottom = [
 
 export default function IdeaToImpactSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#111]">
+    <section className="relative w-full overflow-hidden bg-[#0D0D0D]">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-50">
         <Image
@@ -28,21 +29,15 @@ export default function IdeaToImpactSection() {
 
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-[96px] py-12 sm:py-16 md:py-20 lg:py-[120px] flex flex-col gap-12 sm:gap-16 lg:gap-[100px] items-center">
         {/* Header */}
-        <div className="flex flex-col gap-[20px] items-start w-full">
-          <div className="flex flex-col gap-[12px] items-center w-full">
-            <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] px-[15px] py-[7px] rounded-full">
-              <p className="font-montserrat font-normal text-[10px] text-[#ED6B52] tracking-[1px] uppercase leading-[15px]">
-                Our journey
-              </p>
-            </div>
-            <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-white text-center tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] leading-[1.19] w-full">
-              From an idea to impact
-            </h2>
-          </div>
-          <p className="font-montserrat font-normal text-[15px] sm:text-[16px] lg:text-[18px] text-white text-center leading-[1.5] w-full">
-            A journey of passion, innovation, and purpose.
-          </p>
-        </div>
+        <SectionHeader
+          pill="Our journey"
+          heading="From an idea to impact"
+          description="A journey of passion, innovation, and purpose."
+          align="center"
+          dark
+          headingClassName="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] leading-[1.19]"
+          className="w-full"
+        />
 
         {/* Timeline */}
         <div className="flex flex-col gap-6 lg:gap-[24px] items-center w-full">

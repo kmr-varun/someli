@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionPill from "@/components/ui/SectionPill";
 
 export default function AIBrandingHeroSection() {
   return (
@@ -19,11 +20,7 @@ export default function AIBrandingHeroSection() {
         {/* Left Content */}
         <div className="w-full lg:w-[622px] flex flex-col gap-6 sm:gap-8 lg:gap-10">
           {/* Pill Label */}
-          <div className="inline-flex items-center px-3 sm:px-4 md:px-[15px] py-[6px] md:py-[7px] bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.15)] rounded-full w-fit">
-            <span className="text-[#ED6B52] text-[10px] sm:text-[11px] md:text-[12px] font-normal uppercase tracking-[0.8px] md:tracking-[0.96px] leading-[15px]">
-              Unlock Your Marketing Team
-            </span>
-          </div>
+          <SectionPill>Unlock Your Marketing Team</SectionPill>
 
           {/* Heading */}
           <h1 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-bold leading-[1.2] tracking-[-1.5px] lg:tracking-[-2.04px]">
@@ -41,11 +38,9 @@ export default function AIBrandingHeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-2 items-start sm:items-center">
             <button className="border border-[#ED6B52] rounded-full px-6 sm:px-7 md:px-10 py-3 sm:py-4 text-[#ED6B52] font-bold text-[14px] sm:text-[16px] hover:bg-[#ED6B52] hover:text-white transition-colors flex items-center gap-2">
-              <span>•</span>
               <span>Book a Demo</span>
             </button>
             <button className="rounded-full px-6 sm:px-7 md:px-10 py-3 sm:py-4 text-[#ED6B52] font-bold text-[14px] sm:text-[16px] hover:bg-[rgba(237,107,82,0.1)] transition-colors flex items-center gap-2">
-              <span>•</span>
               <span>See How it Works</span>
             </button>
           </div>
@@ -155,9 +150,9 @@ export default function AIBrandingHeroSection() {
               Content Output
             </h3>
             <ul className="space-y-2 text-xs text-white">
-              <li>• Posts & Reels</li>
-              <li>• Carousels & Articles</li>
-              <li>• Thought Leadership</li>
+              <li>Posts & Reels</li>
+              <li>Carousels & Articles</li>
+              <li>Thought Leadership</li>
             </ul>
           </div>
         </div>

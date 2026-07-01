@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const contentTypes = [
   { number: "01", label: "LinkedIn post" },
@@ -24,7 +25,7 @@ const featuresRight = [
 
 export default function ContentPlannerSection() {
   return (
-    <section className="relative w-full bg-[#111111] overflow-hidden">
+    <section className="relative w-full bg-[#0D0D0D] overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 pointer-events-none opacity-50 overflow-hidden">
         <Image
@@ -38,16 +39,14 @@ export default function ContentPlannerSection() {
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px]">
         <div className="flex flex-col gap-10 sm:gap-12 lg:gap-14 items-center">
           {/* Header */}
-          <div className="flex flex-col gap-4 items-center text-center max-w-[852px]">
-            <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] px-[15px] py-[7px] rounded-full">
-              <p className="font-normal text-[12px] text-[#ED6B52] tracking-[0.96px] uppercase leading-[15px]">
-                PROCESS
-              </p>
-            </div>
-            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-bold leading-[1.19] tracking-[-2px] text-white text-center">
-              Your next 14 days planned automatically
-            </h2>
-          </div>
+          <SectionHeader
+            pill="PROCESS"
+            heading="Your next 14 days planned automatically"
+            align="center"
+            dark
+            headingClassName="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] leading-[1.19] tracking-[-2px]"
+            className="max-w-[852px]"
+          />
 
           {/* Main Content - Two Column */}
           <div className="flex flex-col lg:flex-row gap-5 w-full">

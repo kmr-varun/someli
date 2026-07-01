@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionPill from "@/components/ui/SectionPill";
 
 const steps = [
   {
@@ -38,11 +39,7 @@ export default function ProcessSection() {
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-12 lg:mb-20">
           {/* Pill */}
-          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] px-[15px] py-[7px] rounded-full mb-6">
-            <p className="font-montserrat font-normal text-[12px] text-[#ED6B52] tracking-[0.96px] uppercase leading-[15px]">
-              PROCESS
-            </p>
-          </div>
+          <SectionPill className="mb-6">PROCESS</SectionPill>
 
           <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-black leading-[1.19] tracking-[-2px] mb-6">
             How Someli AI works from insight to influence.
@@ -216,7 +213,7 @@ export default function ProcessSection() {
 
         {/* Bottom badge */}
         <div className="flex justify-center mt-12 sm:mt-16">
-          <div className="bg-[#111] border border-white rounded-full px-6 sm:px-8 py-4 sm:py-6 flex items-center gap-2 sm:gap-2.5">
+          <div className="bg-[#0D0D0D] border border-white rounded-full px-6 sm:px-8 py-4 sm:py-6 flex items-center gap-2 sm:gap-2.5">
             <div className="relative w-[15px] h-[15px] sm:w-[17px] sm:h-[17px]">
               <Image
                 src="/assets/corporates/process-icon.svg"

@@ -5,7 +5,7 @@ import HeroSection from './HeroSection';
 import StatsBarSection from './StatsBarSection';
 import HowItWorksSection from '@/components/sections/HowItWorksSection'; // REUSING existing component
 import TechStackSection from './TechStackSection';
-import LogosSection from '@/components/sections/LogosSection'; // REUSING existing component
+import LogosSection, { PARTNERSHIP_LOGOS } from '@/components/sections/LogosSection';
 
 export const metadata: Metadata = {
   title: 'How Someli Works | Someli AI',
@@ -21,7 +21,7 @@ export default function HowSomeliWorksPage() {
         <StatsBarSection />
         <HowItWorksSection />
         <TechStackSection />
-        <LogosSection label="Our Partnerships" />
+        <LogosSection label="Our Partnerships" logos={PARTNERSHIP_LOGOS} />
         <Footer />
       </main>
     </>

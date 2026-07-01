@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionPill from "@/components/ui/SectionPill";
 
 export default function CorporatesHeroSection() {
   return (
@@ -18,11 +19,7 @@ export default function CorporatesHeroSection() {
         <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[40px] w-full lg:w-[797px]">
           <div className="flex flex-col gap-[16px] items-start">
             {/* Pill label */}
-            <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.15)] px-[15px] py-[7px] rounded-full">
-              <p className="font-montserrat font-normal text-[12px] text-[#ED6B52] tracking-[0.96px] uppercase leading-[15px]">
-                SOLUTION FOR CORPORATE 50-500 EMPLOYEES
-              </p>
-            </div>
+            <SectionPill>SOLUTION FOR CORPORATE 50-500 EMPLOYEES</SectionPill>
 
             {/* Heading */}
             <h1 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-[#222222] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2.04px] leading-[1.1]">

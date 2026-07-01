@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
-import LogosSection from "@/components/sections/LogosSection";
+import LogosSection, { PARTNERSHIP_LOGOS } from "@/components/sections/LogosSection";
 import GrowthEngineSection from "@/components/sections/GrowthEngineSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import ProvenImpactSection from "@/components/sections/ProvenImpactSection";
@@ -25,7 +25,7 @@ export default function Home() {
       <GrowthEngineSection />
       <FeaturesSection />
       <ProvenImpactSection />
-      <LogosSection label="Our Partnerships" />
+      <LogosSection label="Our Partnerships" logos={PARTNERSHIP_LOGOS} />
       <ContentManagementSection />
       <BeforeAfterSection />
       <HowItWorksSection />

@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import CaseStudiesHeroSection from '@/components/sections/case-studies/CaseStudiesHeroSection';
 import PricingMarqueeBar from '@/components/sections/pricing/PricingMarqueeBar';
 import CaseStudiesListSection from '@/components/sections/case-studies/CaseStudiesListSection';
-import LogosSection from '@/components/sections/LogosSection';
+import LogosSection, { PARTNERSHIP_LOGOS } from '@/components/sections/LogosSection';
 
 export const metadata = {
   title: 'Case Studies | Someli.ai',
@@ -17,7 +17,7 @@ export default function CaseStudiesPage() {
       <CaseStudiesHeroSection />
       <PricingMarqueeBar />
       <CaseStudiesListSection />
-      <LogosSection label="OUR PARTNERSHIPS" />
+      <LogosSection label="OUR PARTNERSHIPS" logos={PARTNERSHIP_LOGOS} />
       <Footer />
     </main>
   );

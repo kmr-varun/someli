@@ -12,7 +12,7 @@ export default function CaseStudyDetailResults() {
     <section id="results" className="relative w-full overflow-clip px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 lg:py-[100px]">
       {/* Dark background with pattern */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute inset-0 bg-[#111]" />
+        <div className="absolute inset-0 bg-[#0D0D0D]" />
         <div className="absolute inset-0 opacity-50 overflow-hidden">
           <Image
             src="/assets/case-study-detail/results-bg.png"

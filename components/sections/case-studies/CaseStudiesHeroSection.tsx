@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import SectionPill from "@/components/ui/SectionPill";
 
 export default function CaseStudiesHeroSection() {
   return (
@@ -20,14 +21,10 @@ export default function CaseStudiesHeroSection() {
         {/* Pill Label + Heading */}
         <div className="flex flex-col gap-4">
           {/* Pill Label */}
-          <div className="inline-flex items-center self-start px-[15px] py-[7px] rounded-full bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.15)]">
-            <span className="font-['Montserrat'] text-[12px] font-normal tracking-[0.96px] uppercase text-[#ed6b52] leading-[15px]">
-              CASE STUDIES
-            </span>
-          </div>
+          <SectionPill>CASE STUDIES</SectionPill>
 
           {/* Heading */}
-          <h1 className="font-['Montserrat'] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[60px] font-bold leading-[1.19] tracking-[-0.04em]">
+          <h1 className="font-montserrat text-[32px] sm:text-[40px] md:text-[48px] lg:text-[60px] font-bold leading-[1.19] tracking-[-0.04em]">
             <span className="text-[#222] block mb-0">Real results,</span>
             <span
               className="block bg-gradient-to-b from-[#df8251] to-[#d54050] bg-clip-text text-transparent"
@@ -39,17 +36,17 @@ export default function CaseStudiesHeroSection() {
 
         {/* Description + CTAs */}
         <div className="flex flex-col gap-6">
-          <p className="font-['Montserrat'] text-[16px] md:text-[18px] font-normal leading-[1.5] text-[#444]">
+          <p className="font-montserrat text-[16px] md:text-[18px] font-normal leading-[1.5] text-[#444]">
             Someli helps mid-sized organizations turn employees into trusted brand advocates and measurable growth drivers
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-2">
-            <button className="flex items-center justify-center px-[28px] pr-10 py-4 rounded-full border border-[#ed6b52] text-[#ed6b52] font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-none whitespace-nowrap hover:bg-[#ED6B52] hover:text-white transition-colors">
-              <span className="mr-3">•</span> Take a Product Tour
+            <button className="flex items-center justify-center px-[28px] pr-10 py-4 rounded-full border border-[#ed6b52] text-[#ed6b52] font-montserrat text-[14px] md:text-[16px] font-bold leading-none whitespace-nowrap hover:bg-[#ED6B52] hover:text-white transition-colors">
+              Take a Product Tour
             </button>
-            <button className="flex items-center justify-center px-[28px] pr-10 py-4 rounded-full text-[#ed6b52] font-['Montserrat'] text-[14px] md:text-[16px] font-bold leading-none whitespace-nowrap">
-              <span className="mr-3">•</span> Book a Demo
+            <button className="flex items-center justify-center px-[28px] pr-10 py-4 rounded-full text-[#ed6b52] font-montserrat text-[14px] md:text-[16px] font-bold leading-none whitespace-nowrap">
+              Book a Demo
             </button>
           </div>
         </div>
@@ -90,10 +87,10 @@ export default function CaseStudiesHeroSection() {
         >
           <div className="flex items-center justify-between">
             <div className="flex-1">
-              <p className="font-['Montserrat'] text-[7px] sm:text-[8px] lg:text-[8.97px] font-normal leading-none tracking-[0.538px] uppercase text-white mb-[3px] lg:mb-[4.5px]">
+              <p className="font-montserrat text-[7px] sm:text-[8px] lg:text-[8.97px] font-normal leading-none tracking-[0.538px] uppercase text-white mb-[3px] lg:mb-[4.5px]">
                 Total Reach
               </p>
-              <p className="font-['Montserrat'] text-[18px] sm:text-[20px] lg:text-[23.5px] font-bold leading-[1.1] text-white">
+              <p className="font-montserrat text-[18px] sm:text-[20px] lg:text-[23.5px] font-bold leading-[1.1] text-white">
                 10X
               </p>
             </div>
@@ -108,7 +105,7 @@ export default function CaseStudiesHeroSection() {
               </div>
             </div>
           </div>
-          <p className="font-['Montserrat'] text-[7px] sm:text-[8px] lg:text-[8.97px] font-medium leading-[1.5] tracking-[-0.179px] text-white">
+          <p className="font-montserrat text-[7px] sm:text-[8px] lg:text-[8.97px] font-medium leading-[1.5] tracking-[-0.179px] text-white">
             More than Company Pages
           </p>
         </div>
@@ -120,10 +117,10 @@ export default function CaseStudiesHeroSection() {
         >
           <div className="flex items-center justify-between">
             <div className="flex-1">
-              <p className="font-['Montserrat'] text-[8px] sm:text-[9px] lg:text-[10.56px] font-normal leading-none tracking-[0.634px] uppercase text-[#444] mb-[4px] lg:mb-[5.3px]">
+              <p className="font-montserrat text-[8px] sm:text-[9px] lg:text-[10.56px] font-normal leading-none tracking-[0.634px] uppercase text-[#444] mb-[4px] lg:mb-[5.3px]">
                 ENGAGEMENT RATE
               </p>
-              <p className="font-['Montserrat'] text-[20px] sm:text-[24px] lg:text-[27.7px] font-bold leading-[1.1] bg-gradient-to-b from-[#df8251] to-[#d54050] bg-clip-text text-transparent">
+              <p className="font-montserrat text-[20px] sm:text-[24px] lg:text-[27.7px] font-bold leading-[1.1] bg-gradient-to-b from-[#df8251] to-[#d54050] bg-clip-text text-transparent">
                 8.7X
               </p>
             </div>
@@ -138,7 +135,7 @@ export default function CaseStudiesHeroSection() {
               </div>
             </div>
           </div>
-          <p className="font-['Montserrat'] text-[8px] sm:text-[9px] lg:text-[10.56px] font-medium leading-[1.5] tracking-[-0.211px] text-[#222]">
+          <p className="font-montserrat text-[8px] sm:text-[9px] lg:text-[10.56px] font-medium leading-[1.5] tracking-[-0.211px] text-[#222]">
             Higher than Brand Channels
           </p>
         </div>
@@ -150,10 +147,10 @@ export default function CaseStudiesHeroSection() {
         >
           <div className="flex items-center justify-between">
             <div className="flex-1">
-              <p className="font-['Montserrat'] text-[6.5px] sm:text-[7.5px] lg:text-[8.11px] font-normal leading-none tracking-[0.486px] uppercase text-[#444] mb-[3px] lg:mb-[4.05px]">
+              <p className="font-montserrat text-[6.5px] sm:text-[7.5px] lg:text-[8.11px] font-normal leading-none tracking-[0.486px] uppercase text-[#444] mb-[3px] lg:mb-[4.05px]">
                 TRUST FACTOR
               </p>
-              <p className="font-['Montserrat'] text-[16px] sm:text-[19px] lg:text-[21.3px] font-bold leading-[1.1] bg-gradient-to-b from-[#df8251] to-[#d54050] bg-clip-text text-transparent">
+              <p className="font-montserrat text-[16px] sm:text-[19px] lg:text-[21.3px] font-bold leading-[1.1] bg-gradient-to-b from-[#df8251] to-[#d54050] bg-clip-text text-transparent">
                 2.4X
               </p>
             </div>
@@ -168,7 +165,7 @@ export default function CaseStudiesHeroSection() {
               </div>
             </div>
           </div>
-          <p className="font-['Montserrat'] text-[6.5px] sm:text-[7.5px] lg:text-[8.11px] font-medium leading-[1.5] tracking-[-0.162px] text-[#222]">
+          <p className="font-montserrat text-[6.5px] sm:text-[7.5px] lg:text-[8.11px] font-medium leading-[1.5] tracking-[-0.162px] text-[#222]">
             More trusted than Brand Posts
           </p>
         </div>

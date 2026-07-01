@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import RotatingCircle from "@/components/RotatingCircle";
 import ProfileCard from "@/components/ProfileCard";
+import SectionPill from "@/components/ui/SectionPill";
 
 function CounterStat({ value }: { value: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -126,17 +127,7 @@ export default function HeroSection() {
           <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full lg:w-[49%] shrink-0">
             {/* Pill label */}
             <div className="flex flex-col gap-3 sm:gap-4">
-              <div
-                className="self-start flex items-center px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px] rounded-full border"
-                style={{
-                  backgroundColor: "rgba(237,107,82,0.16)",
-                  borderColor: "rgba(237,107,82,0.15)",
-                }}
-              >
-                <span className="text-[10px] sm:text-[11px] md:text-[12px] font-normal text-[#ED6B52] tracking-[0.8px] sm:tracking-[0.96px] uppercase">
-                  Employee Advocacy and AI Powered Personal Branding Platform
-                </span>
-              </div>
+              <SectionPill className="whitespace-nowrap">Employee Advocacy and AI Powered Personal Branding Platform</SectionPill>
 
               {/* H1 */}
               <h1
@@ -175,7 +166,6 @@ export default function HeroSection() {
                 href="#"
                 className="flex items-center gap-2 pl-5 pr-8 sm:pl-6 sm:pr-9 md:pl-7 md:pr-10 py-3 sm:py-3.5 md:py-4 rounded-full border border-[#ED6B52] text-[14px] sm:text-[15px] md:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap hover:bg-[#ED6B52] hover:text-white transition-colors"
               >
-                <span>•</span>
                 <span>Book a Demo</span>
               </a>
               <button

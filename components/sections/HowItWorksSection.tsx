@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import SectionPill from '@/components/ui/SectionPill';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -33,8 +34,8 @@ const items = [
       'AI ingest company context, industry, and audience profile.',
       'Enterprise content library built - approved as its messages, campaigns',
     ],
-    mockup: '/assets/how-it-works/dashboard-tab1.png',
-    mockupPosition: 'object-[left_-0.04%_top_0%]',
+    mockup: '/assets/how-it-works/dashboard-tab3.png',
+    mockupPosition: 'object-[left_-3.39%_top_-5.3%]',
   },
   {
     id: 3,
@@ -47,8 +48,8 @@ const items = [
       'AI ingest company context, industry, and audience profile.',
       'Enterprise content library built - approved as its messages, campaigns',
     ],
-    mockup: '/assets/how-it-works/dashboard-tab3.png',
-    mockupPosition: 'object-[left_-3.39%_top_-5.3%]',
+    mockup: '/assets/how-it-works/dashboard-tab1.png',
+    mockupPosition: 'object-[left_-0.04%_top_0%]',
   },
 ];
 
@@ -212,11 +213,7 @@ export default function HowItWorksSection() {
       <div className="px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 pt-12 sm:pt-16 md:pt-20 lg:pt-24 xl:pt-[100px] pb-8 sm:pb-10 md:pb-12 max-w-[1440px] mx-auto">
         <div className="mx-auto flex max-w-[892px] flex-col items-start lg:items-center gap-3 sm:gap-4 text-left lg:text-center">
           {/* Pill Label */}
-          <div className="inline-flex items-center rounded-full border border-[rgba(247,103,57,0.15)] bg-[rgba(247,103,57,0.16)] px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px]">
-            <span className="font-montserrat text-[9px] sm:text-[10px] font-normal uppercase leading-[15px] tracking-[0.8px] sm:tracking-[1px] text-[#f76739]">
-              Smart Workflow
-            </span>
-          </div>
+          <SectionPill>Smart Workflow</SectionPill>
 
           {/* Heading */}
           <h2 className="w-full font-montserrat text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] font-bold leading-[1.2] tracking-[-1.5px] md:tracking-[-2px] text-[#222]">

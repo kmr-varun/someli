@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const features = [
   {
@@ -44,21 +45,15 @@ export default function FeaturesSection() {
     <section className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-16 lg:py-[100px] flex flex-col gap-[56px] items-center">
         {/* Header */}
-        <div className="flex flex-col gap-4 items-center text-center w-full">
-          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full px-[15px] py-[7px]">
-            <span className="font-montserrat font-normal text-[12px] text-[#ED6B52] tracking-[0.96px] uppercase leading-[15px]">
-              FEATURES
-            </span>
-          </div>
-          <div className="flex flex-col gap-6 items-center">
-            <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-black leading-[1.19] tracking-[-2px]">
-              The Employee Advocacy Platform that delivers
-            </h2>
-            <p className="font-montserrat font-normal text-[16px] lg:text-[18px] text-[#222] leading-[1.36] max-w-[808px]">
-              Everything you need to launch, engage, and scale your advocacy program
-            </p>
-          </div>
-        </div>
+        <SectionHeader
+          pill="FEATURES"
+          heading="The Employee Advocacy Platform that delivers"
+          description="Everything you need to launch, engage, and scale your advocacy program"
+          align="center"
+          headingClassName="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.19] tracking-[-2px]"
+          descriptionClassName="max-w-[808px]"
+          className="w-full"
+        />
 
         {/* Feature cards grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 w-full">

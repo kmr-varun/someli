@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const benefits = [
   {
@@ -24,24 +25,15 @@ export default function WhatWeOfferSection() {
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col gap-10 sm:gap-12 lg:gap-[56px] items-center">
           {/* Header */}
-          <div className="flex flex-col gap-4 lg:gap-[16px] items-center w-full">
-            {/* Pill Label */}
-            <div className="inline-flex items-center px-[15px] py-[7px] rounded-full bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)]">
-              <p className="font-montserrat font-normal text-[12px] text-[#ed6b52] tracking-[0.96px] uppercase leading-[15px]">
-                WHAT WE OFFER
-              </p>
-            </div>
-
-            {/* Heading and Description */}
-            <div className="flex flex-col gap-5 sm:gap-6 lg:gap-[24px] items-center text-center pb-[0.67px]">
-              <h2 className="font-montserrat font-bold text-[40px] sm:text-[48px] lg:text-[60px] text-black tracking-[-2px] leading-[71.4px]">
-                That Gap? We Close It.
-              </h2>
-              <p className="font-montserrat font-normal text-[16px] sm:text-[18px] text-black leading-[24.5px] max-w-[808px]">
-                Posts shared by employees get 2.5–8x more engagement than brand pages. The challenge has always been getting employees to consistently share company-approved content — without it feeling like extra work.
-              </p>
-            </div>
-          </div>
+          <SectionHeader
+            pill="WHAT WE OFFER"
+            heading="That Gap? We Close It."
+            description="Posts shared by employees get 2.5–8x more engagement than brand pages. The challenge has always been getting employees to consistently share company-approved content — without it feeling like extra work."
+            align="center"
+            headingClassName="text-[40px] sm:text-[48px] lg:text-[60px] tracking-[-2px] leading-[1.19]"
+            descriptionClassName="max-w-[808px]"
+            className="w-full"
+          />
 
           {/* Benefit Cards */}
           <div className="w-full">

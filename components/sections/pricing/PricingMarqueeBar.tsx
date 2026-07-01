@@ -17,7 +17,7 @@ const items = [
 
 export default function PricingMarqueeBar() {
   return (
-    <section className="relative w-full h-[80px] sm:h-[100px] md:h-[116px] lg:h-[132px] overflow-hidden bg-[#111]">
+    <section className="relative w-full h-[80px] sm:h-[100px] md:h-[116px] lg:h-[132px] overflow-hidden bg-[#0D0D0D]">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-50">
         <Image

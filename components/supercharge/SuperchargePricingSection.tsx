@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const features = [
   "28 posts / mo (7 posts / week)",
@@ -58,19 +59,13 @@ export default function SuperchargePricingSection() {
     <section className="relative w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px] flex flex-col gap-10 sm:gap-12 md:gap-14 items-center">
         {/* Header */}
-        <div className="flex flex-col gap-3 sm:gap-4 items-center w-full">
-          {/* Pill Label */}
-          <div className="inline-flex items-center px-3 sm:px-4 md:px-[15px] py-[6px] md:py-[7px] bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full">
-            <span className="text-[#ED6B52] text-[10px] sm:text-[11px] md:text-[12px] font-normal uppercase tracking-[0.8px] md:tracking-[0.96px] leading-[15px]">
-              Transparent pricing
-            </span>
-          </div>
-
-          {/* Heading */}
-          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-bold leading-[1.2] tracking-[-1.5px] lg:tracking-[-2px] text-black text-center">
-            One plan. Supercharge Plan
-          </h2>
-        </div>
+        <SectionHeader
+          pill="Transparent pricing"
+          heading="One plan. Supercharge Plan"
+          align="center"
+          headingClassName="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] leading-[1.2] tracking-[-1.5px] lg:tracking-[-2px]"
+          className="w-full"
+        />
 
         {/* Pricing Cards - Responsive Layout */}
         <div className="flex flex-col lg:flex-row gap-5 sm:gap-6 items-stretch justify-center w-full">
@@ -143,7 +138,6 @@ export default function SuperchargePricingSection() {
             <div className="flex flex-col gap-2">
               <button className="w-full border border-white rounded-full px-6 sm:px-[28px] py-3 sm:py-4 flex items-center justify-center text-white font-bold text-[14px] sm:text-[16px] hover:bg-white/10 transition-colors">
                 <span className="flex items-center gap-2">
-                  <span>•</span>
                   <span>Start Your Free Trial →</span>
                 </span>
               </button>

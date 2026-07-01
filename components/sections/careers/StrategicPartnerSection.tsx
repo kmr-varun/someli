@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const regions = [
   {
@@ -31,21 +32,15 @@ export default function StrategicPartnerSection() {
 
       <div className="relative max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-16 sm:py-20 lg:py-[80px]">
         {/* Header */}
-        <div className="flex flex-col gap-4 items-center text-center mb-10 sm:mb-[60px]">
-          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full px-[15px] py-[7px]">
-            <span className="font-montserrat text-[12px] font-normal tracking-[0.96px] uppercase text-[#ED6B52] leading-[15px]">
-              PARTNERSHIPS
-            </span>
-          </div>
-          <div className="flex flex-col gap-4 sm:gap-6 items-center">
-            <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.19] tracking-[-2px] text-black">
-              Become a strategic growth partner
-            </h2>
-            <p className="font-montserrat text-[15px] sm:text-[16px] lg:text-[18px] font-normal leading-[1.5] text-[#444] max-w-[900px]">
-              We are building a carefully selected partner ecosystem across key global markets. We are seeking high-performing agencies and consulting firms that serve enterprise and mid-market organizations looking to increase employee engagement, brand reach, and social impact
-            </p>
-          </div>
-        </div>
+        <SectionHeader
+          pill="PARTNERSHIPS"
+          heading="Become a strategic growth partner"
+          description="We are building a carefully selected partner ecosystem across key global markets. We are seeking high-performing agencies and consulting firms that serve enterprise and mid-market organizations looking to increase employee engagement, brand reach, and social impact"
+          align="center"
+          headingClassName="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.19] tracking-[-2px]"
+          descriptionClassName="max-w-[900px]"
+          className="mb-10 sm:mb-[60px]"
+        />
 
         {/* Map + Region cards */}
         <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-[64px]">

@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIBrandingHeroSection from "@/components/sections/ai-branding/AIBrandingHeroSection";
-import LogosSection from "@/components/sections/LogosSection";
+import LogosSection, { PARTNERSHIP_LOGOS } from "@/components/sections/LogosSection";
 import ProcessSection from "@/components/sections/ai-branding/ProcessSection";
 import ContentPlannerSection from "@/components/sections/ai-branding/ContentPlannerSection";
 import MultiLanguageSection from "@/components/sections/ai-branding/MultiLanguageSection";
@@ -40,7 +40,7 @@ export default function AIPoweredBrandingPage() {
       <TestimonialsSection />
 
       {/* Section 9: Logos Marquee 2 */}
-      <LogosSection label="OUR PARTNERSHIPS" />
+      <LogosSection label="OUR PARTNERSHIPS" logos={PARTNERSHIP_LOGOS} />
 
       {/* Footer */}
       <Footer />

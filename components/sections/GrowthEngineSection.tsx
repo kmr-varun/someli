@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const BENEFIT_PILLS = [
   { text: "More reach across more people",  top: "36px",    right: "120px" },
@@ -39,7 +40,7 @@ const TESTIMONIAL_CARDS = [
 
 export default function GrowthEngineSection() {
   return (
-    <section className="relative w-full bg-[#111] overflow-hidden" style={{ minHeight: 'auto' }}>
+    <section className="relative w-full bg-[#0D0D0D] overflow-hidden" style={{ minHeight: 'auto' }}>
       {/* Orange swoosh background */}
       <div className="absolute inset-0 opacity-50 pointer-events-none overflow-hidden">
         <Image
@@ -57,37 +58,20 @@ export default function GrowthEngineSection() {
 
         {/* LEFT: text block */}
         <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-[40px] w-full lg:flex-1 lg:min-w-0 lg:max-w-[595px]">
-          {/* Pill label */}
-          <div className="flex flex-col gap-3 sm:gap-4 md:gap-[16px]">
-            <div
-              className="self-start flex items-center px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px] rounded-full border"
-              style={{ backgroundColor: "rgba(237,107,82,0.16)", borderColor: "rgba(237,107,82,0.16)" }}
-            >
-              <span className="text-[9px] sm:text-[10px] font-normal text-[#ED6B52] tracking-[0.8px] sm:tracking-[1px] uppercase whitespace-nowrap">
-                People-Powered Reach
-              </span>
-            </div>
-
-            {/* H2 */}
-            <h2
-              className="font-bold text-white text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] leading-[1.2] tracking-[-1.5px] md:tracking-[-2px]"
-            >
-              Your team is your<br />greatest growth engine
-            </h2>
-          </div>
-
-          {/* Body */}
-          <p className="text-[14px] sm:text-[16px] md:text-[18px] text-white leading-[1.5] font-normal">
-            When your team builds their personal brand your company becomes the obvious choice. Teams with 70%+ participation typically see exponential growth in visibility.
-          </p>
+          <SectionHeader
+            pill="People-Powered Reach"
+            heading={<>Your team is your<br />greatest growth engine</>}
+            description="When your team builds their personal brand your company becomes the obvious choice. Teams with 70%+ participation typically see exponential growth in visibility."
+            dark
+            headingClassName="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] leading-[1.2] tracking-[-1.5px] md:tracking-[-2px]"
+          />
 
           {/* CTA */}
           <a
             href="#"
             className="self-start flex items-center gap-2 pl-5 pr-8 sm:pl-6 sm:pr-9 md:pl-7 md:pr-10 py-3 sm:py-3.5 md:py-4 rounded-full border border-[#ED6B52] text-[14px] sm:text-[15px] md:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap hover:bg-[#ED6B52] hover:text-white transition-colors"
           >
-            <span>•</span>
-            <span>Build your team&apos;s influence →</span>
+            <span>Book a Demo →</span>
           </a>
         </div>
 

@@ -46,7 +46,7 @@ const whatYouGet = [
 
 export default function RightForYouSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#111]">
+    <section className="relative w-full overflow-hidden bg-[#0D0D0D]">
       {/* Dark background image */}
       <div className="absolute inset-0 opacity-50">
         <Image
@@ -144,7 +144,7 @@ export default function RightForYouSection() {
 
           {/* CTA Button */}
           <button className="bg-black border border-[#ED6B52] rounded-full pl-7 pr-10 py-4 font-montserrat font-semibold text-[16px] text-[#ED6B52] leading-none cursor-pointer hover:bg-[#ED6B52] hover:text-white transition-colors">
-            • Start your 14-Day FREE Trial Now! →
+            Start your 14-Day FREE Trial Now! →
           </button>
         </div>
       </div>

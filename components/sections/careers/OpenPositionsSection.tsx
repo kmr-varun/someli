@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const teams = [
   {
@@ -49,16 +50,12 @@ export default function OpenPositionsSection() {
     <section className="w-full">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-16 sm:py-20 lg:py-[80px] flex flex-col gap-10 sm:gap-[56px] items-center">
         {/* Header */}
-        <div className="flex flex-col gap-4 items-center">
-          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full px-[15px] py-[7px]">
-            <span className="font-montserrat text-[12px] font-normal tracking-[0.96px] uppercase text-[#ED6B52] leading-[15px]">
-              CAREERS
-            </span>
-          </div>
-          <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.19] tracking-[-2px] text-black text-center">
-            Join the Team Building the Future of Employee Advocacy
-          </h2>
-        </div>
+        <SectionHeader
+          pill="CAREERS"
+          heading="Join the Team Building the Future of Employee Advocacy"
+          align="center"
+          headingClassName="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.19] tracking-[-2px]"
+        />
 
         {/* Job cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">

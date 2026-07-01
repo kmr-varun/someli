@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
+import SectionPill from "@/components/ui/SectionPill";
 
 const categories = [
   'Category 01',
@@ -95,11 +96,7 @@ export default function BlogsInsightsPage() {
         {/* Left content */}
         <div className="relative z-10 w-full lg:w-[759px] flex flex-col gap-3 sm:gap-4">
           {/* Pill label */}
-          <div className="inline-flex items-center px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px] rounded-full bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.15)] w-fit">
-            <span className="text-[#ED6B52] text-[10px] sm:text-[11px] md:text-[12px] font-normal tracking-[0.8px] sm:tracking-[0.96px] uppercase">
-              BLOGS
-            </span>
-          </div>
+          <SectionPill>BLOGS</SectionPill>
 
           {/* Heading */}
           <h1 className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] font-bold leading-[1.2] tracking-[-1.5px] md:tracking-[-2px] text-[#222]">
@@ -152,7 +149,6 @@ export default function BlogsInsightsPage() {
                   }
                 `}
               >
-                <span>•</span>
                 <span>{category}</span>
               </button>
             ))}

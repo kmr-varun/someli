@@ -63,7 +63,7 @@ export default function Header() {
         {/* Left: logo + nav */}
         <div className="flex items-center gap-4 md:gap-6 lg:gap-10">
           {/* Logo */}
-          <Link href="/" className="relative w-[100px] sm:w-[120px] md:w-[140px] xl:w-[158px] h-10 sm:h-12 md:h-14 xl:h-16 shrink-0">
+          <Link href="/" className="relative w-[120px] sm:w-[140px] md:w-[160px] xl:w-[180px] h-12 sm:h-14 md:h-[60px] xl:h-[72px] shrink-0">
             <Image
               src="/assets/logo.png"
               alt="Someli"
@@ -80,11 +80,10 @@ export default function Header() {
               <div key={item.label} className="relative group">
                 <Link
                   href={item.href}
-                  className={`flex items-center gap-1 lg:gap-2 text-[12px] lg:text-[13px] xl:text-[14px] leading-none text-[#222] whitespace-nowrap hover:font-bold transition-all ${
+                  className={`flex items-center gap-1 lg:gap-2 text-[13px] lg:text-[15px] xl:text-[16px] leading-none text-[#222] whitespace-nowrap hover:font-bold transition-all ${
                     isNavActive(item, pathname) ? "font-bold" : "font-normal"
                   }`}
                 >
-                  <span className="text-[#222]">•</span>
                   <span>{item.label}</span>
                   {item.hasChevron && (
                     <Image
@@ -128,7 +127,6 @@ export default function Header() {
             href="#"
             className="hidden lg:flex items-center gap-1 sm:gap-2 px-3 sm:pl-4 sm:pr-6 md:pl-5 md:pr-8 lg:pl-7 lg:pr-10 py-2 sm:py-3 md:py-4 rounded-full text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap border border-transparent hover:border-[#ED6B52] transition-colors"
           >
-            <span>•</span>
             <span>Log in</span>
           </Link>
 
@@ -137,7 +135,6 @@ export default function Header() {
             href="/contact"
             className="hidden lg:flex items-center gap-1 sm:gap-2 px-3 sm:pl-4 sm:pr-6 md:pl-5 md:pr-8 lg:pl-7 lg:pr-10 py-2 sm:py-3 md:py-4 rounded-full border border-[#ED6B52] text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-bold text-[#ED6B52] whitespace-nowrap hover:bg-[#ED6B52] hover:text-white transition-colors"
           >
-            <span>•</span>
             <span>Book a Demo</span>
           </Link>
 
@@ -167,7 +164,6 @@ export default function Header() {
                     onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
                   >
                     <span className="flex items-center gap-2">
-                      <span className="text-[#222]">•</span>
                       <span>{item.label}</span>
                     </span>
                     <Image
@@ -186,7 +182,6 @@ export default function Header() {
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="text-[#222]">•</span>
                     <span>{item.label}</span>
                   </Link>
                 )}
@@ -215,7 +210,6 @@ export default function Header() {
                 href="#"
                 className="flex items-center justify-center gap-2 py-3 rounded-full text-[15px] font-bold text-[#ED6B52]"
               >
-                <span>•</span>
                 <span>Log in</span>
               </Link>
               <Link
@@ -223,7 +217,6 @@ export default function Header() {
                 className="flex items-center justify-center gap-2 py-3 rounded-full border border-[#ED6B52] text-[15px] font-bold text-[#ED6B52] hover:bg-[#ED6B52] hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span>•</span>
                 <span>Book a Demo</span>
               </Link>
             </div>

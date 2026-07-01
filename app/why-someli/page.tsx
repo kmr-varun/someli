@@ -5,7 +5,7 @@ import StatsGridSection from "@/components/sections/why-someli/StatsGridSection"
 import RealImpactSection from "@/components/sections/why-someli/RealImpactSection";
 import TestimonialsSection from "@/components/sections/why-someli/TestimonialsSection";
 import WhyCompaniesSection from "@/components/sections/why-someli/WhyCompaniesSection";
-import LogosSection from "@/components/sections/LogosSection";
+import LogosSection, { PARTNERSHIP_LOGOS } from "@/components/sections/LogosSection";
 import Footer from "@/components/Footer";
 
 export default function WhySomeliPage() {
@@ -18,7 +18,7 @@ export default function WhySomeliPage() {
       <RealImpactSection />
       <TestimonialsSection />
       <WhyCompaniesSection />
-      <LogosSection label="OUR PARTNERSHIPS" />
+      <LogosSection label="OUR PARTNERSHIPS" logos={PARTNERSHIP_LOGOS} />
       <Footer />
     </main>
   );

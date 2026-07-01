@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import SectionHeader from '@/components/ui/SectionHeader';
 
 export default function ContentManagementSection() {
   const devices = [
@@ -24,16 +25,12 @@ export default function ContentManagementSection() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-8">
           {/* Left: Label + Heading */}
-          <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[618px]">
-            <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px] inline-flex w-fit">
-              <span className="text-[#ED6B52] text-[9px] sm:text-[10px] font-normal font-['Inter'] tracking-[0.8px] sm:tracking-[1px] uppercase leading-[15px]">
-                AUTOMATED VISIBILITY
-              </span>
-            </div>
-            <h2 className="text-white text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] font-bold leading-[1.2] tracking-[-1.5px] md:tracking-[-2px]">
-              Content management and distribution made seamless
-            </h2>
-          </div>
+          <SectionHeader
+            pill="AUTOMATED VISIBILITY"
+            heading="Content management and distribution made seamless"
+            dark
+            className="w-full lg:w-[618px]"
+          />
 
           {/* Right: Description */}
           <div className="w-full lg:w-[542px] lg:pt-[59px] flex flex-col gap-2 text-white text-[14px] sm:text-[16px] md:text-lg leading-[1.5]">
@@ -89,7 +86,7 @@ export default function ContentManagementSection() {
           </div>
 
           {/* Social Platforms Pill */}
-          <div className="bg-[#111] border border-white rounded-full px-5 sm:px-6 md:px-8 py-3 sm:py-3.5 md:py-4 flex gap-[8px] sm:gap-[10px] items-center">
+          <div className="bg-[#0D0D0D] border border-white rounded-full px-5 sm:px-6 md:px-8 py-3 sm:py-3.5 md:py-4 flex gap-[8px] sm:gap-[10px] items-center">
             <div className="w-[14px] h-[14px] sm:w-[15px] sm:h-[15px] md:w-[16.909px] md:h-[16.909px] relative shrink-0">
               <Image
                 src="/assets/content-management/social-icon.svg"

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import SectionHeader from '@/components/ui/SectionHeader';
 
 export default function ReachCalculatorSection() {
 
@@ -21,28 +22,12 @@ export default function ReachCalculatorSection() {
         {/* Left side - Heading + Calculator */}
         <div className="flex flex-col gap-10 sm:gap-12 md:gap-14 lg:gap-16 w-full lg:flex-1 lg:min-w-0">
           {/* Heading block */}
-          <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
-            <div className="flex flex-col gap-2 sm:gap-3">
-              {/* Pill label */}
-              <div className="inline-flex items-center self-start bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px]">
-                <span className="text-[#ED6B52] text-[10px] sm:text-[11px] md:text-[12px] font-normal tracking-[0.8px] sm:tracking-[0.96px] uppercase font-['Space_Grotesk']">
-                  REACH MULTIPLIED
-                </span>
-              </div>
-
-              {/* Main heading */}
-              <h2 className="text-white text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] font-bold leading-[1.2] tracking-[-1.5px] md:tracking-[-2px]">
-                See your potential.
-                <br />
-                Multiply your reach.
-              </h2>
-            </div>
-
-            {/* Subheading */}
-            <p className="text-white text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[1.5]">
-              Calculate how employee advocacy can 10x your brand reach on LinkedIn.
-            </p>
-          </div>
+          <SectionHeader
+            pill="REACH MULTIPLIED"
+            heading={<>See your potential.<br />Multiply your reach.</>}
+            description="Calculate how employee advocacy can 10x your brand reach on LinkedIn."
+            dark
+          />
 
           {/* Calculator widget */}
           <div className="flex flex-wrap items-center gap-4 sm:gap-5 md:gap-6 bg-gradient-to-b from-[#DF8251] to-[#D54050] rounded-[10px] sm:rounded-[12px] px-4 sm:px-6 md:px-8 py-4 sm:py-5">
@@ -115,6 +100,17 @@ export default function ReachCalculatorSection() {
 
         {/* Right side - Report request card */}
         <div className="glass-border-card w-full lg:w-[377px] lg:max-w-[377px] bg-[rgba(255,255,255,0.04)] rounded-[5.735px] p-5 sm:p-6 flex flex-col gap-5 sm:gap-[22.939px] relative z-10">
+          {/* Floating "Trusted by" card - inside card, floated above top-right corner */}
+          <div className="hidden lg:flex glass-border-card absolute -top-[70px] -left-[209px] w-[226px] bg-[rgba(17,17,17,0.85)] rounded-[12px] px-6 py-5 flex-col gap-3 backdrop-blur-md z-20">
+            <div className="flex items-center w-[90px] h-[38px]">
+              <Image src="/assets/reach-calculator/avatar-1.png" alt="" width={38} height={38} className="mr-[-12px] relative" />
+              <Image src="/assets/reach-calculator/avatar-2.png" alt="" width={38} height={38} className="mr-[-12px] relative" />
+              <Image src="/assets/reach-calculator/avatar-3.png" alt="" width={38} height={38} className="relative" />
+            </div>
+            <p className="text-[#ED6B52] text-[16px] font-medium tracking-[0.64px] leading-[1.2] w-[187px]">
+              Trusted by 500+ companies worldwide
+            </p>
+          </div>
           {/* Icon */}
           <Image
             src="/assets/reach-calculator/icon-report.svg"
@@ -158,46 +154,10 @@ export default function ReachCalculatorSection() {
           {/* CTA button */}
           <button className="group self-start border border-[#ED6B52] rounded-full px-5 sm:px-6 py-3 sm:py-4 text-[#ED6B52] text-[15px] sm:text-[16px] md:text-[17px] font-medium hover:bg-[#ED6B52] transition-colors">
             <span className="flex items-center group-hover:text-white transition-colors">
-              <span className="mr-2">•</span>
               Generate my report
             </span>
           </button>
         </div>
-      </div>
-
-      {/* Floating "Trusted by" card - hidden on mobile/tablet */}
-      <div className="hidden lg:block absolute inset-0 max-w-[1440px] mx-auto pointer-events-none">
-      <div className="glass-border-card flex absolute right-[360px] top-[79.81px] w-[226px] bg-[rgba(17,17,17,0.85)] rounded-[12px] px-6 py-5 flex-col gap-3 backdrop-blur-md z-20 pointer-events-auto">
-        {/* Avatar stack */}
-        <div className="flex items-center w-[90px] h-[38.077px]">
-          <Image
-            src="/assets/reach-calculator/avatar-1.png"
-            alt=""
-            width={38.462}
-            height={38.077}
-            className="mr-[-12.692px] relative"
-          />
-          <Image
-            src="/assets/reach-calculator/avatar-2.png"
-            alt=""
-            width={38.462}
-            height={38.077}
-            className="mr-[-12.692px] relative"
-          />
-          <Image
-            src="/assets/reach-calculator/avatar-3.png"
-            alt=""
-            width={38.462}
-            height={38.077}
-            className="relative"
-          />
-        </div>
-
-        {/* Text */}
-        <p className="text-[#ED6B52] text-[16px] font-medium tracking-[0.64px] leading-[1.2] w-[187px]">
-          Trusted by 500+ companies worldwide
-        </p>
-      </div>
       </div>
     </section>
   );

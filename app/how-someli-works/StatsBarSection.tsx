@@ -30,7 +30,7 @@ export default function StatsBarSection() {
   return (
     <section className="relative w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-6 sm:py-8 md:py-10">
       <div aria-hidden className="absolute inset-0 pointer-events-none">
-        <div className="absolute bg-[#111] inset-0" />
+        <div className="absolute bg-[#0D0D0D] inset-0" />
         <div className="absolute inset-0 opacity-50 overflow-hidden">
           <Image
             src="/assets/how-someli-works/stats/background.png"

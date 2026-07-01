@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const testimonials = [
   {
@@ -126,7 +127,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="relative w-full bg-[#111] py-12 sm:py-16 md:py-20 lg:py-[120px] overflow-hidden">
+    <section className="relative w-full bg-[#0D0D0D] py-12 sm:py-16 md:py-20 lg:py-[120px] overflow-hidden">
       <div className="absolute inset-0 opacity-50 pointer-events-none">
         <Image
           src="/assets/why-someli/testimonials-bg.png"
@@ -137,16 +138,14 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="relative max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
-        <div className="flex flex-col items-center gap-3 sm:gap-4 mb-12 sm:mb-16 lg:mb-[100px]">
-          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] px-[15px] py-[7px] rounded-full">
-            <p className="font-montserrat font-normal text-[10px] text-[#ED6B52] tracking-[1px] uppercase leading-[15px]">
-              TESTIMONIALS
-            </p>
-          </div>
-          <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-white tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] leading-[1.2] lg:leading-[71.4px] text-center px-4">
-            Loved by teams, trusted by leaders.
-          </h2>
-        </div>
+        <SectionHeader
+          pill="TESTIMONIALS"
+          heading="Loved by teams, trusted by leaders."
+          align="center"
+          dark
+          headingClassName="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] leading-[1.2]"
+          className="mb-12 sm:mb-16 lg:mb-[100px] px-4"
+        />
 
         <div className="relative">
           {/* Desktop: 3 cards */}

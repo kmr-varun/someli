@@ -1,4 +1,6 @@
 import Image from "next/image";
+import SectionHeader from "@/components/ui/SectionHeader";
+import Button from "@/components/ui/Button";
 
 const languagesLeft = [
   { name: "Arabic", flag: "/assets/ai-branding/language/flag-arabic.png" },
@@ -20,16 +22,12 @@ export default function MultiLanguageSection() {
     <section className="relative w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px] flex flex-col gap-12 sm:gap-16 items-center">
         {/* Header */}
-        <div className="flex flex-col gap-4 items-center text-center">
-          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] px-[15px] py-[7px] rounded-full">
-            <p className="font-normal text-[12px] text-[#ED6B52] tracking-[0.96px] uppercase leading-[15px]">
-              GLOBAL REACH
-            </p>
-          </div>
-          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-bold leading-[1.19] tracking-[-2px] text-black text-center">
-            Reach every audience in their language
-          </h2>
-        </div>
+        <SectionHeader
+          pill="GLOBAL REACH"
+          heading="Reach every audience in their language"
+          align="center"
+          headingClassName="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] leading-[1.19] tracking-[-2px]"
+        />
 
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row items-center w-full">
@@ -68,10 +66,7 @@ export default function MultiLanguageSection() {
             </div>
 
             {/* CTA */}
-            <button className="border border-[#ED6B52] rounded-full pl-7 pr-10 py-4 text-[#ED6B52] font-bold text-[16px] w-fit flex items-center gap-1 hover:bg-[#ED6B52] hover:text-white transition-colors">
-              <span className="ml-6">•</span>
-              <span>Reach your Global Audience</span>
-            </button>
+            <Button variant="outlined">Reach your Global Audience</Button>
           </div>
 
           {/* Right Card - Gradient with post mockups, sits on top of left */}

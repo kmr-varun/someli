@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import SectionHeader from "@/components/ui/SectionHeader";
+import Button from "@/components/ui/Button";
 
 const teamMembers = [
   { name: "Rajiv Shah", role: "FOUNDER & CEO", image: "/assets/our-story/team-1.jpg" },
@@ -12,7 +14,7 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#111]">
+    <section className="relative w-full overflow-hidden bg-[#0D0D0D]">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-50">
         <Image
@@ -26,31 +28,17 @@ export default function TeamSection() {
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-[96px] py-12 sm:py-16 md:py-20 lg:py-[120px] flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8">
         {/* Left content */}
         <div className="flex flex-col gap-[40px] items-start w-full lg:w-[595px]">
-          <div className="flex flex-col gap-[16px] items-start w-full">
-            {/* Pill */}
-            <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] px-[15px] py-[7px] rounded-full">
-              <p className="font-montserrat font-normal text-[10px] text-[#ED6B52] tracking-[1px] uppercase leading-[15px]">
-                OUR TEAM
-              </p>
-            </div>
-
-            {/* Heading */}
-            <h2 className="font-montserrat font-bold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-white tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] leading-[1.19]">
-              A Team That&apos;s In Your Corner
-            </h2>
-          </div>
-
-          {/* Body */}
-          <p className="font-montserrat font-normal text-[15px] sm:text-[16px] lg:text-[18px] text-white leading-[1.5]">
-            When you sign up with Someli, you&apos;re not just getting software. Depending on your plan, you get a dedicated marketing team managing your content strategy, branding, design, and video — working as an extension of your business.
-          </p>
+          <SectionHeader
+            pill="OUR TEAM"
+            heading={<>A Team That&apos;s In Your Corner</>}
+            description="When you sign up with Someli, you're not just getting software. Depending on your plan, you get a dedicated marketing team managing your content strategy, branding, design, and video — working as an extension of your business."
+            dark
+            headingClassName="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] leading-[1.19]"
+            className="w-full"
+          />
 
           {/* CTA */}
-          <button className="border border-[#ED6B52] rounded-full pl-[28px] pr-[40px] py-[16px] hover:bg-[#ED6B52] hover:text-white transition-colors">
-            <span className="font-montserrat font-bold text-[16px] text-[#ED6B52] leading-none">
-              • Contact us →
-            </span>
-          </button>
+          <Button variant="outlined">Contact us →</Button>
         </div>
 
         {/* Right — Team cards infinite slide */}

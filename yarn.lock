@@ -470,6 +470,18 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@lottiefiles/dotlottie-react@^0.19.6":
+  version "0.19.6"
+  resolved "https://registry.yarnpkg.com/@lottiefiles/dotlottie-react/-/dotlottie-react-0.19.6.tgz#685fe11990bec889bc0c611c239473ac2b24e88d"
+  integrity sha512-6W790H3YE/TkKEBwGQ1k9NctnzJaKGmtAwwkW2oaW3p61Lrb9NTz7NxEgVHQtP1ctIXZqGA4qqqDOLrlNYzoEg==
+  dependencies:
+    "@lottiefiles/dotlottie-web" "0.75.0"
+
+"@lottiefiles/dotlottie-web@0.75.0":
+  version "0.75.0"
+  resolved "https://registry.yarnpkg.com/@lottiefiles/dotlottie-web/-/dotlottie-web-0.75.0.tgz#73d3a1f781af6ae2f79dffc9661981b4484e1a3b"
+  integrity sha512-2IZAIK7TblPPxSsjmPsDrSDew2XYj422rWKmwjIUPH+zroUPK6/gImjkKoJhKOXzByLEo5bTPx9qW4DCZfM5/g==
+
 "@napi-rs/wasm-runtime@^1.1.4":
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/@napi-rs/wasm-runtime/-/wasm-runtime-1.1.5.tgz#cccd6ebc40b991dea6936f9126b1b8155b6c4c95"

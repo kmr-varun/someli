@@ -2,25 +2,26 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import SectionPill from "@/components/ui/SectionPill";
 
 const stats = [
   {
     icon: '/assets/proven-impact/icon-increase.svg',
-    label: 'INCREASE IN IMPRESSIONS',
-    number: '3-5x',
-    description: 'Within - 30- 60 weeks',
+    label: 'MORE ENGAGEMENT',
+    number: '3X',
+    description: '3X More Engagement',
   },
   {
     icon: '/assets/proven-impact/icon-group.svg',
-    label: 'INCREASE IN IMPRESSIONS',
-    number: '3-5x',
-    description: 'Within - 30- 60 weeks',
+    label: 'MORE TRUST',
+    number: '4X',
+    description: '4X More Trust',
   },
   {
     icon: '/assets/proven-impact/icon-increase.svg',
-    label: 'CONTENT OUTPUT',
-    number: '10x',
-    description: 'Without increasing output',
+    label: 'MORE REACH',
+    number: '10X',
+    description: '10X More Reach',
   },
 ];
 
@@ -103,11 +104,7 @@ export default function ProvenImpactSection() {
         {/* Right: Heading + CTA */}
         <div className="order-1 lg:order-2 w-full lg:w-[648px] shrink-0 flex flex-col gap-6 sm:gap-7 md:gap-8 items-start lg:items-end">
           {/* Pill label */}
-          <div className="bg-[rgba(237,107,82,0.16)] border border-[rgba(237,107,82,0.16)] rounded-full px-3 sm:px-4 md:px-[15px] py-[5px] sm:py-[6px] md:py-[7px]">
-            <p className="text-[9px] sm:text-[10px] font-normal text-[#ed6b52] tracking-[0.8px] sm:tracking-[1px] uppercase leading-[15px] font-['Inter']">
-              Proven Impact
-            </p>
-          </div>
+          <SectionPill>Proven Impact</SectionPill>
 
           {/* Heading */}
           <h2 className="w-full text-left lg:text-right text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] font-bold text-black leading-[1.2] tracking-[-1.5px] md:tracking-[-2px]">
@@ -156,7 +153,7 @@ export default function ProvenImpactSection() {
 
           {/* CTA button */}
           <button className="border border-[#ed6b52] rounded-full pl-5 pr-8 sm:pl-6 sm:pr-9 md:pl-7 md:pr-10 py-3 sm:py-3.5 md:py-4 text-[#ed6b52] font-bold text-[14px] sm:text-[15px] md:text-[16px] leading-none hover:bg-[#ed6b52] hover:text-white transition-colors">
-            • Calculate your Reach
+            Calculate your Reach
           </button>
         </div>
       </div>

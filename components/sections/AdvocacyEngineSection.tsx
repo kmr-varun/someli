@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const ILLUS_W = 606;
 const ILLUS_H = 479;
@@ -82,26 +83,14 @@ export default function AdvocacyEngineSection() {
 
       <div className="relative mx-auto flex max-w-[1440px] flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8">
         {/* Left: Text block */}
-        <div className="flex w-full flex-col gap-6 lg:w-[620px] lg:flex-shrink-0">
+        <div className="flex w-full flex-col gap-6 lg:w-[48%] lg:flex-shrink-0">
           <div className="flex flex-col gap-4 lg:gap-10">
-            <div className="flex flex-col gap-4">
-              {/* Pill label */}
-              <div className="inline-flex w-fit items-center rounded-full border border-[rgba(237,107,82,0.16)] bg-[rgba(237,107,82,0.16)] px-[15px] py-[7px]">
-                <span className="font-montserrat text-[10px] sm:text-[11px] md:text-[12px] font-normal uppercase tracking-[0.96px] text-[#ED6B52] leading-[15px]">
-                  MORE REACH. MORE IMPACT. LESS COST
-                </span>
-              </div>
-
-              {/* Heading */}
-              <h2 className="font-montserrat text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px] xl:text-[60px] font-bold leading-[1.19] tracking-[-1.5px] md:tracking-[-2px] text-black">
-                Your Next Marketing Hire or an entire Advocacy Engine?
-              </h2>
-            </div>
-
-            {/* Body */}
-            <p className="font-montserrat text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[1.5] text-[#444]">
-              For less than the cost of one employee, Someli AI provides an AI-powered employee advocacy platform, a dedicated creative team, content strategy, and amplified reach across your leadership team.
-            </p>
+            <SectionHeader
+              pill="MORE REACH. MORE IMPACT. LESS COST"
+              heading="Your Next Marketing Hire or an entire Advocacy Engine?"
+              description="For less than the cost of one employee, Someli AI provides an AI-powered employee advocacy platform, a dedicated creative team, content strategy, and amplified reach across your leadership team."
+              headingClassName="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px] xl:text-[60px] leading-[1.19] tracking-[-1.5px] md:tracking-[-2px]"
+            />
           </div>
 
           {/* CTA */}
@@ -110,7 +99,7 @@ export default function AdvocacyEngineSection() {
             className="group self-start inline-flex items-center rounded-full border border-[#ED6B52] pl-7 pr-10 py-4 hover:bg-[#ED6B52] transition-colors"
           >
             <span className="font-montserrat text-[16px] font-bold text-[#ED6B52] group-hover:text-white transition-colors leading-none">
-              • See How it Works →
+              See How it Works →
             </span>
           </Link>
         </div>
@@ -118,15 +107,16 @@ export default function AdvocacyEngineSection() {
         {/* Right: Illustration — scales to fit its wrapper */}
         <div
           ref={wrapperRef}
-          className="w-full lg:flex-1 lg:min-w-0 overflow-hidden"
+          className="w-full lg:w-[48%] lg:flex-shrink-0 flex justify-center overflow-hidden"
           style={{ height: `${scaledH}px` }}
         >
           <div
-            className="relative origin-top-left"
+            className="relative"
             style={{
               width: `${ILLUS_W}px`,
               height: `${ILLUS_H}px`,
               transform: `scale(${scale})`,
+              transformOrigin: 'top center',
             }}
           >
             {/* Dot grid background from Figma */}
@@ -145,7 +135,7 @@ export default function AdvocacyEngineSection() {
                 top: '113.86px',
                 width: '270px',
                 height: '277px',
-                border: '1.719px solid #ff821b',
+                border: '1.719px solid #EE6F58',
                 borderRadius: '13.751px',
                 padding: '34.378px 27.502px',
               }}
@@ -165,7 +155,7 @@ export default function AdvocacyEngineSection() {
                   <span
                     className="font-montserrat font-bold text-[36px] leading-[1.1] tracking-[-0.72px]"
                     style={{
-                      background: 'linear-gradient(to bottom, #ff821b, #d54050)',
+                      background: 'linear-gradient(to bottom, #EE6F58, #D33546)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
